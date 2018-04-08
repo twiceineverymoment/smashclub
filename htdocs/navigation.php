@@ -6,6 +6,7 @@
 	$guestmode = svc_getSetting("EnableGuestBrowsing");
 	//session_start();
 	$eventActive = svc_getSetting("TourneyStatus");
+	$live = svc_getSetting("TwitchOnAir");
 	?>
 
 	<table style="height: 100%; border-collapse: collapse; margin: 0 auto;">
@@ -31,6 +32,12 @@
 	<div class="sidebarlink">
 		<img src="/resource/tab_tourney.png" width="50" />
 		<a href="/tourney/" style="color: orangered !important">Tournament</a>
+	</div>
+	<?php endif; ?>
+	<?php if ($live==1) : ?>
+	<div class="sidebarlink">
+		<img src="/resource/tab_stream.png" width="50" />
+		<a href="/stream/" style="color: mediumvioletred !important">LIVE</a>
 	</div>
 	<?php endif; ?>
 
