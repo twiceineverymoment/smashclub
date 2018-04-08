@@ -1,0 +1,29 @@
+Setting up a local development server
+
+1. Install XAMPP https://www.apachefriends.org/download.html
+2. Install MySQL Workbench https://dev.mysql.com/downloads/workbench/
+3. Install GitHub Desktop https://desktop.github.com/
+4. Sign in to GitHub on the desktop client and clone the 'smashclub' repository to your local workspace.
+5. Open the XAMPP control panel and start the Apache and MySQL services
+6. Open MySQL Workbench and create a new connection:
+	Server: localhost or 127.0.0.1
+	Port: 3306
+	Username: root
+	Password: leave blank
+7. Create a database for your development server by executing the query below in a new tab, replacing <name> with your name
+	CREATE SCHEMA UTCSC_DEV_<name>
+8. Import the template file to setup the database
+	- In the left sidebar, click 'Data Import/Restore'
+	- Under Import options, choose 'Import from Self-Contained File'
+	- Browse to and select the UTCSC_DEV.template.sql file from the Git repository
+	- Under Default Target Schema, choose the database you created
+	- Click 'Start Import' and the schema will be set up with the necessary tables and sample data
+9. From the Git repository, copy the contents of the 'htdocs' folder to C:/xampp/htdocs
+10. Configure the source files to read your development database
+	- Open the file C:/xampp/htdocs/service/app_properties.php
+	- Locate the section containing the database credentials
+	- $db_server="localhost:3306"; $db_database="UTCSC_DEV_<name>"; $db_username="root"; $db_password="";
+11. Open a web browser and navigate to 127.0.0.1 or localhost
+	- If your setup is correct, the homepage will appear populated with sample data
+	- If there is a problem with the database connection, you will be redirected to a "service unavailable" page
+	- If there is a problem with your XAMPP web server, the page may fail to load entirely
