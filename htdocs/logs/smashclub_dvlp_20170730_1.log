@@ -1,0 +1,73 @@
+[2017-07-29 20:01:35] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-29 20:02:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-29 20:03:03] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-07-29 21:53:38] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-29 21:54:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-29 21:57:51] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-29 21:58:39] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-29 21:59:00] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-29 22:47:30] [L3-INFO ]: User ScoreKeeper logged out
+[2017-07-29 22:47:54] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-29 22:57:22] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-29 23:04:05] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-29 23:04:51] [L4-DEBUG]: getProfilesByUsername called with search=master, staffonly=
+[2017-07-29 23:05:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:32:09] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:32:09] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:35:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:35:02] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:35:37] [L3-INFO ]: User bronzemember logged in
+[2017-07-30 08:35:39] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-30 08:35:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:35:42] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:35:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:35:57] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:37:22] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:37:22] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:47:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:47:37] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:48:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:48:58] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:49:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:49:37] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:49:55] [L3-INFO ]: User BronzeMember logged out
+[2017-07-30 08:49:59] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:49:59] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:50:17] [L3-INFO ]: User eclassmember logged in
+[2017-07-30 08:50:20] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 08:50:20] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 08:52:04] [L3-INFO ]: User EClassMember logged out
+[2017-07-30 08:52:21] [L4-DEBUG]: Authentication successful: type=1, uuid=
+[2017-07-30 08:52:21] [L3-INFO ]: User eclassmember logged in
+[2017-07-30 08:53:13] [L3-INFO ]: User EClassMember logged out
+[2017-07-30 08:53:19] [L4-DEBUG]: Authentication successful: type=, uuid=
+[2017-07-30 08:53:19] [L3-INFO ]: User eclassmember logged in
+[2017-07-30 08:54:05] [L3-INFO ]: User EClassMember logged out
+[2017-07-30 08:54:12] [L4-DEBUG]: Authentication successful: type=1, uuid=13
+[2017-07-30 08:54:12] [L3-INFO ]: User eclassmember logged in
+[2017-07-30 08:54:30] [L3-INFO ]: User EClassMember logged out
+[2017-07-30 08:55:38] [L4-DEBUG]: Authentication successful: type=1, uuid=13
+[2017-07-30 08:55:38] [L3-INFO ]: User eclassmember logged in
+[2017-07-30 08:57:20] [L3-INFO ]: User EClassMember logged out
+[2017-07-30 09:02:10] [L4-DEBUG]: Authentication successful: type=1, uuid=14, username=DClassMember
+[2017-07-30 09:02:10] [L3-INFO ]: User dclassmember logged in
+[2017-07-30 09:02:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 09:02:24] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=14
+[2017-07-30 09:56:19] [L3-INFO ]: Error page was displayed with e=400
+[2017-07-30 09:56:54] [L3-INFO ]: Error page was displayed with e=401
+[2017-07-30 10:05:30] [L3-INFO ]: Error page was displayed with e=404
+[2017-07-30 10:23:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 10:23:45] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=14
+[2017-07-30 10:30:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 10:30:13] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=14
+[2017-07-30 10:30:17] [L3-INFO ]: User DClassMember logged out
+[2017-07-30 10:30:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-07-30 10:30:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 10:30:24] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 10:31:15] [L2-WARN ]: Login failed for user cclassmember- incorrect password
+[2017-07-30 10:31:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 10:31:19] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-07-30 10:31:24] [L4-DEBUG]: Authentication successful: type=1, uuid=15, username=CClassMember
+[2017-07-30 10:31:24] [L3-INFO ]: User cclassmember logged in
+[2017-07-30 10:31:27] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-07-30 10:31:27] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=15

@@ -1,0 +1,253 @@
+[2017-08-14 12:53:10] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-14 12:53:10] [L4-DEBUG]: Copy query completed.
+[2017-08-14 12:53:10] [L4-DEBUG]: Season ID update query completed.
+[2017-08-14 12:53:10] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-14 12:53:10] [L4-DEBUG]: Settings change completed.
+[2017-08-14 12:53:10] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-14 12:53:13] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 12:53:40] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-14 12:53:52] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-14 12:54:54] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-14 12:55:24] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-14 19:43:48] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:43:50] [L3-INFO ]: User TestRoot logged out
+[2017-08-14 19:43:50] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:46:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:46:06] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:46:50] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:47:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-14 19:47:40] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:48:08] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-14 19:49:23] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:49:23] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-14 19:50:01] [L3-INFO ]: Guest signed up for event with id 6 using name Brandon
+[2017-08-14 19:50:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:50:04] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-14 19:50:48] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-14 19:50:48] [L3-INFO ]: User testmember1 logged in
+[2017-08-14 19:50:48] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-14 19:50:48] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:50:52] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-14 19:50:52] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-14 19:50:56] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
+[2017-08-14 19:51:52] [L4-DEBUG]: ProfileUpdate: id_nnw= = 
+[2017-08-14 19:51:52] [L4-DEBUG]: ProfileUpdate: catch=bees? = bees?
+[2017-08-14 19:51:52] [L4-DEBUG]: ProfileDetails Query: UPDATE user_profile SET 
+	prof_main_character = 'cloud', 
+	prof_catchphrase = 'bees?', 
+	prof_connect_nintendo = '',
+	prof_connect_xbox = 'xbox',
+	prof_connect_psn = 'psn',
+	prof_connect_steam = 'steam',
+	prof_connect_origin = 'origin',
+	prof_connect_other_name = 'site',
+	prof_connect_other_value = 'name' 
+	WHERE uuid = '13'
+[2017-08-14 19:51:52] [L3-INFO ]: User TestMember1 updated profile information
+[2017-08-14 19:52:09] [L3-INFO ]: User TestMember1 logged out
+[2017-08-14 19:52:09] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:52:35] [L4-DEBUG]: Authentication successful: type=2, uuid=21, username=TestReferee1
+[2017-08-14 19:52:35] [L3-INFO ]: User testreferee1 logged in
+[2017-08-14 19:52:35] [L4-DEBUG]: getAccountStatus returned 0 for user=testreferee1
+[2017-08-14 19:52:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:53:01] [L3-INFO ]: User TestReferee1 logged out
+[2017-08-14 19:53:01] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:53:09] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-14 19:53:09] [L3-INFO ]: User testofficer1 logged in
+[2017-08-14 19:53:09] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-14 19:53:09] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:53:43] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
+[2017-08-14 19:54:23] [L3-INFO ]: Site setting [PollStatus] changed to 1
+[2017-08-14 19:54:23] [L3-INFO ]: Site setting [PollResponses] changed to Yes|No
+[2017-08-14 19:54:23] [L3-INFO ]: Site setting [PollQuestion] changed to Bees?
+[2017-08-14 19:54:23] [L3-INFO ]: A new multiple-choice poll was opened by TestOfficer1
+[2017-08-14 19:54:23] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-14 19:54:29] [L3-INFO ]: A poll response was recorded (multiple choice).
+[2017-08-14 19:54:29] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-14 19:54:39] [L4-DEBUG]: MCPollResults = 1,0
+[2017-08-14 19:54:48] [L4-DEBUG]: MCPollResults = 1,0
+[2017-08-14 19:54:51] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-14 19:54:51] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:55:04] [L2-WARN ]: Login failed for user testadmin1- incorrect password
+[2017-08-14 19:55:06] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:55:33] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-14 19:55:33] [L3-INFO ]: User testroot logged in
+[2017-08-14 19:55:33] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-14 19:55:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
+[2017-08-14 19:56:00] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-14 19:57:16] [L3-INFO ]: A new event was created by TestRoot: Sample Play
+[2017-08-14 19:57:16] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-08-14 19:57:16] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 19:57:16] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=1
+[2017-08-14 19:57:34] [L3-INFO ]: User TestRoot signed up for event with id 8
+[2017-08-14 19:57:35] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 19:57:35] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-08-14 19:57:49] [L3-INFO ]: User TestRoot signed up for event with id 6
+[2017-08-14 19:57:50] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 19:57:50] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-08-14 19:57:59] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-14 19:58:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 19:58:29] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-08-14 19:59:40] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=24
+[2017-08-14 19:59:40] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=4
+[2017-08-14 19:59:40] [L2-WARN ]: User ID 24 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
+[2017-08-14 19:59:58] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-14 20:00:13] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-14 20:00:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:00:46] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-14 20:00:46] [L4-DEBUG]: Copy query completed.
+[2017-08-14 20:00:46] [L4-DEBUG]: Season ID update query completed.
+[2017-08-14 20:00:46] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-14 20:00:46] [L4-DEBUG]: Settings change completed.
+[2017-08-14 20:00:46] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-14 20:00:48] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:00:52] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-14 20:00:59] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-14 20:02:46] [L3-INFO ]: User TestRoot logged out
+[2017-08-14 20:02:46] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:03:04] [L2-WARN ]: Login failed for user testadmin1- incorrect password
+[2017-08-14 20:03:06] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:03:49] [L2-WARN ]: Login failed for user testroot- incorrect password
+[2017-08-14 20:03:51] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:03:56] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-14 20:03:56] [L3-INFO ]: User testroot logged in
+[2017-08-14 20:03:56] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-14 20:03:56] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:05:08] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-14 20:05:08] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-08-14 20:06:19] [L3-INFO ]: User TestRoot logged out
+[2017-08-14 20:06:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:09:30] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 12:09:37] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-15 12:09:37] [L3-INFO ]: User testroot logged in
+[2017-08-15 12:09:37] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-15 12:09:38] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:25:41] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:25:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:26:43] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:45:08] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 12:46:58] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 12:47:01] [L3-INFO ]: Error page was displayed with e=500
+[2017-08-15 12:48:31] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 12:48:33] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:48:52] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 12:48:52] [L1-ERROR]: startSeason failed!
+[2017-08-15 12:48:52] [L1-ERROR]: Query: INSERT INTO season_data (season_title, season_game, season_start_date) VALUES ('Fall 2017', '4', NOW())
+[2017-08-15 12:48:52] [L1-ERROR]: MySQL Error: 
+[2017-08-15 12:48:54] [L3-INFO ]: Error page was displayed with e=500
+[2017-08-15 12:49:37] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 12:49:37] [L1-ERROR]: startSeason failed!
+[2017-08-15 12:49:37] [L1-ERROR]: Query: INSERT INTO season_data (season_title, season_game, season_start_date) VALUES ('Fall 2017', '4', NOW())
+[2017-08-15 12:49:37] [L1-ERROR]: MySQL Error: 
+[2017-08-15 12:50:21] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 12:50:21] [L4-DEBUG]: Insert query successful, new season ID is 4
+[2017-08-15 12:50:21] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 4
+[2017-08-15 12:50:23] [L3-INFO ]: Error page was displayed with e=500
+[2017-08-15 12:51:10] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:51:23] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 12:53:40] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 12:53:41] [L4-DEBUG]: Copy query completed.
+[2017-08-15 12:53:41] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 12:53:41] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 12:53:41] [L4-DEBUG]: Settings change completed.
+[2017-08-15 12:53:41] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 12:53:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:53:50] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-15 12:54:21] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 12:54:21] [L4-DEBUG]: Insert query successful, new season ID is 5
+[2017-08-15 12:54:21] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 5
+[2017-08-15 12:54:21] [L4-DEBUG]: Initial season ratings have been populated using the fresh-start method,.
+[2017-08-15 12:54:21] [L3-INFO ]: User TestRoot started a new season: I Broke Something
+[2017-08-15 12:54:23] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 12:54:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 12:57:28] [L3-INFO ]: --------
+[2017-08-15 12:57:28] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-15 12:57:28] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-15 12:57:28] [L3-INFO ]: Player[1]: TestMember1, Score: 0, Old rank: 1200, New rank: 1100, PM Counter: 4
+[2017-08-15 12:57:28] [L3-INFO ]: Player[2]: TestMember5, Score: 1, Old rank: 1200, New rank: 1300, PM Counter: 4
+[2017-08-15 12:57:28] [L3-INFO ]: --------
+[2017-08-15 12:57:28] [L3-INFO ]: User ID 13 rank was updated to 1100 in database.
+[2017-08-15 12:57:28] [L3-INFO ]: User ID 17 rank was updated to 1300 in database.
+[2017-08-15 12:57:28] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-15 12:57:28] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 12:57:34] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 12:57:36] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 12:57:46] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 13:01:51] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:13:06] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 18:14:22] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 18:30:43] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:31:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:35:33] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:35:50] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-15 18:35:50] [L3-INFO ]: User testroot logged in
+[2017-08-15 18:35:50] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-15 18:35:51] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 18:36:09] [L3-INFO ]: --------
+[2017-08-15 18:36:09] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-15 18:36:09] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-15 18:36:09] [L3-INFO ]: Player[1]: TestMember1, Score: 1, Old rank: 1100, New rank: 1217, PM Counter: 3
+[2017-08-15 18:36:09] [L3-INFO ]: Player[2]: TestMember2, Score: 0, Old rank: 1200, New rank: 1083, PM Counter: 4
+[2017-08-15 18:36:09] [L3-INFO ]: --------
+[2017-08-15 18:36:09] [L3-INFO ]: User ID 13 rank was updated to 1217 in database.
+[2017-08-15 18:36:09] [L3-INFO ]: User ID 14 rank was updated to 1083 in database.
+[2017-08-15 18:36:09] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-15 18:36:09] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 18:36:09] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 18:36:15] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:37:49] [L3-INFO ]: --------
+[2017-08-15 18:37:49] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-15 18:37:49] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-15 18:37:49] [L3-INFO ]: Player[1]: TestMember1, Score: 1, Old rank: 1217, New rank: 1011, PM Counter: 2
+[2017-08-15 18:37:49] [L3-INFO ]: Player[2]: TestReferee1, Score: 3, Old rank: 1200, New rank: 1406, PM Counter: 4
+[2017-08-15 18:37:49] [L3-INFO ]: --------
+[2017-08-15 18:37:49] [L3-INFO ]: User ID 13 rank was updated to 1011 in database.
+[2017-08-15 18:37:49] [L3-INFO ]: User ID 21 rank was updated to 1406 in database.
+[2017-08-15 18:37:49] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-15 18:37:49] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 18:40:12] [L3-INFO ]: --------
+[2017-08-15 18:40:12] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-15 18:40:12] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-15 18:40:12] [L3-INFO ]: Player[1]: TestMember1, Score: 1, Old rank: 1011, New rank: 1123, PM Counter: 1
+[2017-08-15 18:40:12] [L3-INFO ]: Player[2]: TestMember2, Score: 0, Old rank: 1083, New rank: 971, PM Counter: 3
+[2017-08-15 18:40:12] [L3-INFO ]: --------
+[2017-08-15 18:40:12] [L3-INFO ]: User ID 13 rank was updated to 1123 in database.
+[2017-08-15 18:40:12] [L3-INFO ]: User ID 14 rank was updated to 971 in database.
+[2017-08-15 18:40:12] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-15 18:40:12] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 18:40:12] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-08-15 18:41:18] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 18:41:18] [L4-DEBUG]: Copy query completed.
+[2017-08-15 18:41:18] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 18:41:18] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 18:41:18] [L4-DEBUG]: Settings change completed.
+[2017-08-15 18:41:18] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 18:41:20] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 18:41:27] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 18:42:13] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:42:54] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 18:42:54] [L4-DEBUG]: Insert query successful, new season ID is 6
+[2017-08-15 18:42:54] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 6
+[2017-08-15 18:42:54] [L4-DEBUG]: Initial season ratings have been populated using the fresh-start method,.
+[2017-08-15 18:42:54] [L3-INFO ]: User TestRoot started a new season: There, I Fixed It
+[2017-08-15 18:43:00] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 18:43:03] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:46:18] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 18:46:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 19:00:36] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 19:02:43] [L3-INFO ]: --------
+[2017-08-15 19:02:43] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-15 19:02:43] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-15 19:02:43] [L3-INFO ]: Player[1]: TestMember1, Score: 1, Old rank: 1200, New rank: 1300, PM Counter: 3
+[2017-08-15 19:02:43] [L3-INFO ]: Player[2]: TestMember3, Score: 0, Old rank: 1200, New rank: 1100, PM Counter: 3
+[2017-08-15 19:02:43] [L3-INFO ]: --------
+[2017-08-15 19:02:43] [L3-INFO ]: User ID 13 rank was updated to 1300 in database.
+[2017-08-15 19:02:43] [L3-INFO ]: User ID 15 rank was updated to 1100 in database.
+[2017-08-15 19:02:43] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-15 20:34:51] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 20:34:51] [L4-DEBUG]: Copy query completed.
+[2017-08-15 20:34:51] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 20:34:51] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 20:34:51] [L4-DEBUG]: Settings change completed.
+[2017-08-15 20:34:51] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 20:34:53] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /script/
+Disallow: /service/
+Disallow: /forms/
+Disallow: /adminpanel/
+Disallow: /scoring/
+Disallow: /poll/
+Disallow: /account/

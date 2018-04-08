@@ -1,0 +1,335 @@
+[2017-08-04 18:21:01] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:23:15] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:24:13] [L3-INFO ]: --------
+[2017-08-04 18:24:13] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 18:24:13] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 18:24:13] [L3-INFO ]: Player: GoldMember, Score: 1, Old rank: 1664, New rank: 1726, PM Counter: 0
+[2017-08-04 18:24:13] [L3-INFO ]: Player: PlatinumMember, Score: 0, Old rank: 1808, New rank: 1746, PM Counter: 0
+[2017-08-04 18:24:13] [L3-INFO ]: --------
+[2017-08-04 18:24:14] [L3-INFO ]: User ID 20 rank was updated to 1726 in database.
+[2017-08-04 18:24:14] [L3-INFO ]: User ID 21 rank was updated to 1746 in database.
+[2017-08-04 18:25:59] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:27:03] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 18:27:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 18:34:53] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:35:41] [L3-INFO ]: --------
+[2017-08-04 18:35:41] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 18:35:41] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 18:35:41] [L3-INFO ]: Player: DClassMember, Score: 0, Old rank: 420, New rank: 406, PM Counter: 0
+[2017-08-04 18:35:41] [L3-INFO ]: Player: BClassMember, Score: 1, Old rank: 846, New rank: 861, PM Counter: 0
+[2017-08-04 18:35:41] [L3-INFO ]: --------
+[2017-08-04 18:35:41] [L3-INFO ]: User ID 14 rank was updated to 406 in database.
+[2017-08-04 18:35:41] [L3-INFO ]: User ID 16 rank was updated to 861 in database.
+[2017-08-04 18:37:29] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:38:18] [L3-INFO ]: --------
+[2017-08-04 18:38:18] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 18:38:18] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 18:38:18] [L3-INFO ]: Player: BClassMember, Score: 1, Old rank: 861, New rank: 895, PM Counter: 0
+[2017-08-04 18:38:18] [L3-INFO ]: Player: CClassMember, Score: 0, Old rank: 669, New rank: 635, PM Counter: 0
+[2017-08-04 18:38:18] [L3-INFO ]: --------
+[2017-08-04 18:38:18] [L3-INFO ]: User ID 16 rank was updated to 895 in database.
+[2017-08-04 18:38:18] [L3-INFO ]: User ID 15 rank was updated to 635 in database.
+[2017-08-04 18:38:46] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:42:16] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 18:44:05] [L3-INFO ]: --------
+[2017-08-04 18:44:05] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 18:44:05] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 18:44:05] [L3-INFO ]: Player: SilverMember, Score: 2, Old rank: 1492, New rank: 1543, PM Counter: 0
+[2017-08-04 18:44:05] [L3-INFO ]: Player: UnrankedMember, Score: 0, Old rank: 1200, New rank: 1097, PM Counter: 4
+[2017-08-04 18:44:05] [L3-INFO ]: --------
+[2017-08-04 18:44:05] [L3-INFO ]: User ID 19 rank was updated to 1543 in database.
+[2017-08-04 18:44:05] [L3-INFO ]: User ID 27 rank was updated to 1097 in database.
+[2017-08-04 18:57:35] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 18:57:53] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 18:59:24] [L3-INFO ]: --------
+[2017-08-04 18:59:24] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 18:59:24] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 18:59:24] [L3-INFO ]: Player: SilverMember, Score: 2, Old rank: 1543, New rank: 1569, PM Counter: 0
+[2017-08-04 18:59:24] [L3-INFO ]: Player: UnrankedMember, Score: 0, Old rank: 1097, New rank: 1046, PM Counter: 3
+[2017-08-04 18:59:24] [L3-INFO ]: --------
+[2017-08-04 18:59:24] [L1-ERROR]: updateRank procedure failed! userid=19, new rank=1569
+[2017-08-04 18:59:24] [L1-ERROR]: Query: UPDATE user_ranking 
+	SET rank_current = '1569', 
+	rank_season_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_season_high, rank_current) ELSE rank_season_high, 
+	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_high, rank_current) ELSE rank_career_high, 
+	rank_placements = GREATEST(0, rank_placements-1) 
+	WHERE uuid='19'
+[2017-08-04 18:59:24] [L1-ERROR]: MySQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_hig' at line 3
+[2017-08-04 18:59:24] [L1-ERROR]: updateRank procedure failed! userid=27, new rank=1046
+[2017-08-04 18:59:24] [L1-ERROR]: Query: UPDATE user_ranking 
+	SET rank_current = '1046', 
+	rank_season_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_season_high, rank_current) ELSE rank_season_high, 
+	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_high, rank_current) ELSE rank_career_high, 
+	rank_placements = GREATEST(0, rank_placements-1) 
+	WHERE uuid='27'
+[2017-08-04 18:59:24] [L1-ERROR]: MySQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_hig' at line 3
+[2017-08-04 19:01:48] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 19:03:55] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 19:04:52] [L3-INFO ]: --------
+[2017-08-04 19:04:52] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 19:04:52] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 19:04:52] [L3-INFO ]: Player: SilverMember, Score: 2, Old rank: 1543, New rank: 1569, PM Counter: 0
+[2017-08-04 19:04:52] [L3-INFO ]: Player: UnrankedMember, Score: 0, Old rank: 1097, New rank: 1046, PM Counter: 3
+[2017-08-04 19:04:52] [L3-INFO ]: --------
+[2017-08-04 19:04:52] [L3-INFO ]: User ID 19 rank was updated to 1569 in database.
+[2017-08-04 19:04:52] [L3-INFO ]: User ID 27 rank was updated to 1046 in database.
+[2017-08-04 19:14:21] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 19:14:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-04 19:15:42] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-04 19:16:04] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 20:02:31] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 21:49:09] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-04 21:50:04] [L3-INFO ]: --------
+[2017-08-04 21:50:04] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 21:50:04] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-04 21:50:04] [L3-INFO ]: Player[1]: GoldMember, Score: 3, Old rank: 1726, New rank: 1829, PM Counter: 0
+[2017-08-04 21:50:04] [L3-INFO ]: Player[2]: PlatinumMember, Score: 1, Old rank: 1746, New rank: 1643, PM Counter: 0
+[2017-08-04 21:50:04] [L3-INFO ]: --------
+[2017-08-04 21:50:04] [L3-INFO ]: User ID 20 rank was updated to 1829 in database.
+[2017-08-04 21:50:04] [L3-INFO ]: User ID 21 rank was updated to 1643 in database.
+[2017-08-04 21:52:14] [L3-INFO ]: --------
+[2017-08-04 21:52:14] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-04 21:52:14] [L3-INFO ]: Context: FREEPLAY, Type: DOUBLES
+[2017-08-04 21:52:14] [L3-INFO ]: Player[1/1]: GoldMember, Score: 1, Old rank: 1829, New rank: 1738, PM Counter: 0
+[2017-08-04 21:52:14] [L3-INFO ]: Player[1/2]: BClassMember, Score: 1, Old rank: 895, New rank: 882, PM Counter: 0
+[2017-08-04 21:52:14] [L3-INFO ]: Player[2/1]: CClassMember, Score: 2, Old rank: 635, New rank: 746, PM Counter: 0
+[2017-08-04 21:52:14] [L3-INFO ]: Player[2/2]: DiamondMember, Score: 2, Old rank: 2033, New rank: 2034, PM Counter: 0
+[2017-08-04 21:52:14] [L3-INFO ]: --------
+[2017-08-04 21:52:15] [L3-INFO ]: User ID 20 rank was updated to 1738 in database.
+[2017-08-04 21:52:15] [L3-INFO ]: User ID 16 rank was updated to 882 in database.
+[2017-08-04 21:52:15] [L3-INFO ]: User ID 15 rank was updated to 746 in database.
+[2017-08-04 21:52:15] [L3-INFO ]: User ID 22 rank was updated to 2034 in database.
+[2017-08-06 08:35:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 08:56:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 08:56:57] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-06 09:32:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 10:12:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 10:12:03] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-06 10:12:13] [L4-DEBUG]: Authentication successful: type=3, uuid=26, username=ClubPresident
+[2017-08-06 10:12:13] [L3-INFO ]: User clubpresident logged in
+[2017-08-06 10:12:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 10:12:17] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-06 10:13:03] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-06 10:20:33] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 10:20:33] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=26
+[2017-08-06 10:21:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 10:21:19] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=26
+[2017-08-06 12:33:52] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 15:42:35] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 15:42:35] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=26
+[2017-08-06 15:43:04] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-06 16:51:21] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-06 16:56:48] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 16:56:48] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=26
+[2017-08-06 16:56:53] [L3-INFO ]: User ClubPresident signed up for event with id 4
+[2017-08-06 16:56:53] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 16:56:53] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=26
+[2017-08-06 16:57:10] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=4
+[2017-08-06 17:02:02] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 17:09:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 17:49:37] [L3-INFO ]: New user NoobMember self-registered successfully
+[2017-08-06 17:49:37] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-08-06 17:49:40] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 17:50:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 17:52:44] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 18:35:11] [L4-DEBUG]: Authentication successful: type=4, uuid=1, username=webmaster
+[2017-08-06 18:35:11] [L3-INFO ]: User webmaster logged in
+[2017-08-06 18:35:11] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 18:43:09] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-06 18:43:46] [L3-INFO ]: Error page was displayed with e=400
+[2017-08-06 18:45:57] [L3-INFO ]: Error page was displayed with e=400
+[2017-08-06 18:46:29] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-06 19:03:18] [L3-INFO ]: --------
+[2017-08-06 19:03:18] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-06 19:03:18] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-06 19:03:18] [L3-INFO ]: Player[1]: DiamondMember, Score: 0, Old rank: 2034, New rank: 1970, PM Counter: 0
+[2017-08-06 19:03:18] [L3-INFO ]: Player[2]: MasterMember, Score: 2, Old rank: 2251, New rank: 2315, PM Counter: 0
+[2017-08-06 19:03:18] [L3-INFO ]: --------
+[2017-08-06 19:03:18] [L3-INFO ]: User ID 22 rank was updated to 1970 in database.
+[2017-08-06 19:03:18] [L3-INFO ]: User ID 23 rank was updated to 2315 in database.
+[2017-08-06 19:03:18] [L1-ERROR]: Failed to post to activity feed with type: RESULTS_FREEPLAY
+[2017-08-06 19:03:18] [L1-ERROR]: Query: INSERT INTO activity_feed (activity_type, activity_header_html, activity_body_html, activity_owner_uuid, activity_time)
+	VALUES ('1', '', 'DiamondMember <h2 style='display: inline-block'>0-2</h2> MasterMember', '1', NOW())
+[2017-08-06 19:03:18] [L1-ERROR]: MySQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'display: inline-block'>0-2</h2> MasterMember', '1', NOW())' at line 2
+[2017-08-06 19:03:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 19:03:30] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-06 19:05:39] [L3-INFO ]: --------
+[2017-08-06 19:05:39] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-06 19:05:39] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-06 19:05:39] [L3-INFO ]: Player[1]: DiamondMember, Score: 2, Old rank: 1970, New rank: 2128, PM Counter: 0
+[2017-08-06 19:05:39] [L3-INFO ]: Player[2]: MasterMember, Score: 0, Old rank: 2315, New rank: 2158, PM Counter: 0
+[2017-08-06 19:05:39] [L3-INFO ]: --------
+[2017-08-06 19:05:39] [L3-INFO ]: User ID 22 rank was updated to 2128 in database.
+[2017-08-06 19:05:39] [L3-INFO ]: User ID 23 rank was updated to 2158 in database.
+[2017-08-06 19:05:39] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-06 19:05:56] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-06 19:07:07] [L3-INFO ]: --------
+[2017-08-06 19:07:07] [L3-INFO ]: A match was recorded by webmaster
+[2017-08-06 19:07:07] [L3-INFO ]: Context: FREEPLAY, Type: DOUBLES
+[2017-08-06 19:07:07] [L3-INFO ]: Player[1/1]: DClassMember, Score: 1, Old rank: 406, New rank: 351, PM Counter: 0
+[2017-08-06 19:07:07] [L3-INFO ]: Player[1/2]: BClassMember, Score: 1, Old rank: 882, New rank: 748, PM Counter: 0
+[2017-08-06 19:07:07] [L3-INFO ]: Player[2/1]: EClassMember, Score: 3, Old rank: 257, New rank: 422, PM Counter: 0
+[2017-08-06 19:07:07] [L3-INFO ]: Player[2/2]: AClassMember, Score: 3, Old rank: 1098, New rank: 1122, PM Counter: 0
+[2017-08-06 19:07:07] [L3-INFO ]: --------
+[2017-08-06 19:07:08] [L3-INFO ]: User ID 14 rank was updated to 351 in database.
+[2017-08-06 19:07:08] [L3-INFO ]: User ID 16 rank was updated to 748 in database.
+[2017-08-06 19:07:08] [L3-INFO ]: User ID 13 rank was updated to 422 in database.
+[2017-08-06 19:07:08] [L3-INFO ]: User ID 17 rank was updated to 1122 in database.
+[2017-08-06 19:07:08] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-06 19:08:49] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 19:09:20] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 19:09:56] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:09:56] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=1
+[2017-08-06 19:10:05] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=3
+[2017-08-06 19:10:15] [L3-INFO ]: User webmaster logged out
+[2017-08-06 19:10:15] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:10:20] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-06 19:15:56] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:16:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:17:06] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:17:34] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:18:10] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:19:17] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:19:17] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-06 19:19:25] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:22:03] [L4-DEBUG]: Authentication successful: type=3, uuid=26, username=ClubPresident
+[2017-08-06 19:22:03] [L3-INFO ]: User clubpresident logged in
+[2017-08-06 19:22:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-06 19:23:21] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-06 19:23:43] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-07 12:42:00] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-07 12:42:00] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=26
+[2017-08-07 13:08:18] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-08 12:15:29] [L3-INFO ]: A new event was created by ClubPresident: Not the B\'s!
+[2017-08-08 12:15:29] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-08-08 12:15:29] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:15:29] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=26
+[2017-08-08 12:19:18] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-08 12:21:53] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:39:55] [L3-INFO ]: User ClubPresident logged out
+[2017-08-08 12:39:55] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:40:02] [L4-DEBUG]: Authentication successful: type=4, uuid=1, username=webmaster
+[2017-08-08 12:40:02] [L3-INFO ]: User webmaster logged in
+[2017-08-08 12:40:02] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:40:21] [L3-INFO ]: User webmaster logged out
+[2017-08-08 12:40:21] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:42:32] [L3-INFO ]: New user VicePresident self-registered successfully
+[2017-08-08 12:42:32] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-08-08 12:42:35] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:42:39] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:43:50] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:44:39] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=webmaster
+[2017-08-08 12:44:39] [L3-INFO ]: User webmaster logged in
+[2017-08-08 12:44:39] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:45:08] [L3-INFO ]: User webmaster logged out
+[2017-08-08 12:45:08] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:52:56] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:53:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:53:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:53:35] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:53:44] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 12:53:48] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:58:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:58:28] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 12:58:43] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 13:01:45] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 17:34:57] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:34:57] [L1-ERROR]: 
+[2017-08-08 17:34:57] [L1-ERROR]: Season portlet has an error, you may have invalid data configuration.
+[2017-08-08 17:34:57] [L1-ERROR]: Correct this error ASAP to avoid corrupting your rank records.
+[2017-08-08 17:34:57] [L1-ERROR]: getAllUpcomingEvents failed
+[2017-08-08 17:34:57] [L1-ERROR]: 
+[2017-08-08 17:35:52] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:35:52] [L1-ERROR]: 
+[2017-08-08 17:35:52] [L1-ERROR]: Season portlet has an error, you may have invalid data configuration.
+[2017-08-08 17:35:52] [L1-ERROR]: Correct this error ASAP to avoid corrupting your rank records.
+[2017-08-08 17:35:52] [L1-ERROR]: getAllUpcomingEvents failed
+[2017-08-08 17:35:52] [L1-ERROR]: 
+[2017-08-08 17:36:04] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:36:04] [L1-ERROR]: 
+[2017-08-08 17:36:04] [L1-ERROR]: Season portlet has an error, you may have invalid data configuration.
+[2017-08-08 17:36:04] [L1-ERROR]: Correct this error ASAP to avoid corrupting your rank records.
+[2017-08-08 17:36:04] [L1-ERROR]: getAllUpcomingEvents failed
+[2017-08-08 17:36:04] [L1-ERROR]: 
+[2017-08-08 17:36:39] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:36:39] [L1-ERROR]: 
+[2017-08-08 17:36:39] [L1-ERROR]: Season portlet has an error, you may have invalid data configuration.
+[2017-08-08 17:36:39] [L1-ERROR]: Correct this error ASAP to avoid corrupting your rank records.
+[2017-08-08 17:36:39] [L1-ERROR]: getAllUpcomingEvents failed
+[2017-08-08 17:36:39] [L1-ERROR]: 
+[2017-08-08 17:37:12] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:37:12] [L1-ERROR]: 
+[2017-08-08 17:37:13] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:37:13] [L1-ERROR]: 
+[2017-08-08 17:37:14] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:37:14] [L1-ERROR]: 
+[2017-08-08 17:37:15] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:37:15] [L1-ERROR]: 
+[2017-08-08 17:37:16] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:37:16] [L1-ERROR]: 
+[2017-08-08 17:39:44] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:39:44] [L1-ERROR]: 
+[2017-08-08 17:39:45] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:39:45] [L1-ERROR]: 
+[2017-08-08 17:39:45] [L3-INFO ]: Error page was displayed with e=503
+[2017-08-08 17:41:24] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:41:24] [L1-ERROR]: 
+[2017-08-08 17:41:24] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-08 17:44:00] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:44:00] [L1-ERROR]: 
+[2017-08-08 17:44:00] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-08 17:50:44] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:50:44] [L1-ERROR]: 
+[2017-08-08 17:50:44] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-08 17:50:51] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:50:51] [L1-ERROR]: 
+[2017-08-08 17:50:52] [L1-ERROR]: MySQL Connection failed! SmashClub is down.
+[2017-08-08 17:50:52] [L1-ERROR]: 
+[2017-08-08 17:50:52] [L3-INFO ]: Error page was displayed with e=503
+[2017-08-08 17:52:58] [L3-INFO ]: Error page was displayed with e=503
+[2017-08-08 17:53:03] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 17:53:14] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 18:15:37] [L2-WARN ]: Anonymous user attempted to load CHANGE PASSWORD form
+[2017-08-08 18:15:38] [L3-INFO ]: Error page was displayed with e=401
+[2017-08-08 18:15:47] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=webmaster
+[2017-08-08 18:15:47] [L3-INFO ]: User webmaster logged in
+[2017-08-08 18:15:48] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:16:35] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:36:54] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:37:09] [L3-INFO ]: User webmaster logged out
+[2017-08-08 18:37:10] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:37:59] [L3-INFO ]: New user DisabledMember self-registered successfully
+[2017-08-08 18:37:59] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-08-08 18:38:01] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:38:05] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 18:38:48] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 18:39:05] [L4-DEBUG]: Authentication successful: type=1, uuid=30, username=DisabledMember
+[2017-08-08 18:39:05] [L3-INFO ]: User disabledmember logged in
+[2017-08-08 18:39:05] [L4-DEBUG]: getAccountStatus returned 2 for user=disabledmember
+[2017-08-08 18:39:05] [L2-WARN ]: Attempted login by disabled account: DisabledMember. Cancelling.
+[2017-08-08 18:39:05] [L3-INFO ]: User DisabledMember logged out
+[2017-08-08 18:39:09] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:44:18] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:47:49] [L2-WARN ]: Anonymous user attempted to load CHANGE PASSWORD form
+[2017-08-08 18:47:50] [L3-INFO ]: Error page was displayed with e=401
+[2017-08-08 18:48:47] [L3-INFO ]: Error page was displayed with e=401
+[2017-08-08 18:48:51] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=webmaster
+[2017-08-08 18:48:51] [L3-INFO ]: User webmaster logged in
+[2017-08-08 18:48:51] [L4-DEBUG]: getAccountStatus returned 0 for user=webmaster
+[2017-08-08 18:48:52] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:53:30] [L3-INFO ]: Error page was displayed with e=500
+[2017-08-08 18:54:39] [L3-INFO ]: User webmaster logged out
+[2017-08-08 18:54:40] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:55:29] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:55:34] [L2-WARN ]: Login failed for user webmaster- name not valid
+[2017-08-08 18:55:36] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:55:42] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-08 18:55:54] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=Administrator
+[2017-08-08 18:55:54] [L3-INFO ]: User administrator logged in
+[2017-08-08 18:55:54] [L4-DEBUG]: getAccountStatus returned 1 for user=administrator
+[2017-08-08 18:55:54] [L3-INFO ]: User Administrator has expired password flag. Redirecting to password change form.
+[2017-08-08 18:56:48] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-08 18:56:52] [L3-INFO ]: User Administrator logged out
+[2017-08-08 18:56:53] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows

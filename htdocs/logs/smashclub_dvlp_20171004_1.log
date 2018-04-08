@@ -1,0 +1,118 @@
+[2017-10-04 21:00:56] [DEBUG  ] [admin10]: getAllCurrentRankData called with order=0
+[2017-10-04 21:04:42] [DEBUG  ] [admin10]: getGuestListByEvent returned 10 rows for event id=12
+[2017-10-04 21:06:56] [NOTICE ] [admin10]: Sending a contact email to all attendees of event ID 12
+[2017-10-04 21:06:59] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:09:20] [DEBUG  ] [admin10]: getEventIdsByUser returned 4 results for userid=22
+[2017-10-04 21:09:20] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-10-04 21:09:49] [DEBUG  ] [admin10]: getAllCurrentRankData called with order=0
+[2017-10-04 21:21:31] [NOTICE ] [admin10]: admin10 logged out
+[2017-10-04 21:21:32] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:22:12] [NOTICE ] [Anonymous]: Sending a Contact email to the spokesperson (ID=34)
+[2017-10-04 21:22:12] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:22:12] [NOTICE ] [Anonymous]: Contact to single member (ID=0)
+[2017-10-04 21:22:12] [NOTICE ] [Anonymous]: TO:/ SUBJECT:New Contact/ BODY:New Contact From: Johnny Hammersticks, Reply To: johnny-hammersticks@cups.info 
+ 5643 yeah right!/ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:22:13] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:25:37] [NOTICE ] [Anonymous]: Sending a Contact email to the spokesperson (ID=34)
+[2017-10-04 21:25:37] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:25:37] [NOTICE ] [Anonymous]: Contact to single member (ID=0)
+[2017-10-04 21:25:37] [NOTICE ] [Anonymous]: TO:/ SUBJECT:New Contact/ BODY:New Contact From: Mr. Walkway, Reply To: misterwalkway@gmail.com 
+ Lead me to the building. Fuck you./ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:25:39] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:27:33] [NOTICE ] [Anonymous]: Sending a Contact email to the spokesperson (ID=34)
+[2017-10-04 21:27:33] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:27:33] [NOTICE ] [Anonymous]: Contact to single member (ID=0)
+[2017-10-04 21:27:33] [NOTICE ] [Anonymous]: TO:/ SUBJECT:New Contact/ BODY:New Contact From: swarm of bees, Reply To: bees@bees 
+ Bees?/ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:27:35] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:29:49] [NOTICE ] [Anonymous]: Sending a Contact email to the spokesperson (ID=34)
+[2017-10-04 21:29:49] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:29:49] [NOTICE ] [Anonymous]: Contact to single user (ID=34)
+[2017-10-04 21:29:49] [NOTICE ] [Anonymous]: TO:/ SUBJECT:New Contact/ BODY:New Contact From: King of the Trees, Reply To: treemeister@gmail.com 
+ I count on them/ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:29:51] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:31:50] [NOTICE ] [Anonymous]: Sending a Contact email to the spokesperson (ID=22)
+[2017-10-04 21:31:50] [DEBUG  ] [Anonymous]: getUserEmailAddress returned admin10@test for UUID 22
+[2017-10-04 21:31:50] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:31:50] [NOTICE ] [Anonymous]: Contact to single user (ID=22)
+[2017-10-04 21:31:50] [NOTICE ] [Anonymous]: TO:admin10@test/ SUBJECT:New Contact/ BODY:New Contact From: Captain Knots, Reply To: capn-tyin-knots@yahoo.com 
+ Whenever anyone needs some knots tied they go to me./ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:31:51] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:32:30] [DEBUG  ] [admin10]: Authentication successful: email=admin10@test, type=4, uuid=22, username=admin10
+[2017-10-04 21:32:30] [NOTICE ] [admin10]: admin10@test logged in from IP address ::1
+[2017-10-04 21:32:30] [DEBUG  ] [admin10]: getAccountStatus returned 0 for user=admin10
+[2017-10-04 21:32:30] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:32:36] [DEBUG  ] [admin10]: getEventIdsByUser returned 4 results for userid=22
+[2017-10-04 21:32:36] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-10-04 21:32:57] [NOTICE ] [admin10]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-10-04 21:32:57] [DEBUG  ] [admin10]: AllActiveUsers BCC: root@test,member01@test,member02@test,member03@test,member04@test,member05@test,member06@test,referee07@test,referee08@test,officer09@test,admin10@test,demo13@test,demo14@test,demo15@test,demo16@test,demo17@test,demo18@test,
+[2017-10-04 21:32:57] [NOTICE ] [admin10]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:32:57] [NOTICE ] [admin10]: Contact to all members
+[2017-10-04 21:32:57] [NOTICE ] [admin10]: TO:utcsmashclub@gmail.com/ SUBJECT:Announcement: This is a test/ BODY:admin10 Posted a new announcement: This is a test
+THIS IS A TEST OF THE SMASHCLUB NOTIFICATION SYSTEM/ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+Bcc: root@test,member01@test,member02@test,member03@test,member04@test,member05@test,member06@test,referee07@test,referee08@test,officer09@test,admin10@test,demo13@test,demo14@test,demo15@test,demo16@test,demo17@test,demo18@test,
+
+[2017-10-04 21:33:04] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:34:02] [DEBUG  ] [admin10]: getGuestListByEvent returned 10 rows for event id=12
+[2017-10-04 21:34:44] [NOTICE ] [admin10]: Sending a contact email to all attendees of event ID 12
+[2017-10-04 21:34:44] [DEBUG  ] [admin10]: EventGusts BCC: member01@test,member02@test,member03@test,member04@test,member05@test,member06@test,referee07@test,referee08@test,officer09@test,admin10@test,
+[2017-10-04 21:34:44] [NOTICE ] [admin10]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:34:44] [NOTICE ] [admin10]: Contact to event guests (EVENT ID=12)
+[2017-10-04 21:34:44] [NOTICE ] [admin10]: TO:utcsmashclub@gmail.com/ SUBJECT:New Message From Event Host/ BODY:New Contact From: An Indian, Reply To: indian@cups.info 
+ This guy thinks he's an indian? What is he, an asshole? the fuck is he doin./ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+Bcc: member01@test,member02@test,member03@test,member04@test,member05@test,member06@test,referee07@test,referee08@test,officer09@test,admin10@test,
+
+[2017-10-04 21:34:47] [DEBUG  ] [admin10]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:36:38] [NOTICE ] [admin10]: admin10 logged out
+[2017-10-04 21:36:38] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:36:47] [DEBUG  ] [member03]: Authentication successful: email=member03@test, type=1, uuid=15, username=member03
+[2017-10-04 21:36:47] [NOTICE ] [member03]: member03@test logged in from IP address ::1
+[2017-10-04 21:36:47] [DEBUG  ] [member03]: getAccountStatus returned 0 for user=member03
+[2017-10-04 21:36:47] [DEBUG  ] [member03]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:36:57] [DEBUG  ] [member03]: getEventIdsByUser returned 4 results for userid=15
+[2017-10-04 21:36:57] [DEBUG  ] [member03]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-10-04 21:37:27] [DEBUG  ] [member03]: getEventIdsByUser returned 4 results for userid=15
+[2017-10-04 21:37:27] [DEBUG  ] [member03]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-10-04 21:37:39] [NOTICE ] [member03]: member03 logged out
+[2017-10-04 21:37:39] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:37:46] [ALERT  ] [Anonymous]: Login failed for user member02@test from ::1 (invalid password)
+[2017-10-04 21:37:48] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:37:58] [ALERT  ] [Anonymous]: User ID 14 password was reset using a temporary password.  requested the reset and was shown the new password.
+[2017-10-04 21:37:58] [DEBUG  ] [Anonymous]: getUserEmailAddress returned member02@test for UUID 14
+[2017-10-04 21:37:58] [NOTICE ] [Anonymous]: Email is turned off, contents will be dumped to logs.
+[2017-10-04 21:37:58] [NOTICE ] [Anonymous]: Contact to single user (ID=14)
+[2017-10-04 21:37:58] [NOTICE ] [Anonymous]: TO:member02@test/ SUBJECT:Temporary SmashClub Password/ BODY:You requested a password reset on SmashClub. Your temporary password: 
+PYNBQb6HSr
+You will be required to change to a new password the next time you log in.
+
+		IF YOU DID NOT REQUEST THIS CHANGE, CONTACT THE CLUB STAFF IMMEDIATELY./ HEADER:From: SmashClub2 <utcsmashclub@gmail.com>
+
+[2017-10-04 21:37:58] [ALERT  ] [Anonymous]: Self password reset performed for user member02
+[2017-10-04 21:38:00] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:39:00] [ALERT  ] [Anonymous]: Page:ADMINPANEL requested by unauthorized user, IP: ::1
+[2017-10-04 21:39:01] [ALERT  ] [Anonymous]: 403 - FORBIDDEN, errorpage served to ::1
+[2017-10-04 21:39:14] [DEBUG  ] [member02]: Authentication successful: email=member02@test, type=1, uuid=14, username=member02
+[2017-10-04 21:39:14] [NOTICE ] [member02]: member02@test logged in from IP address ::1
+[2017-10-04 21:39:14] [DEBUG  ] [member02]: getAccountStatus returned 1 for user=member02
+[2017-10-04 21:39:14] [NOTICE ] [member02]: User member02 has expired password flag. Redirecting to password change form.
+[2017-10-04 21:39:21] [NOTICE ] [member02]: User member02 successfully changed their password
+[2017-10-04 21:39:21] [NOTICE ] [member02]: member02 logged out
+[2017-10-04 21:39:22] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:39:29] [DEBUG  ] [member02]: Authentication successful: email=member02@test, type=1, uuid=14, username=member02
+[2017-10-04 21:39:29] [NOTICE ] [member02]: member02@test logged in from IP address ::1
+[2017-10-04 21:39:29] [DEBUG  ] [member02]: getAccountStatus returned 0 for user=member02
+[2017-10-04 21:39:29] [DEBUG  ] [member02]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:39:36] [DEBUG  ] [member02]: getProfilesByUsername called with search=, staffonly=
+[2017-10-04 21:41:39] [NOTICE ] [member02]: member02 logged out
+[2017-10-04 21:41:40] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:41:47] [DEBUG  ] [member03]: Authentication successful: email=member03@test, type=1, uuid=15, username=member03
+[2017-10-04 21:41:47] [NOTICE ] [member03]: member03 logged in from IP address ::1
+[2017-10-04 21:41:47] [DEBUG  ] [member03]: getAccountStatus returned 0 for user=member03
+[2017-10-04 21:41:47] [DEBUG  ] [member03]: getAllUpcomingEvents returned 3 rows, private=
+[2017-10-04 21:42:21] [NOTICE ] [member03]: member03 logged out
+[2017-10-04 21:42:21] [DEBUG  ] [Anonymous]: getAllUpcomingEvents returned 3 rows, private=

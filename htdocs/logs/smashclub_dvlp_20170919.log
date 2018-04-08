@@ -1,0 +1,1852 @@
+[2017-08-15 20:37:54] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 20:37:54] [L4-DEBUG]: Insert query successful, new season ID is 7
+[2017-08-15 20:37:54] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 7
+[2017-08-15 20:37:54] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 5
+[2017-08-15 20:37:54] [L4-DEBUG]: getSeasonsByGame Query: SELECT season_id FROM season_data WHERE season_game in ('4', 0)
+[2017-08-15 20:37:54] [L4-DEBUG]: getSeasonsByGame returned 4 rows
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 1
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 13
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 14
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 15
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 16
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 17
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 18
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 19
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 20
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 21
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 22
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 23
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 24
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 25
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 26
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 30
+[2017-08-15 20:37:54] [L4-DEBUG]: Looking for records for UUID 33
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '1'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '13'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '14'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '15'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '16'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '17'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '18'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '19'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '20'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '21'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '22'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '23'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '24'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '25'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '26'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '30'
+[2017-08-15 20:37:54] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '33'
+[2017-08-15 20:37:54] [L4-DEBUG]: Initial season ratings have been populated using the last-season method.
+[2017-08-15 20:37:54] [L3-INFO ]: User TestRoot started a new season: Well Fuck
+[2017-08-15 20:38:29] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 20:38:35] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 20:38:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:43:00] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:43:14] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 20:43:14] [L4-DEBUG]: Copy query completed.
+[2017-08-15 20:43:14] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 20:43:14] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 20:43:14] [L4-DEBUG]: Settings change completed.
+[2017-08-15 20:43:14] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 20:43:16] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:45:15] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 20:45:15] [L4-DEBUG]: Insert query successful, new season ID is 7
+[2017-08-15 20:45:15] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 7
+[2017-08-15 20:45:15] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 5
+[2017-08-15 20:45:15] [L4-DEBUG]: getSeasonsByGame Query: SELECT season_id FROM season_data WHERE season_game in ('4', 0)
+[2017-08-15 20:45:15] [L4-DEBUG]: getSeasonsByGame returned 4 rows
+[2017-08-15 20:45:15] [L1-ERROR]: populateInitRanks failed on records query.
+[2017-08-15 20:45:15] [L1-ERROR]: Query: SELECT uuid, rank_final FROM user_rank_history WHERE season_number IN ('2,3,4,7') ORDER BY season_id DESC
+[2017-08-15 20:45:15] [L1-ERROR]: MySQL Error: Unknown column 'season_id' in 'order clause'
+[2017-08-15 20:45:18] [L3-INFO ]: Error page was displayed with e=500
+[2017-08-15 20:47:06] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:47:17] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 20:47:17] [L4-DEBUG]: Copy query completed.
+[2017-08-15 20:47:17] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 20:47:17] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 20:47:17] [L4-DEBUG]: Settings change completed.
+[2017-08-15 20:47:17] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 20:47:20] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:49:32] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 20:49:32] [L4-DEBUG]: Insert query successful, new season ID is 8
+[2017-08-15 20:49:32] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 8
+[2017-08-15 20:49:32] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 6
+[2017-08-15 20:49:32] [L4-DEBUG]: getSeasonsByGame Query: SELECT season_id FROM season_data WHERE season_game in ('4', 0)
+[2017-08-15 20:49:32] [L4-DEBUG]: getSeasonsByGame returned 5 rows
+[2017-08-15 20:49:32] [L4-DEBUG]: Looking for records for UUID 1
+[2017-08-15 20:49:32] [L4-DEBUG]: Found a record for UUID 1 = 2999
+[2017-08-15 20:49:32] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2999', rank_season_high = 0, rank_placements = '6' WHERE uuid = '1'
+[2017-08-15 20:49:32] [L4-DEBUG]: Initial season ratings have been populated using the last-season method.
+[2017-08-15 20:49:32] [L3-INFO ]: User TestRoot started a new season: I Am Groot
+[2017-08-15 20:49:36] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 20:53:09] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-15 20:53:09] [L4-DEBUG]: Copy query completed.
+[2017-08-15 20:53:09] [L4-DEBUG]: Season ID update query completed.
+[2017-08-15 20:53:09] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-15 20:53:09] [L4-DEBUG]: Settings change completed.
+[2017-08-15 20:53:09] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-15 20:53:11] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-15 20:54:29] [L4-DEBUG]: Entering startSeason...
+[2017-08-15 20:54:29] [L4-DEBUG]: Insert query successful, new season ID is 9
+[2017-08-15 20:54:29] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 9
+[2017-08-15 20:54:29] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 5
+[2017-08-15 20:54:29] [L4-DEBUG]: getSeasonsByGame Query: SELECT season_id FROM season_data WHERE season_game in ('4', 0)
+[2017-08-15 20:54:29] [L4-DEBUG]: getSeasonsByGame returned 6 rows
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 1
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 1 = 2999
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 13
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 13 = 422
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 14
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 14 = 351
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 15
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 15 = 746
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 16
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 16 = 748
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 17
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 17 = 1122
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 18
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 18 = 1237
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 19
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 19 = 1569
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 20
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 20 = 1738
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 21
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 21 = 1643
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 22
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 22 = 2128
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 23
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 23 = 2158
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 24
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 24 = 2515
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 25
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 25 = 2156
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 26
+[2017-08-15 20:54:29] [L4-DEBUG]: Found a record for UUID 26 = 2492
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 30
+[2017-08-15 20:54:29] [L4-DEBUG]: Looking for records for UUID 33
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2999', rank_season_high = 0, rank_placements = '5' WHERE uuid = '1'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '422', rank_season_high = 0, rank_placements = '5' WHERE uuid = '13'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '351', rank_season_high = 0, rank_placements = '5' WHERE uuid = '14'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '746', rank_season_high = 0, rank_placements = '5' WHERE uuid = '15'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '748', rank_season_high = 0, rank_placements = '5' WHERE uuid = '16'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1122', rank_season_high = 0, rank_placements = '5' WHERE uuid = '17'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1237', rank_season_high = 0, rank_placements = '5' WHERE uuid = '18'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1569', rank_season_high = 0, rank_placements = '5' WHERE uuid = '19'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1738', rank_season_high = 0, rank_placements = '5' WHERE uuid = '20'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1643', rank_season_high = 0, rank_placements = '5' WHERE uuid = '21'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2128', rank_season_high = 0, rank_placements = '5' WHERE uuid = '22'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2158', rank_season_high = 0, rank_placements = '5' WHERE uuid = '23'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2515', rank_season_high = 0, rank_placements = '5' WHERE uuid = '24'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2156', rank_season_high = 0, rank_placements = '5' WHERE uuid = '25'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '2492', rank_season_high = 0, rank_placements = '5' WHERE uuid = '26'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '30'
+[2017-08-15 20:54:29] [L4-DEBUG]: init_ranks query: UPDATE user_ranking SET rank_current = '1200', rank_season_high = 0, rank_placements = '5' WHERE uuid = '33'
+[2017-08-15 20:54:29] [L4-DEBUG]: Initial season ratings have been populated using the last-season method.
+[2017-08-15 20:54:29] [L3-INFO ]: User TestRoot started a new season: SuS
+[2017-08-15 20:54:32] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 20:59:27] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-15 21:07:25] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-15 21:07:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 00:03:04] [L1-ERROR]: Email to  was rejected by the mail server.
+[2017-08-16 00:04:28] [L1-ERROR]: Email to notifications-beta@localhost was rejected by the mail server.
+[2017-08-16 00:12:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 18:16:20] [L1-ERROR]: Email to notifications-beta@localhost was rejected by the mail server.
+[2017-08-16 18:17:03] [L1-ERROR]: Email to notifications-beta@localhost was rejected by the mail server.
+[2017-08-16 18:19:47] [L1-ERROR]: Email to notifications-beta@localhost was rejected by the mail server.
+[2017-08-16 18:21:20] [L3-INFO ]: Sent an email to notifications-beta@localhost: SmashClubEmailTest
+[2017-08-16 18:22:41] [L3-INFO ]: Sent an email to utcsmashclub@gmail.com: SmashClubEmailTest
+[2017-08-16 19:13:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 19:14:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 20:01:27] [L3-INFO ]: Sent an email to utcsmashclub@gmail.com: SmashClubEmailTest
+[2017-08-16 20:15:29] [L3-INFO ]: Sent an email to bkf926@mocs.utc.edu: SmashClubEmailTest
+[2017-08-16 20:17:33] [L4-DEBUG]: AllActiveUsers BCC: 
+[2017-08-16 20:17:40] [L3-INFO ]: Sent an email to all active users: SmashClubEmailTest
+[2017-08-16 20:20:55] [L1-ERROR]: getAllUsersBccHeader failed
+[2017-08-16 20:20:55] [L1-ERROR]: MySQL Error: Unknown column 'prof_email' in 'field list'
+[2017-08-16 20:21:37] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,bushplow365@yahoo.com,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,
+[2017-08-16 20:21:49] [L3-INFO ]: Sent an email to all active users: SmashClubEmailTest
+[2017-08-16 20:34:16] [L4-DEBUG]: Entering mass mail tester...
+[2017-08-16 20:34:16] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,hvz272@mocs.utc.edu,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,
+[2017-08-16 20:34:28] [L3-INFO ]: Sent an email to all active users: SmashClubEmailTest
+[2017-08-16 20:34:28] [L4-DEBUG]: Mass mail test complete.
+[2017-08-16 21:03:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 21:03:12] [L3-INFO ]: User TestRoot logged out
+[2017-08-16 21:03:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 21:04:36] [L3-INFO ]: New user Enforcer574 self-registered successfully, UUID = 34
+[2017-08-16 21:04:36] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-08-16 21:04:43] [L3-INFO ]: Sent an email to elamderek574@gmail.com: Your SmashClub Account Has Been Created
+[2017-08-16 21:04:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 21:07:44] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-16 21:58:10] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 21:58:45] [L3-INFO ]: Sending a Contact email to the spokesperson (ID=34)
+[2017-08-16 21:58:55] [L3-INFO ]: Sent an email to elamderek574@gmail.com: New Contact
+[2017-08-16 21:58:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 22:22:01] [L3-INFO ]: Sending a Contact email to the spokesperson (ID=34)
+[2017-08-16 22:22:04] [L3-INFO ]: Sent an email to elamderek574@gmail.com: New Contact
+[2017-08-16 22:22:07] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 22:24:21] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-16 22:25:22] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 22:25:22] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:15:44] [L3-INFO ]: Sending a Contact email to the spokesperson (ID=34)
+[2017-08-16 23:15:47] [L3-INFO ]: Sent an email to elamderek574@gmail.com: New Contact
+[2017-08-16 23:15:50] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:17:42] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-16 23:18:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:18:13] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:22:25] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:22:25] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:22:28] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:22:28] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:22:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:22:44] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:23:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:23:29] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:23:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:23:37] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:23:41] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:23:41] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-16 23:25:57] [L3-INFO ]: Sending a Contact email to event host (ID=1)
+[2017-08-16 23:26:00] [L3-INFO ]: Sent an email to bkf926@mocs.utc.edu: New Message About Your Event
+[2017-08-16 23:26:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:30:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-16 23:36:11] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-16 23:36:23] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-16 23:36:23] [L3-INFO ]: User testmember1 logged in
+[2017-08-16 23:36:23] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-16 23:36:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-16 23:36:34] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-16 23:36:49] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-16 23:36:55] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-17 18:26:12] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 18:47:56] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-17 18:47:56] [L3-INFO ]: User testofficer1 logged in
+[2017-08-17 18:47:56] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-17 18:47:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 18:52:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 18:52:57] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 18:55:30] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-17 18:55:31] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 18:55:33] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 18:57:05] [L3-INFO ]: New user testmember12 self-registered successfully, UUID = 35
+[2017-08-17 18:57:05] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-08-17 18:57:10] [L3-INFO ]: Sent an email to test@utcsmash.org: Your SmashClub Account Has Been Created
+[2017-08-17 18:57:12] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 18:57:17] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 19:16:13] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-17 19:16:13] [L3-INFO ]: User testofficer1 logged in
+[2017-08-17 19:16:13] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-17 19:16:14] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
+[2017-08-17 19:17:43] [L3-INFO ]: A new event was created by TestOfficer1: Fall 2017 First Meeting
+[2017-08-17 19:17:43] [L3-INFO ]: Sending an email to all active users: New Event: Fall 2017 First Meeting
+[2017-08-17 19:17:43] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 19:17:56] [L3-INFO ]: Email complete.
+[2017-08-17 19:17:56] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-08-17 19:17:57] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 19:17:57] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 19:43:36] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-17 19:44:24] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-17 19:44:24] [L3-INFO ]: Sending an email to all active users: Announcement: Hello There!
+[2017-08-17 19:44:24] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 19:44:35] [L3-INFO ]: Email complete.
+[2017-08-17 20:13:34] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:13:34] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 20:14:51] [L3-INFO ]: An event was changed by TestOfficer1: Sample Training Event
+[2017-08-17 20:14:51] [L3-INFO ]: Sending an email to all active users: Event Update: Sample Training Event
+[2017-08-17 20:14:51] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 20:14:58] [L3-INFO ]: Email complete.
+[2017-08-17 20:14:58] [L3-INFO ]: Posted to activity feed with type: 
+[2017-08-17 20:14:59] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:14:59] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 20:15:17] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:15:17] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 20:15:47] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-17 20:15:52] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:27:48] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-17 20:28:56] [L3-INFO ]: Site setting [PollStatus] changed to 0
+[2017-08-17 20:28:56] [L3-INFO ]: The active poll was closed by TestOfficer1
+[2017-08-17 20:28:56] [L3-INFO ]: Posted to activity feed with type: 
+[2017-08-17 20:29:55] [L3-INFO ]: Site setting [PollStatus] changed to 1
+[2017-08-17 20:29:55] [L3-INFO ]: Site setting [PollResponses] changed to 25%|50%|40%|25%
+[2017-08-17 20:29:55] [L3-INFO ]: Site setting [PollQuestion] changed to If you answer this randomly, what is the chance you will be correct?
+[2017-08-17 20:29:55] [L3-INFO ]: A new multiple-choice poll was opened by TestOfficer1
+[2017-08-17 20:29:55] [L3-INFO ]: Posted to activity feed with type: 
+[2017-08-17 20:29:56] [L4-DEBUG]: PollChoices size=4, value=25%,50%,40%,25%
+[2017-08-17 20:41:00] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-17 20:41:01] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:41:09] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-17 20:41:09] [L3-INFO ]: User testofficer1 logged in
+[2017-08-17 20:41:09] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-17 20:41:10] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 20:41:16] [L3-INFO ]: Site setting [PollStatus] changed to 0
+[2017-08-17 20:41:16] [L3-INFO ]: The active poll was closed by TestOfficer1
+[2017-08-17 20:41:16] [L3-INFO ]: Posted to activity feed with type: POLL_ACTION
+[2017-08-17 20:42:35] [L3-INFO ]: Site setting [PollStatus] changed to 1
+[2017-08-17 20:42:35] [L3-INFO ]: Site setting [PollResponses] changed to Gamecube|Wiimote|Wii U Gamepad|Pro Controller
+[2017-08-17 20:42:35] [L3-INFO ]: Site setting [PollQuestion] changed to What is your preferred controller?
+[2017-08-17 20:42:35] [L3-INFO ]: A new multiple-choice poll was opened by TestOfficer1
+[2017-08-17 20:42:35] [L3-INFO ]: Posted to activity feed with type: POLL_ACTION
+[2017-08-17 20:42:35] [L3-INFO ]: Sending an email to all active users: New Poll Available
+[2017-08-17 20:42:35] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 20:42:41] [L3-INFO ]: Email complete.
+[2017-08-17 20:42:42] [L4-DEBUG]: PollChoices size=4, value=Gamecube,Wiimote,Wii U Gamepad,Pro Controller
+[2017-08-17 20:42:59] [L3-INFO ]: A poll response was recorded (multiple choice).
+[2017-08-17 20:43:00] [L4-DEBUG]: PollChoices size=4, value=Gamecube,Wiimote,Wii U Gamepad,Pro Controller
+[2017-08-17 21:04:28] [L4-DEBUG]: PollChoices size=4, value=Gamecube,Wiimote,Wii U Gamepad,Pro Controller
+[2017-08-17 21:04:31] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-17 21:04:32] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:04:38] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-17 21:04:38] [L3-INFO ]: User testroot logged in
+[2017-08-17 21:04:38] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-17 21:04:39] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:04:45] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-17 21:04:45] [L4-DEBUG]: Copy query completed.
+[2017-08-17 21:04:45] [L4-DEBUG]: Season ID update query completed.
+[2017-08-17 21:04:45] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-17 21:04:45] [L4-DEBUG]: Settings change completed.
+[2017-08-17 21:04:45] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-17 21:04:45] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-08-17 21:04:45] [L3-INFO ]: Sending an email to all active users: The Current Season Has Ended
+[2017-08-17 21:04:45] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 21:04:57] [L3-INFO ]: Email complete.
+[2017-08-17 21:05:00] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:07:07] [L4-DEBUG]: Entering startSeason...
+[2017-08-17 21:07:07] [L4-DEBUG]: Insert query successful, new season ID is 10
+[2017-08-17 21:07:07] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 10
+[2017-08-17 21:07:07] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 3
+[2017-08-17 21:07:07] [L4-DEBUG]: Initial season ratings have been populated using the fresh-start method,.
+[2017-08-17 21:07:07] [L3-INFO ]: User TestRoot started a new season: Which Season
+[2017-08-17 21:07:07] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-08-17 21:07:07] [L3-INFO ]: Sending an email to all active users: A New Season Has Started: Which Season
+[2017-08-17 21:07:07] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 21:07:23] [L3-INFO ]: Email complete.
+[2017-08-17 21:07:27] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-17 21:07:31] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:26:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 21:27:56] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 21:28:03] [L3-INFO ]: User TestRoot logged out
+[2017-08-17 21:28:04] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:28:11] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-17 21:28:11] [L3-INFO ]: User testmember1 logged in
+[2017-08-17 21:28:11] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-17 21:28:12] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:28:21] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 21:28:47] [L3-INFO ]: User TestMember1 logged out
+[2017-08-17 21:28:47] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:29:56] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:29:56] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-17 21:34:00] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-17 21:34:00] [L3-INFO ]: User testofficer1 logged in
+[2017-08-17 21:34:00] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-17 21:34:01] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 21:34:14] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=9
+[2017-08-17 21:37:05] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:38:17] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:38:30] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:41:15] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:42:51] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:43:12] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=9
+[2017-08-17 21:43:36] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-08-17 21:55:28] [L4-DEBUG]: PollChoices size=4, value=Gamecube,Wiimote,Wii U Gamepad,Pro Controller
+[2017-08-17 21:55:33] [L4-DEBUG]: MCPollResults = 0,0,1,0
+[2017-08-17 22:18:04] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-17 22:20:47] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 22:21:08] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
+[2017-08-17 22:21:08] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-17 22:29:16] [L2-WARN ]: Anonymous user attempted to load CREATE EVENT form
+[2017-08-17 22:29:17] [L3-INFO ]: Error page was displayed with e=401
+[2017-08-17 22:29:30] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:29:46] [L2-WARN ]: Login failed for user testofficer1- incorrect password
+[2017-08-17 22:29:50] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:29:57] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
+[2017-08-17 22:29:57] [L3-INFO ]: User testofficer1 logged in
+[2017-08-17 22:29:57] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
+[2017-08-17 22:29:58] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:30:32] [L3-INFO ]: A new event was created by TestOfficer1: The SmashClub Invitational
+[2017-08-17 22:30:32] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-08-17 22:30:33] [L4-DEBUG]: getAllUpcomingEvents returned 5 rows, private=1
+[2017-08-17 22:30:33] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=23
+[2017-08-17 22:31:13] [L3-INFO ]: User TestOfficer1 logged out
+[2017-08-17 22:31:14] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:31:17] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 22:31:20] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:31:20] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-17 22:32:10] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:37:24] [L2-WARN ]: Login failed for user testadmin1- incorrect password
+[2017-08-17 22:37:32] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-17 22:37:32] [L3-INFO ]: User testmember1 logged in
+[2017-08-17 22:37:32] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-17 22:37:33] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:37:44] [L4-DEBUG]: PollChoices size=4, value=Gamecube,Wiimote,Wii U Gamepad,Pro Controller
+[2017-08-17 22:40:48] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:40:53] [L3-INFO ]: User TestMember1 logged out
+[2017-08-17 22:40:54] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:43:37] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
+[2017-08-17 22:43:37] [L3-INFO ]: User testroot logged in
+[2017-08-17 22:43:37] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
+[2017-08-17 22:43:38] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:43:47] [L3-INFO ]: --------
+[2017-08-17 22:43:47] [L3-INFO ]: A match was recorded by TestRoot
+[2017-08-17 22:43:47] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-17 22:43:47] [L3-INFO ]: Player[1]: TestMember1, Score: 1, Old rank: 1200, New rank: 1300, PM Counter: 3
+[2017-08-17 22:43:47] [L3-INFO ]: Player[2]: TestMember2, Score: 0, Old rank: 1200, New rank: 1100, PM Counter: 3
+[2017-08-17 22:43:47] [L3-INFO ]: --------
+[2017-08-17 22:43:47] [L3-INFO ]: User ID 13 rank was updated to 1300 in database.
+[2017-08-17 22:43:47] [L3-INFO ]: User ID 14 rank was updated to 1100 in database.
+[2017-08-17 22:43:47] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-17 22:43:57] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-17 22:44:14] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-17 22:44:14] [L4-DEBUG]: Copy query completed.
+[2017-08-17 22:44:14] [L4-DEBUG]: Season ID update query completed.
+[2017-08-17 22:44:14] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-17 22:44:14] [L4-DEBUG]: Settings change completed.
+[2017-08-17 22:44:14] [L3-INFO ]: User TestRoot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-17 22:44:14] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-08-17 22:44:14] [L3-INFO ]: Sending an email to all active users: The Current Season Has Ended
+[2017-08-17 22:44:14] [L4-DEBUG]: AllActiveUsers BCC: bkf926@mocs.utc.edu,elamderek574@gmail.com,beta@utcsmash.org,enforcer574@hotmail.com,dr_octagonapus_xxiii@comcast.net,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,beta@utcsmash.org,elamderek574@gmail.com,test@utcsmash.org,
+[2017-08-17 22:44:19] [L3-INFO ]: Email complete.
+[2017-08-17 22:44:22] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:54:11] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-17 22:57:12] [L3-INFO ]: User TestRoot logged out
+[2017-08-17 22:57:13] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 22:58:23] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:04:31] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:10:48] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:11:43] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:11:47] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:11:56] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-17 23:13:50] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:33:49] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:33:57] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:34:30] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:39:22] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:40:06] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:40:36] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:45:57] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:48:38] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:49:03] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-18 18:49:03] [L3-INFO ]: User testmember1 logged in
+[2017-08-18 18:49:03] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-18 18:49:04] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:50:03] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:50:18] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:50:47] [L3-INFO ]: User TestMember1 logged out
+[2017-08-18 18:50:48] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 18:53:14] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-18 19:57:09] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-08-22 12:36:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-22 12:37:27] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:46:39] [L4-DEBUG]: getProfilesByUsername called with search=mem, staffonly=
+[2017-08-22 12:46:47] [L4-DEBUG]: getProfilesByUsername called with search=sam, staffonly=
+[2017-08-22 12:46:57] [L4-DEBUG]: getProfilesByUsername called with search=mariah, staffonly=
+[2017-08-22 12:47:01] [L4-DEBUG]: getProfilesByUsername called with search=ed, staffonly=
+[2017-08-22 12:47:44] [L4-DEBUG]: getProfilesByUsername called with search=stay, staffonly=
+[2017-08-22 12:48:43] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:49:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:49:57] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:50:08] [L4-DEBUG]: getProfilesByUsername called with search=roger, staffonly=
+[2017-08-22 12:50:21] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:50:27] [L4-DEBUG]: getProfilesByUsername called with search=axel, staffonly=
+[2017-08-22 12:53:18] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-22 12:53:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:53:29] [L4-DEBUG]: getProfilesByUsername called with search=karl, staffonly=
+[2017-08-22 12:53:36] [L4-DEBUG]: getProfilesByUsername called with search=admin, staffonly=
+[2017-08-22 12:54:05] [L2-WARN ]: Login failed for user testmember1- incorrect password
+[2017-08-22 12:54:06] [L4-DEBUG]: getProfilesByUsername called with search=admin, staffonly=
+[2017-08-22 12:54:10] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
+[2017-08-22 12:54:10] [L3-INFO ]: User testmember1 logged in
+[2017-08-22 12:54:10] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
+[2017-08-22 12:54:10] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-22 12:54:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-22 12:54:45] [L3-INFO ]: User TestMember1 logged out
+[2017-08-22 12:54:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-23 13:28:37] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 12:52:59] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 12:53:26] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-24 17:51:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 18:31:43] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 18:31:46] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:32:00] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:35:55] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:35:56] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-24 18:35:56] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-24 18:35:56] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-24 18:40:39] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:40:39] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-24 18:41:34] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:41:44] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:42:11] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:42:22] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:42:30] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:49:26] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:49:34] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:49:41] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 18:49:41] [L3-INFO ]: User demoroot logged in
+[2017-08-24 18:49:41] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 18:49:41] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 18:49:45] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 18:51:09] [L4-DEBUG]: getAllCurrentRankData called with order=4
+[2017-08-24 18:51:22] [L4-DEBUG]: getAllCurrentRankData called with order=4
+[2017-08-24 18:52:15] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 18:52:17] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:54:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:55:08] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 18:55:40] [L3-INFO ]: User demoroot logged out
+[2017-08-24 18:55:40] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 18:55:41] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 19:00:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 19:00:38] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:00:38] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 19:01:13] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 19:01:13] [L3-INFO ]: User demoroot logged in
+[2017-08-24 19:01:13] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 19:01:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:06:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:07:27] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-08-24 19:07:43] [L3-INFO ]: User demoroot logged out
+[2017-08-24 19:07:43] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:07:46] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:09:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:10:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:10:39] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:10:39] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 19:10:50] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 19:10:50] [L3-INFO ]: User demoroot logged in
+[2017-08-24 19:10:50] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 19:10:50] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:11:04] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=13
+[2017-08-24 19:11:04] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
+[2017-08-24 19:11:04] [L2-WARN ]: User ID 13 password was reset using a temporary password. demoroot requested the reset and was shown the new password.
+[2017-08-24 19:11:12] [L3-INFO ]: User demoroot logged out
+[2017-08-24 19:11:12] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:11:17] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-24 19:11:17] [L3-INFO ]: User member01 logged in
+[2017-08-24 19:11:17] [L4-DEBUG]: getAccountStatus returned 1 for user=member01
+[2017-08-24 19:11:17] [L3-INFO ]: User member01 has expired password flag. Redirecting to password change form.
+[2017-08-24 19:11:41] [L3-INFO ]: User member01 successfully changed their password
+[2017-08-24 19:11:41] [L3-INFO ]: User member01 logged out
+[2017-08-24 19:11:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:11:51] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-24 19:11:51] [L3-INFO ]: User member01 logged in
+[2017-08-24 19:11:51] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-08-24 19:11:51] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:14:45] [L3-INFO ]: User member01 logged out
+[2017-08-24 19:14:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:15:44] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 19:15:44] [L3-INFO ]: User demoroot logged in
+[2017-08-24 19:15:44] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 19:15:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:15:59] [L3-INFO ]: User demoroot successfully changed their password
+[2017-08-24 19:15:59] [L3-INFO ]: User demoroot logged out
+[2017-08-24 19:16:00] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:16:07] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 19:16:07] [L3-INFO ]: User demoroot logged in
+[2017-08-24 19:16:07] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 19:16:07] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:16:24] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=19
+[2017-08-24 19:16:24] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=2
+[2017-08-24 19:16:24] [L2-WARN ]: User ID 19 password was reset using a temporary password. demoroot requested the reset and was shown the new password.
+[2017-08-24 19:16:35] [L3-INFO ]: User demoroot logged out
+[2017-08-24 19:16:35] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:16:41] [L4-DEBUG]: Authentication successful: type=2, uuid=19, username=referee07
+[2017-08-24 19:16:41] [L3-INFO ]: User referee07 logged in
+[2017-08-24 19:16:41] [L4-DEBUG]: getAccountStatus returned 1 for user=referee07
+[2017-08-24 19:16:41] [L3-INFO ]: User referee07 has expired password flag. Redirecting to password change form.
+[2017-08-24 19:16:51] [L3-INFO ]: User referee07 successfully changed their password
+[2017-08-24 19:16:51] [L3-INFO ]: User referee07 logged out
+[2017-08-24 19:16:52] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:17:03] [L4-DEBUG]: Authentication successful: type=2, uuid=19, username=referee07
+[2017-08-24 19:17:03] [L3-INFO ]: User referee07 logged in
+[2017-08-24 19:17:03] [L4-DEBUG]: getAccountStatus returned 0 for user=referee07
+[2017-08-24 19:17:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:17:16] [L3-INFO ]: User referee07 logged out
+[2017-08-24 19:17:16] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:17:24] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-24 19:17:24] [L3-INFO ]: User demoroot logged in
+[2017-08-24 19:17:24] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-24 19:17:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:17:44] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=22
+[2017-08-24 19:17:44] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=4
+[2017-08-24 19:17:44] [L2-WARN ]: User ID 22 password was reset using a temporary password. demoroot requested the reset and was shown the new password.
+[2017-08-24 19:17:52] [L3-INFO ]: User demoroot logged out
+[2017-08-24 19:17:52] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:17:58] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-08-24 19:17:58] [L3-INFO ]: User admin10 logged in
+[2017-08-24 19:17:58] [L4-DEBUG]: getAccountStatus returned 1 for user=admin10
+[2017-08-24 19:17:58] [L3-INFO ]: User admin10 has expired password flag. Redirecting to password change form.
+[2017-08-24 19:18:07] [L3-INFO ]: User admin10 successfully changed their password
+[2017-08-24 19:18:07] [L3-INFO ]: User admin10 logged out
+[2017-08-24 19:18:08] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:18:15] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-08-24 19:18:15] [L3-INFO ]: User admin10 logged in
+[2017-08-24 19:18:15] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-08-24 19:18:15] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:18:57] [L4-DEBUG]: Entering compareUserAccess, user1=22, user2=21
+[2017-08-24 19:18:57] [L4-DEBUG]: Running compareUserAccess, type1=4, type2=3
+[2017-08-24 19:18:57] [L2-WARN ]: User ID 21 password was reset using a temporary password. admin10 requested the reset and was shown the new password.
+[2017-08-24 19:19:07] [L3-INFO ]: User admin10 logged out
+[2017-08-24 19:19:07] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:19:11] [L4-DEBUG]: Authentication successful: type=3, uuid=21, username=officer09
+[2017-08-24 19:19:11] [L3-INFO ]: User officer09 logged in
+[2017-08-24 19:19:11] [L4-DEBUG]: getAccountStatus returned 1 for user=officer09
+[2017-08-24 19:19:11] [L3-INFO ]: User officer09 has expired password flag. Redirecting to password change form.
+[2017-08-24 19:19:21] [L3-INFO ]: User officer09 successfully changed their password
+[2017-08-24 19:19:21] [L3-INFO ]: User officer09 logged out
+[2017-08-24 19:19:22] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:22:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:22:32] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-08-24 19:22:32] [L3-INFO ]: User admin10 logged in
+[2017-08-24 19:22:32] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-08-24 19:22:32] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:23:57] [L3-INFO ]: User admin10 logged out
+[2017-08-24 19:23:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:25:01] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:25:13] [L4-DEBUG]: Authentication successful: type=3, uuid=21, username=officer09
+[2017-08-24 19:25:13] [L3-INFO ]: User officer09 logged in
+[2017-08-24 19:25:13] [L4-DEBUG]: getAccountStatus returned 0 for user=officer09
+[2017-08-24 19:25:13] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:25:19] [L3-INFO ]: User officer09 logged out
+[2017-08-24 19:25:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:25:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 19:25:33] [L4-DEBUG]: getProfilesByUsername called with search=ivan, staffonly=
+[2017-08-24 19:25:37] [L4-DEBUG]: getProfilesByUsername called with search=nav, staffonly=
+[2017-08-24 19:25:40] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 19:25:50] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:25:50] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 19:26:02] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-24 19:26:02] [L3-INFO ]: User member01 logged in
+[2017-08-24 19:26:02] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-08-24 19:26:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:27:53] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 19:28:00] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-24 19:28:00] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=13
+[2017-08-24 19:28:10] [L3-INFO ]: User member01 logged out
+[2017-08-24 19:28:10] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:29:36] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:29:45] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:35:26] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-24 19:35:26] [L3-INFO ]: User member01 logged in
+[2017-08-24 19:35:26] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-08-24 19:35:26] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:35:49] [L3-INFO ]: User member01 logged out
+[2017-08-24 19:35:49] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:36:02] [L4-DEBUG]: Authentication successful: type=3, uuid=21, username=officer09
+[2017-08-24 19:36:02] [L3-INFO ]: User officer09 logged in
+[2017-08-24 19:36:02] [L4-DEBUG]: getAccountStatus returned 0 for user=officer09
+[2017-08-24 19:36:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:36:17] [L4-DEBUG]: Entering compareUserAccess, user1=21, user2=15
+[2017-08-24 19:36:17] [L4-DEBUG]: Running compareUserAccess, type1=3, type2=1
+[2017-08-24 19:36:17] [L2-WARN ]: User ID 15 password was reset using a temporary password. officer09 requested the reset and was shown the new password.
+[2017-08-24 19:37:19] [L3-INFO ]: User officer09 logged out
+[2017-08-24 19:37:19] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:37:24] [L4-DEBUG]: Authentication successful: type=1, uuid=15, username=member03
+[2017-08-24 19:37:24] [L3-INFO ]: User member03 logged in
+[2017-08-24 19:37:24] [L4-DEBUG]: getAccountStatus returned 1 for user=member03
+[2017-08-24 19:37:24] [L3-INFO ]: User member03 has expired password flag. Redirecting to password change form.
+[2017-08-24 19:37:32] [L3-INFO ]: User member03 successfully changed their password
+[2017-08-24 19:37:32] [L3-INFO ]: User member03 logged out
+[2017-08-24 19:37:34] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:37:40] [L4-DEBUG]: Authentication successful: type=1, uuid=15, username=member03
+[2017-08-24 19:37:40] [L3-INFO ]: User member03 logged in
+[2017-08-24 19:37:40] [L4-DEBUG]: getAccountStatus returned 0 for user=member03
+[2017-08-24 19:37:40] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 19:37:45] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 19:39:41] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 19:40:02] [L3-INFO ]: User member03 logged out
+[2017-08-24 19:40:02] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:28:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:28:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:28:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:28:40] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:30:23] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:31:49] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:31:49] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 20:32:24] [L3-INFO ]: Guest signed up for event with id 8 using name Derek
+[2017-08-24 20:32:27] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:32:27] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 20:32:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:32:58] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-08-24 20:35:35] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-24 20:35:35] [L3-INFO ]: User member01 logged in
+[2017-08-24 20:35:35] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-08-24 20:35:35] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:35:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-24 20:35:44] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=13
+[2017-08-24 20:35:51] [L3-INFO ]: User member01 signed up for event with id 8
+[2017-08-24 20:35:51] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-24 20:35:51] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-08-24 20:36:15] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:38:07] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:39:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:40:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:40:28] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:41:43] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-24 20:41:58] [L3-INFO ]: A poll response was recorded (multiple choice).
+[2017-08-24 20:41:58] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-24 20:44:18] [L3-INFO ]: User member01 logged out
+[2017-08-24 20:44:18] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:44:27] [L4-DEBUG]: Authentication successful: type=2, uuid=19, username=referee07
+[2017-08-24 20:44:27] [L3-INFO ]: User referee07 logged in
+[2017-08-24 20:44:27] [L4-DEBUG]: getAccountStatus returned 0 for user=referee07
+[2017-08-24 20:44:27] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:44:35] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:46:31] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:46:48] [L3-INFO ]: --------
+[2017-08-24 20:46:48] [L3-INFO ]: A match was recorded by referee07
+[2017-08-24 20:46:48] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-24 20:46:48] [L3-INFO ]: Player[1]: member01, Score: 2, Old rank: 1375, New rank: 1426, PM Counter: 0
+[2017-08-24 20:46:48] [L3-INFO ]: Player[2]: member03, Score: 1, Old rank: 1389, New rank: 1338, PM Counter: 0
+[2017-08-24 20:46:48] [L3-INFO ]: --------
+[2017-08-24 20:46:48] [L3-INFO ]: User ID 13 rank was updated to 1426 in database.
+[2017-08-24 20:46:48] [L3-INFO ]: User ID 15 rank was updated to 1338 in database.
+[2017-08-24 20:46:48] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-24 20:46:53] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:47:34] [L3-INFO ]: User referee07 logged out
+[2017-08-24 20:47:34] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:47:42] [L4-DEBUG]: Authentication successful: type=3, uuid=21, username=officer09
+[2017-08-24 20:47:42] [L3-INFO ]: User officer09 logged in
+[2017-08-24 20:47:42] [L4-DEBUG]: getAccountStatus returned 0 for user=officer09
+[2017-08-24 20:47:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:48:51] [L3-INFO ]: User ID 13 was changed to account type 2 by officer09
+[2017-08-24 20:48:55] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-24 20:49:10] [L4-DEBUG]: Entering compareUserAccess, user1=21, user2=13
+[2017-08-24 20:49:10] [L4-DEBUG]: Running compareUserAccess, type1=3, type2=2
+[2017-08-24 20:49:10] [L3-INFO ]: User ID 13 was changed to account type 1 by officer09
+[2017-08-24 20:50:11] [L4-DEBUG]: Entering compareUserAccess, user1=21, user2=14
+[2017-08-24 20:50:11] [L4-DEBUG]: Running compareUserAccess, type1=3, type2=1
+[2017-08-24 20:50:11] [L2-WARN ]: User ID 14 password was reset using a temporary password. officer09 requested the reset and was shown the new password.
+[2017-08-24 20:51:41] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=1
+[2017-08-24 20:51:48] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=2
+[2017-08-24 20:51:54] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=7
+[2017-08-24 20:53:17] [L4-DEBUG]: MCPollResults = 2,0
+[2017-08-24 20:53:26] [L3-INFO ]: Site setting [PollStatus] changed to 0
+[2017-08-24 20:53:26] [L3-INFO ]: The active poll was closed by officer09
+[2017-08-24 20:53:26] [L3-INFO ]: Posted to activity feed with type: POLL_ACTION
+[2017-08-24 20:53:29] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-24 20:54:27] [L3-INFO ]: User officer09 logged out
+[2017-08-24 20:54:27] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:54:36] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-08-24 20:54:36] [L3-INFO ]: User admin10 logged in
+[2017-08-24 20:54:36] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-08-24 20:54:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:55:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:55:27] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-08-24 20:55:27] [L4-DEBUG]: Copy query completed.
+[2017-08-24 20:55:27] [L4-DEBUG]: Season ID update query completed.
+[2017-08-24 20:55:27] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-08-24 20:55:27] [L4-DEBUG]: Settings change completed.
+[2017-08-24 20:55:27] [L3-INFO ]: User admin10 Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-08-24 20:55:27] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-08-24 20:55:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-24 20:55:33] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-24 20:55:39] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 12:17:44] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-25 12:17:44] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-08-25 12:17:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-25 12:17:57] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-08-25 12:21:24] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-25 12:21:24] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-08-25 17:53:48] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-25 17:53:48] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-08-25 17:53:55] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-25 17:54:16] [L2-WARN ]: Aborting SINGLES FREEPLAY match due to duplicate usernames
+[2017-08-25 17:55:01] [L3-INFO ]: --------
+[2017-08-25 17:55:01] [L3-INFO ]: A match was recorded by admin10
+[2017-08-25 17:55:01] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-08-25 17:55:01] [L3-INFO ]: Player[1]: member01, Score: 2, Old rank: 422, New rank: 510, PM Counter: 5
+[2017-08-25 17:55:01] [L3-INFO ]: Player[2]: member02, Score: 1, Old rank: 351, New rank: 263, PM Counter: 5
+[2017-08-25 17:55:01] [L3-INFO ]: --------
+[2017-08-25 17:55:01] [L3-INFO ]: User ID 13 rank was updated to 510 in database.
+[2017-08-25 17:55:01] [L3-INFO ]: User ID 14 rank was updated to 263 in database.
+[2017-08-25 17:55:02] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-25 17:55:06] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-25 17:55:09] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-25 17:55:43] [L3-INFO ]: --------
+[2017-08-25 17:55:43] [L3-INFO ]: A match was recorded by admin10
+[2017-08-25 17:55:43] [L3-INFO ]: Context: FREEPLAY, Type: DOUBLES
+[2017-08-25 17:55:43] [L3-INFO ]: Player[1/1]: member01, Score: 2, Old rank: 510, New rank: 609, PM Counter: 4
+[2017-08-25 17:55:43] [L3-INFO ]: Player[1/2]: member03, Score: 2, Old rank: 746, New rank: 806, PM Counter: 5
+[2017-08-25 17:55:43] [L3-INFO ]: Player[2/1]: member02, Score: 1, Old rank: 263, New rank: 224, PM Counter: 4
+[2017-08-25 17:55:43] [L3-INFO ]: Player[2/2]: member04, Score: 1, Old rank: 748, New rank: 628, PM Counter: 5
+[2017-08-25 17:55:43] [L3-INFO ]: --------
+[2017-08-25 17:55:43] [L3-INFO ]: User ID 13 rank was updated to 609 in database.
+[2017-08-25 17:55:43] [L3-INFO ]: User ID 15 rank was updated to 806 in database.
+[2017-08-25 17:55:43] [L3-INFO ]: User ID 14 rank was updated to 224 in database.
+[2017-08-25 17:55:43] [L3-INFO ]: User ID 16 rank was updated to 628 in database.
+[2017-08-25 17:55:43] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-08-25 17:56:39] [L2-WARN ]: Aborting DOUBLES FREEPLAY match due to duplicate usernames
+[2017-08-25 17:59:53] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:00:43] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:00:51] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:01:18] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:01:31] [L2-WARN ]: User accessed ranking records with no season-id. Possible defect.
+[2017-08-25 18:01:31] [L4-DEBUG]: getRankHistoryBySeason called with order=4
+[2017-08-25 18:03:56] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:04:08] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-25 18:04:20] [L4-DEBUG]: getRankHistoryBySeason called with order=4
+[2017-08-25 18:04:30] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-26 20:56:04] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-27 13:18:38] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-27 13:37:17] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-27 13:37:23] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-27 15:16:53] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-28 21:28:16] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-28 21:28:31] [L2-WARN ]: Login failed for user admin10- incorrect password
+[2017-08-28 21:28:33] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-28 21:28:56] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-08-28 21:28:56] [L3-INFO ]: User demoroot logged in
+[2017-08-28 21:28:56] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-08-28 21:28:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-30 12:57:09] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-30 13:08:16] [L3-INFO ]: Error page was displayed with e=404
+[2017-08-31 20:11:39] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:12:57] [L3-INFO ]: User demoroot logged out
+[2017-08-31 20:12:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:13:42] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-08-31 20:13:42] [L3-INFO ]: User member01 logged in
+[2017-08-31 20:13:42] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-08-31 20:13:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:13:59] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-31 20:15:09] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-31 20:15:14] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-31 20:15:18] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-08-31 20:15:27] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-31 20:15:27] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=13
+[2017-08-31 20:16:04] [L3-INFO ]: User member01 signed up for event with id 6
+[2017-08-31 20:16:04] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-08-31 20:16:04] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-08-31 20:17:02] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-08-31 20:19:25] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-08-31 20:20:06] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-31 20:20:44] [L3-INFO ]: A poll response was recorded (multiple choice).
+[2017-08-31 20:20:45] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-08-31 20:21:29] [L4-DEBUG]: ProfileUpdate: id_nnw= = 
+[2017-08-31 20:21:29] [L4-DEBUG]: ProfileUpdate: catch=A good soldier never leaves a man behind. = A good soldier never leaves a man behind.
+[2017-08-31 20:21:29] [L4-DEBUG]: ProfileDetails Query: UPDATE user_profile SET 
+	prof_main_character = 'diddykong', 
+	prof_catchphrase = 'A good soldier never leaves a man behind.', 
+	prof_connect_nintendo = '',
+	prof_connect_xbox = '',
+	prof_connect_psn = '',
+	prof_connect_steam = 'TheOtherGabeN',
+	prof_connect_origin = '',
+	prof_connect_other_name = '',
+	prof_connect_other_value = '' 
+	WHERE uuid = '13'
+[2017-08-31 20:21:29] [L3-INFO ]: User member01 updated profile information
+[2017-08-31 20:22:30] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:22:47] [L3-INFO ]: User member01 logged out
+[2017-08-31 20:22:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:23:33] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-08-31 20:37:49] [L2-WARN ]: Login failed for user admin10- incorrect password
+[2017-08-31 20:37:52] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-09-01 19:15:56] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-01 19:16:20] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-01 19:16:20] [L3-INFO ]: User demoroot logged in
+[2017-09-01 19:16:20] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-01 19:16:22] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-01 19:18:25] [L3-INFO ]: --------
+[2017-09-01 19:18:25] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-01 19:18:25] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-01 19:18:25] [L3-INFO ]: Player[1]: member01, Score: 0, Old rank: 609, New rank: 281, PM Counter: 3
+[2017-09-01 19:18:25] [L3-INFO ]: Player[2]: member02, Score: 2, Old rank: 224, New rank: 552, PM Counter: 3
+[2017-09-01 19:18:25] [L3-INFO ]: --------
+[2017-09-01 19:18:25] [L3-INFO ]: User ID 13 rank was updated to 281 in database.
+[2017-09-01 19:18:25] [L3-INFO ]: User ID 14 rank was updated to 552 in database.
+[2017-09-01 19:18:25] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-02 08:58:11] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 08:58:26] [L3-INFO ]: User demoroot logged out
+[2017-09-02 08:58:27] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 08:58:30] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 09:04:33] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-02 09:04:33] [L3-INFO ]: User demoroot logged in
+[2017-09-02 09:04:33] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-02 09:04:34] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 09:05:22] [L3-INFO ]: --------
+[2017-09-02 09:05:22] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-02 09:05:22] [L3-INFO ]: Context: FREEPLAY, Type: DOUBLES
+[2017-09-02 09:05:22] [L3-INFO ]: Player[1/1]: member01, Score: 0, Old rank: 281, New rank: 233, PM Counter: 2
+[2017-09-02 09:05:22] [L3-INFO ]: Player[1/2]: member03, Score: 0, Old rank: 806, New rank: 670, PM Counter: 4
+[2017-09-02 09:05:22] [L3-INFO ]: Player[2/1]: member02, Score: 1, Old rank: 552, New rank: 651, PM Counter: 2
+[2017-09-02 09:05:22] [L3-INFO ]: Player[2/2]: member04, Score: 1, Old rank: 628, New rank: 714, PM Counter: 4
+[2017-09-02 09:05:22] [L3-INFO ]: --------
+[2017-09-02 09:05:22] [L3-INFO ]: User ID 13 rank was updated to 233 in database.
+[2017-09-02 09:05:22] [L3-INFO ]: User ID 15 rank was updated to 670 in database.
+[2017-09-02 09:05:22] [L3-INFO ]: User ID 14 rank was updated to 651 in database.
+[2017-09-02 09:05:22] [L3-INFO ]: User ID 16 rank was updated to 714 in database.
+[2017-09-02 09:05:22] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-02 10:05:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 10:05:38] [L3-INFO ]: User demoroot logged out
+[2017-09-02 10:05:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 10:05:42] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 10:05:53] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 10:06:22] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 10:06:38] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 10:22:25] [L2-WARN ]: SECURITY ALERT: Attempt was made to navigate directly to the /script/ folder
+[2017-09-02 10:22:26] [L3-INFO ]: Error page was displayed with e=403
+[2017-09-02 10:26:39] [L3-INFO ]: Error page was displayed with e=401
+[2017-09-02 10:32:54] [L3-INFO ]: Error page was displayed with e=400
+[2017-09-02 10:33:20] [L3-INFO ]: Error page was displayed with e=401
+[2017-09-02 10:33:38] [L3-INFO ]: Error page was displayed with e=403
+[2017-09-02 10:33:55] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-02 10:34:06] [L3-INFO ]: Error page was displayed with e=405
+[2017-09-02 10:34:15] [L3-INFO ]: Error page was displayed with e=500
+[2017-09-02 10:34:26] [L3-INFO ]: Error page was displayed with e=503
+[2017-09-02 11:12:35] [L2-WARN ]: SECURITY ALERT: Attempt was made to navigate directly to the /script/ folder
+[2017-09-02 11:12:35] [L3-INFO ]: Error page was displayed with e=403
+[2017-09-02 16:40:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 19:20:35] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-02 19:20:35] [L3-INFO ]: User demoroot logged in
+[2017-09-02 19:20:35] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-02 19:20:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 19:21:04] [L3-INFO ]: Queued match #3 was closed.
+[2017-09-02 19:21:04] [L3-INFO ]: --------
+[2017-09-02 19:21:04] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-02 19:21:04] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-02 19:21:04] [L3-INFO ]: Player[1]: 4, Score: 0, Old rank: 4, New rank: 1, PM Counter: 4
+[2017-09-02 19:21:04] [L3-INFO ]: Player[2]: 4, Score: 1, Old rank: 4, New rank: 104, PM Counter: 4
+[2017-09-02 19:21:04] [L3-INFO ]: --------
+[2017-09-02 19:21:04] [L3-INFO ]: User ID  rank was updated to 1 in database.
+[2017-09-02 19:21:04] [L3-INFO ]: User ID  rank was updated to 104 in database.
+[2017-09-02 19:21:04] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-02 19:23:33] [L3-INFO ]: Queued match #1 was closed.
+[2017-09-02 19:23:33] [L3-INFO ]: --------
+[2017-09-02 19:23:33] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-02 19:23:33] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-02 19:23:33] [L3-INFO ]: Player[1]: member01, Score: 0, Old rank: 233, New rank: 203, PM Counter: 1
+[2017-09-02 19:23:33] [L3-INFO ]: Player[2]: member02, Score: 1, Old rank: 651, New rank: 681, PM Counter: 1
+[2017-09-02 19:23:33] [L3-INFO ]: --------
+[2017-09-02 19:23:33] [L3-INFO ]: User ID 13 rank was updated to 203 in database.
+[2017-09-02 19:23:33] [L3-INFO ]: User ID 14 rank was updated to 681 in database.
+[2017-09-02 19:23:33] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-02 19:23:33] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-09-02 19:23:52] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 19:24:00] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-02 19:25:27] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 19:26:25] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 19:26:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-02 19:29:15] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-02 19:29:43] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-02 19:29:43] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-03 10:39:14] [L3-INFO ]: Queued match #2 was closed.
+[2017-09-03 10:39:14] [L3-INFO ]: --------
+[2017-09-03 10:39:14] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-03 10:39:14] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-03 10:39:14] [L3-INFO ]: Player[1]: member03, Score: 0, Old rank: 670, New rank: 577, PM Counter: 3
+[2017-09-03 10:39:14] [L3-INFO ]: Player[2]: member04, Score: 1, Old rank: 714, New rank: 807, PM Counter: 3
+[2017-09-03 10:39:14] [L3-INFO ]: --------
+[2017-09-03 10:39:14] [L3-INFO ]: User ID 15 rank was updated to 577 in database.
+[2017-09-03 10:39:14] [L3-INFO ]: User ID 16 rank was updated to 807 in database.
+[2017-09-03 10:39:14] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-03 10:39:20] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 10:39:57] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-03 15:55:40] [L4-DEBUG]: Entering endCurrentSeason...
+[2017-09-03 15:55:40] [L4-DEBUG]: Copy query completed.
+[2017-09-03 15:55:40] [L4-DEBUG]: Season ID update query completed.
+[2017-09-03 15:55:40] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 0
+[2017-09-03 15:55:40] [L4-DEBUG]: Settings change completed.
+[2017-09-03 15:55:40] [L3-INFO ]: User demoroot Ended the current season. Ratings have been stored to the Hall of Records.
+[2017-09-03 15:55:40] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-09-03 15:55:43] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 15:55:56] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-09-03 15:56:03] [L4-DEBUG]: getRankHistoryBySeason called with order=1
+[2017-09-03 15:56:21] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-03 15:56:21] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-03 15:56:57] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-09-03 15:57:15] [L4-DEBUG]: MCPollResults = 2,0
+[2017-09-03 15:57:23] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-09-03 15:57:26] [L3-INFO ]: A poll response was recorded (multiple choice).
+[2017-09-03 15:57:27] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-09-03 15:57:39] [L4-DEBUG]: MCPollResults = 2,1
+[2017-09-03 15:57:53] [L3-INFO ]: Site setting [PollStatus] changed to 0
+[2017-09-03 15:57:53] [L3-INFO ]: The active poll was closed by demoroot
+[2017-09-03 15:57:53] [L3-INFO ]: Posted to activity feed with type: POLL_ACTION
+[2017-09-03 15:58:43] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:07:25] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-03 16:11:22] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:13:17] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:14:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:14:46] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:15:44] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:16:34] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:17:19] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 16:17:27] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-03 16:17:39] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-03 17:06:43] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 17:07:13] [L3-INFO ]: User demoroot logged out
+[2017-09-03 17:07:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 17:07:17] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 17:08:44] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-03 17:08:44] [L3-INFO ]: User demoroot logged in
+[2017-09-03 17:08:44] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-03 17:08:45] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 17:14:02] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-03 17:15:16] [L3-INFO ]: --------
+[2017-09-03 17:15:16] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-03 17:15:16] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-03 17:15:16] [L3-INFO ]: Player[1]: admin10, Score: 0, Old rank: 2128, New rank: 2028, PM Counter: 5
+[2017-09-03 17:15:16] [L3-INFO ]: Player[2]: admin10, Score: 1, Old rank: 2128, New rank: 2228, PM Counter: 5
+[2017-09-03 17:15:16] [L3-INFO ]: --------
+[2017-09-03 17:15:16] [L3-INFO ]: User ID 22 rank was updated to 2028 in database.
+[2017-09-03 17:15:16] [L3-INFO ]: User ID 22 rank was updated to 2228 in database.
+[2017-09-03 17:15:16] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-03 17:15:24] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 17:40:53] [L3-INFO ]: --------
+[2017-09-03 17:40:53] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-03 17:40:53] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-03 17:40:53] [L3-INFO ]: Player[1]: admin10, Score: 0, Old rank: 2228, New rank: 2128, PM Counter: 3
+[2017-09-03 17:40:53] [L3-INFO ]: Player[2]: admin10, Score: 1, Old rank: 2228, New rank: 2328, PM Counter: 3
+[2017-09-03 17:40:53] [L3-INFO ]: --------
+[2017-09-03 17:40:54] [L3-INFO ]: User ID 22 rank was updated to 2128 in database.
+[2017-09-03 17:40:54] [L3-INFO ]: User ID 22 rank was updated to 2328 in database.
+[2017-09-03 17:40:54] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-03 17:42:05] [L3-INFO ]: --------
+[2017-09-03 17:42:05] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-03 17:42:05] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-03 17:42:05] [L3-INFO ]: Player[1]: admin10, Score: 0, Old rank: 2328, New rank: 2128, PM Counter: 1
+[2017-09-03 17:42:05] [L3-INFO ]: Player[2]: admin10, Score: 2, Old rank: 2328, New rank: 2528, PM Counter: 1
+[2017-09-03 17:42:05] [L3-INFO ]: --------
+[2017-09-03 17:42:05] [L3-INFO ]: User ID 22 rank was updated to 2128 in database.
+[2017-09-03 17:42:06] [L3-INFO ]: User ID 22 rank was updated to 2528 in database.
+[2017-09-03 17:42:06] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-03 17:42:06] [L3-INFO ]: Posted to activity feed with type: USER_RANK
+[2017-09-03 17:44:37] [L3-INFO ]: --------
+[2017-09-03 17:44:37] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-03 17:44:37] [L3-INFO ]: Context: FREEPLAY, Type: DOUBLES
+[2017-09-03 17:44:37] [L3-INFO ]: Player[1/1]: member01, Score: 2, Old rank: 203, New rank: 385, PM Counter: 0
+[2017-09-03 17:44:37] [L3-INFO ]: Player[1/2]: member02, Score: 2, Old rank: 681, New rank: 783, PM Counter: 0
+[2017-09-03 17:44:37] [L3-INFO ]: Player[2/1]: member04, Score: 0, Old rank: 807, New rank: 485, PM Counter: 2
+[2017-09-03 17:44:37] [L3-INFO ]: Player[2/2]: member03, Score: 0, Old rank: 577, New rank: 332, PM Counter: 2
+[2017-09-03 17:44:37] [L3-INFO ]: --------
+[2017-09-03 17:44:37] [L3-INFO ]: User ID 13 rank was updated to 385 in database.
+[2017-09-03 17:44:37] [L3-INFO ]: User ID 14 rank was updated to 783 in database.
+[2017-09-03 17:44:37] [L3-INFO ]: User ID 16 rank was updated to 485 in database.
+[2017-09-03 17:44:37] [L3-INFO ]: User ID 15 rank was updated to 332 in database.
+[2017-09-03 17:44:37] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-03 17:45:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 19:44:52] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-03 19:46:37] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
+[2017-09-03 20:18:45] [L3-INFO ]: User demoroot logged out
+[2017-09-03 20:18:45] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 20:19:08] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 20:19:08] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-03 20:19:16] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 21:24:25] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-03 21:24:25] [L3-INFO ]: User demoroot logged in
+[2017-09-03 21:24:25] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-03 21:24:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-03 21:24:40] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-04 10:48:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 10:57:27] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-04 10:57:27] [L3-INFO ]: User demoroot logged in
+[2017-09-04 10:57:27] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-04 10:57:28] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 10:57:53] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 10:58:13] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 10:58:46] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 11:01:03] [L3-INFO ]: Site setting [PollStatus] changed to 2
+[2017-09-04 11:01:04] [L3-INFO ]: Site setting [PollQuestion] changed to Do you ever think about the moon?
+[2017-09-04 11:01:04] [L3-INFO ]: A new text poll was opened by demoroot
+[2017-09-04 11:01:04] [L3-INFO ]: Posted to activity feed with type: POLL_ACTION
+[2017-09-04 11:01:04] [L4-DEBUG]: PollChoices size=2, value=Yes,No
+[2017-09-04 11:25:56] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 11:26:30] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-04 11:26:59] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-04 11:31:41] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 11:31:41] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-04 11:49:21] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 11:49:36] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=1
+[2017-09-04 11:49:50] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 11:51:25] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=Select...
+[2017-09-04 11:51:25] [L2-WARN ]: getEventDataById called for unknown event ID = Select..., no rows returned
+[2017-09-04 11:51:35] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 13:39:40] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 13:39:52] [L1-ERROR]: Call to purgeSignups failed - entries is not an array
+[2017-09-04 13:39:53] [L3-INFO ]: Error page was displayed with e=500
+[2017-09-04 13:43:11] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 13:43:19] [L1-ERROR]: Call to purgeSignups failed - entries is not an array
+[2017-09-04 13:43:19] [L3-INFO ]: Error page was displayed with e=500
+[2017-09-04 13:43:43] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 13:43:49] [L1-ERROR]: Call to purgeSignups failed - entries is not an array
+[2017-09-04 13:43:50] [L3-INFO ]: Error page was displayed with e=500
+[2017-09-04 13:44:35] [L4-DEBUG]: getGuestListByEvent returned 4 rows for event id=6
+[2017-09-04 13:45:12] [L3-INFO ]: User 5 purged 1 event signup entries.
+[2017-09-04 13:45:12] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-04 13:46:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 13:46:05] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-04 13:46:16] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=Select...
+[2017-09-04 13:46:16] [L2-WARN ]: getEventDataById called for unknown event ID = Select..., no rows returned
+[2017-09-04 13:46:22] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-04 13:46:29] [L3-INFO ]: User demoroot purged 1 event signup entries.
+[2017-09-04 13:46:30] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 13:46:36] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 13:46:36] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-04 13:53:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 14:41:15] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-04 14:41:21] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-04 14:42:31] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 14:42:31] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-04 15:01:04] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-04 15:42:31] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-04 15:42:31] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-04 15:42:31] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-04 15:42:31] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-04 15:42:50] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-04 15:42:59] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-04 15:42:59] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-04 15:42:59] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-04 15:42:59] [L3-INFO ]: User demoroot started free play with ranked=1
+[2017-09-04 15:43:49] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-04 15:43:58] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-04 15:52:48] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 15:53:01] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:53:12] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:53:23] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:54:47] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 15:54:58] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:56:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 15:57:06] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:57:29] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 15:58:27] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 16:01:53] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 16:03:29] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 16:04:09] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=8
+[2017-09-04 16:04:29] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=8
+[2017-09-04 17:36:47] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 20:07:51] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 20:08:20] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 20:09:57] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 20:10:54] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-04 20:11:15] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-04 20:11:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 20:11:26] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-04 20:11:30] [L3-INFO ]: User demoroot signed up for event with id 6
+[2017-09-04 20:11:30] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-04 20:11:30] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-04 20:11:48] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-04 20:13:33] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-04 20:14:14] [L3-INFO ]: User demoroot purged 1 event signup entries.
+[2017-09-04 20:14:14] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 12:25:01] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:25:25] [L3-INFO ]: User demoroot logged out
+[2017-09-05 12:25:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:31:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:31:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:39:02] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-05 12:39:02] [L3-INFO ]: User demoroot logged in
+[2017-09-05 12:39:02] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-05 12:39:03] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:39:45] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 12:40:08] [L4-DEBUG]: Entering startSeason...
+[2017-09-05 12:40:08] [L4-DEBUG]: Insert query successful, new season ID is 10
+[2017-09-05 12:40:08] [L3-INFO ]: Site setting [CurrentSeasonNumber] changed to 10
+[2017-09-05 12:40:08] [L3-INFO ]: Site setting [InitialPlacementMatches] changed to 5
+[2017-09-05 12:40:08] [L4-DEBUG]: Initial season ratings have been populated using the fresh-start method,.
+[2017-09-05 12:40:08] [L3-INFO ]: User demoroot started a new season: Season 205
+[2017-09-05 12:40:08] [L3-INFO ]: Posted to activity feed with type: SEASON_ACTION
+[2017-09-05 12:40:11] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-05 12:40:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 20:13:22] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 20:13:39] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-05 20:13:39] [L3-INFO ]: User demoroot logged in
+[2017-09-05 20:13:39] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-05 20:13:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 20:16:09] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 20:29:36] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 21:25:54] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:26:54] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:27:33] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:28:14] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:33:43] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:34:21] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 21:34:30] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:34:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-05 21:38:21] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:39:58] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-05 21:40:02] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-05 21:40:02] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 6
+[2017-09-05 21:40:02] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-05 21:40:02] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-05 21:41:11] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-05 21:41:26] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=2
+[2017-09-05 21:41:39] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-05 21:41:39] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 2
+[2017-09-05 21:41:39] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-05 21:41:39] [L3-INFO ]: User demoroot started event play with ranked=1
+[2017-09-05 21:41:57] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-05 21:43:38] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-05 21:49:12] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-05 21:54:19] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=8
+[2017-09-05 21:54:55] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=8
+[2017-09-05 21:55:01] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-06 12:09:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 12:09:33] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-06 12:09:33] [L3-INFO ]: User demoroot logged in
+[2017-09-06 12:09:33] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-06 12:09:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 12:18:06] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-06 12:18:14] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 12:18:14] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 6
+[2017-09-06 12:18:14] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 12:18:14] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-06 20:56:50] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 20:57:16] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 20:57:16] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-06 20:57:16] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 20:57:16] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-06 21:09:10] [L3-INFO ]: Queued match #1 was closed.
+[2017-09-06 21:09:10] [L3-INFO ]: --------
+[2017-09-06 21:09:10] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-06 21:09:10] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-06 21:09:10] [L3-INFO ]: Player[1]: member01, Score: 2, Old rank: 1200, New rank: 1400, PM Counter: 5
+[2017-09-06 21:09:10] [L3-INFO ]: Player[2]: member02, Score: 0, Old rank: 1200, New rank: 1000, PM Counter: 5
+[2017-09-06 21:09:10] [L3-INFO ]: --------
+[2017-09-06 21:09:10] [L3-INFO ]: User ID 13 rank was updated to 1400 in database.
+[2017-09-06 21:09:10] [L3-INFO ]: User ID 14 rank was updated to 1000 in database.
+[2017-09-06 21:09:10] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-06 21:09:13] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-06 21:11:09] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 21:11:12] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 21:11:46] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=13
+[2017-09-06 21:11:46] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
+[2017-09-06 21:11:46] [L2-WARN ]: User ID 13 password was reset using a temporary password. demoroot requested the reset and was shown the new password.
+[2017-09-06 21:12:18] [L3-INFO ]: User demoroot logged out
+[2017-09-06 21:12:18] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:12:32] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-06 21:12:32] [L3-INFO ]: User member01 logged in
+[2017-09-06 21:12:32] [L4-DEBUG]: getAccountStatus returned 1 for user=member01
+[2017-09-06 21:12:32] [L3-INFO ]: User member01 has expired password flag. Redirecting to password change form.
+[2017-09-06 21:12:58] [L3-INFO ]: User member01 successfully changed their password
+[2017-09-06 21:12:58] [L3-INFO ]: User member01 logged out
+[2017-09-06 21:12:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:13:08] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-06 21:13:08] [L3-INFO ]: User member01 logged in
+[2017-09-06 21:13:08] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-06 21:13:08] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:14:57] [L3-INFO ]: User member01 logged out
+[2017-09-06 21:14:57] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:15:05] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-06 21:15:05] [L3-INFO ]: User demoroot logged in
+[2017-09-06 21:15:05] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-06 21:15:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:18:45] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 21:18:45] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-06 21:18:52] [L3-INFO ]: User demoroot signed up for event with id 6
+[2017-09-06 21:18:52] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 21:18:52] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-06 21:19:05] [L3-INFO ]: User demoroot logged out
+[2017-09-06 21:19:06] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:19:11] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-06 21:19:11] [L3-INFO ]: User member01 logged in
+[2017-09-06 21:19:11] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-06 21:19:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:19:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 21:19:14] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-06 21:19:21] [L3-INFO ]: User member01 logged out
+[2017-09-06 21:19:21] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:20:38] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-06 21:20:38] [L3-INFO ]: User demoroot logged in
+[2017-09-06 21:20:38] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-06 21:20:38] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 21:20:50] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 21:20:59] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 21:20:59] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-06 21:20:59] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 21:20:59] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-06 21:22:13] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 21:22:17] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-06 21:22:32] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 21:22:32] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 6
+[2017-09-06 21:22:32] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 21:22:32] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-06 21:24:22] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 21:24:22] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-06 21:24:24] [L3-INFO ]: User demoroot cancelled signup for event with id 6
+[2017-09-06 21:24:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 21:24:25] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-06 21:29:54] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 21:30:01] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 21:30:01] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-06 21:30:01] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 21:30:01] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-06 21:33:45] [L3-INFO ]: Queued match #2 was closed.
+[2017-09-06 21:33:45] [L3-INFO ]: --------
+[2017-09-06 21:33:45] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-06 21:33:45] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-06 21:33:45] [L3-INFO ]: Player[1]: member02, Score: 1, Old rank: 1000, New rank: 1167, PM Counter: 4
+[2017-09-06 21:33:45] [L3-INFO ]: Player[2]: member01, Score: 0, Old rank: 1400, New rank: 1233, PM Counter: 4
+[2017-09-06 21:33:45] [L3-INFO ]: --------
+[2017-09-06 21:33:45] [L3-INFO ]: User ID 14 rank was updated to 1167 in database.
+[2017-09-06 21:33:45] [L3-INFO ]: User ID 13 rank was updated to 1233 in database.
+[2017-09-06 21:33:46] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-06 23:04:06] [L1-ERROR]: getMatchProposal encountered an error
+[2017-09-06 23:04:06] [L1-ERROR]: Query: SELECT a.uuid, a.user_username, r.rank_current, ABS(r.rank_current - '1200') 
+		FROM user_authentication a 
+		INNER JOIN user_ranking r ON s.uuid = r.uuid 
+		ORDER BY ABS(r.rank_current - '1200') ASC
+[2017-09-06 23:04:06] [L1-ERROR]: MySQL Error: Unknown column 's.uuid' in 'on clause'
+[2017-09-06 23:10:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:11:20] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:14:13] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 23:16:35] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 23:16:35] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-06 23:16:35] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-06 23:16:35] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-06 23:16:42] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 23:16:55] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-06 23:16:55] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-06 23:16:55] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-06 23:16:55] [L3-INFO ]: User demoroot started free play with ranked=1
+[2017-09-06 23:23:52] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-06 23:30:14] [L3-INFO ]: User demoroot logged out
+[2017-09-06 23:30:15] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:32:02] [L3-INFO ]: New user referee13 self-registered successfully, UUID = 37
+[2017-09-06 23:32:02] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-09-06 23:32:07] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:32:11] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:32:50] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:34:10] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:34:30] [L4-DEBUG]: Authentication successful: type=1, uuid=37, username=referee13
+[2017-09-06 23:34:30] [L3-INFO ]: User referee13 logged in
+[2017-09-06 23:34:30] [L4-DEBUG]: getAccountStatus returned 0 for user=referee13
+[2017-09-06 23:34:30] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:35:07] [L3-INFO ]: User referee13 logged out
+[2017-09-06 23:35:07] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:35:09] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:38:57] [L3-INFO ]: New user member14 self-registered successfully, UUID = 38
+[2017-09-06 23:38:57] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-09-06 23:38:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:39:01] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:41:11] [L4-DEBUG]: Authentication successful: type=1, uuid=38, username=member14
+[2017-09-06 23:41:11] [L3-INFO ]: User member14 logged in
+[2017-09-06 23:41:11] [L4-DEBUG]: getAccountStatus returned 0 for user=member14
+[2017-09-06 23:41:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:41:22] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-06 23:41:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 23:41:35] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=38
+[2017-09-06 23:41:37] [L3-INFO ]: User member14 signed up for event with id 6
+[2017-09-06 23:41:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 23:41:37] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=38
+[2017-09-06 23:41:38] [L3-INFO ]: User member14 signed up for event with id 7
+[2017-09-06 23:41:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-06 23:41:39] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=38
+[2017-09-06 23:41:48] [L4-DEBUG]: getRankHistoryBySeason called with order=0
+[2017-09-06 23:42:01] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:49:10] [L3-INFO ]: User member14 logged out
+[2017-09-06 23:49:10] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:49:13] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:52:16] [L3-INFO ]: New user member15 self-registered successfully, UUID = 39
+[2017-09-06 23:52:16] [L3-INFO ]: Posted to activity feed with type: NEW_USER
+[2017-09-06 23:52:18] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-06 23:52:19] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-06 23:52:40] [L4-DEBUG]: Authentication successful: type=1, uuid=39, username=member15
+[2017-09-06 23:52:40] [L3-INFO ]: User member15 logged in
+[2017-09-06 23:52:40] [L4-DEBUG]: getAccountStatus returned 0 for user=member15
+[2017-09-06 23:52:40] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 08:05:54] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 08:07:31] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 08:07:31] [L3-INFO ]: User demoroot logged in
+[2017-09-07 08:07:31] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 08:07:32] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 08:07:44] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 08:07:44] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-07 08:07:59] [L3-INFO ]: User demoroot signed up for event with id 6
+[2017-09-07 08:07:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 08:07:59] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-07 08:08:58] [L3-INFO ]: A new event was created by demoroot: Ranked MM Test
+[2017-09-07 08:08:58] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-09-07 08:08:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-07 08:08:58] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-07 08:11:42] [L3-INFO ]: A new event was created by demoroot: Unranked MM Test
+[2017-09-07 08:11:42] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-09-07 08:11:42] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=1
+[2017-09-07 08:11:42] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-07 08:31:37] [L3-INFO ]: User demoroot logged out
+[2017-09-07 08:31:37] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:31:49] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 08:31:49] [L3-INFO ]: User demoroot logged in
+[2017-09-07 08:31:49] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 08:31:49] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:31:57] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 08:31:57] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-07 08:31:57] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-07 08:31:57] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-07 08:33:12] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:33:18] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 08:34:25] [L3-INFO ]: Queued match #1 was closed.
+[2017-09-07 08:34:25] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 08:34:53] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:35:00] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 08:35:31] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=1
+[2017-09-07 08:35:31] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-07 08:48:58] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:49:21] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 08:49:48] [L3-INFO ]: Queued match #3 was closed.
+[2017-09-07 08:49:48] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 08:53:24] [L3-INFO ]: Queued match #2 was closed.
+[2017-09-07 08:53:24] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 08:54:11] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 08:54:17] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=9
+[2017-09-07 08:54:32] [L4-DEBUG]: getGuestListByEvent returned 0 rows for event id=9
+[2017-09-07 08:54:36] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 08:54:36] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 9
+[2017-09-07 08:54:36] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-07 08:54:36] [L3-INFO ]: User demoroot started event play with ranked=1
+[2017-09-07 08:54:49] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 08:54:53] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 08:56:13] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=1
+[2017-09-07 08:56:14] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=1
+[2017-09-07 08:56:16] [L3-INFO ]: User demoroot signed up for event with id 9
+[2017-09-07 08:56:16] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=1
+[2017-09-07 08:56:16] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 08:56:25] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 08:56:31] [L3-INFO ]: User demoroot logged out
+[2017-09-07 08:56:31] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows, private=
+[2017-09-07 12:19:45] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-07 12:19:45] [L3-INFO ]: User member01 logged in
+[2017-09-07 12:19:45] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-07 12:19:46] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:19:49] [L3-INFO ]: User member01 logged out
+[2017-09-07 12:19:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:20:30] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 12:20:30] [L3-INFO ]: User demoroot logged in
+[2017-09-07 12:20:30] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 12:20:31] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:20:43] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 12:21:09] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 12:21:09] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-07 12:21:09] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-07 12:21:09] [L3-INFO ]: User demoroot started free play with ranked=0
+[2017-09-07 12:23:33] [L3-INFO ]: Queued match #4 was closed.
+[2017-09-07 12:23:33] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 12:24:20] [L3-INFO ]: Queued match #6 was closed.
+[2017-09-07 12:24:20] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 12:24:39] [L3-INFO ]: User demoroot logged out
+[2017-09-07 12:24:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:24:45] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-07 12:24:45] [L3-INFO ]: User member01 logged in
+[2017-09-07 12:24:45] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-07 12:24:45] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:28:08] [L3-INFO ]: User member01 logged out
+[2017-09-07 12:28:08] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:28:13] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 12:28:13] [L3-INFO ]: User demoroot logged in
+[2017-09-07 12:28:13] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 12:28:13] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:37:06] [L3-INFO ]: Queued match #5 was closed.
+[2017-09-07 12:37:17] [L3-INFO ]: Queued match #8 was closed.
+[2017-09-07 12:37:43] [L3-INFO ]: Queued match #7 was closed.
+[2017-09-07 12:39:39] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 12:39:46] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 12:39:46] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-07 12:39:46] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-07 12:39:46] [L3-INFO ]: User demoroot started free play with ranked=1
+[2017-09-07 12:40:25] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-07 12:42:03] [L3-INFO ]: Queued match #9 was closed.
+[2017-09-07 12:42:03] [L3-INFO ]: --------
+[2017-09-07 12:42:03] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-07 12:42:03] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-07 12:42:03] [L3-INFO ]: Player[1]: demoroot, Score: 0, Old rank: 1200, New rank: 1100, PM Counter: 5
+[2017-09-07 12:42:03] [L3-INFO ]: Player[2]: member05, Score: 1, Old rank: 1200, New rank: 1300, PM Counter: 5
+[2017-09-07 12:42:03] [L3-INFO ]: --------
+[2017-09-07 12:42:03] [L3-INFO ]: User ID 1 rank was updated to 1100 in database.
+[2017-09-07 12:42:03] [L3-INFO ]: User ID 17 rank was updated to 1300 in database.
+[2017-09-07 12:42:03] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 12:42:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 12:42:54] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 12:45:23] [L3-INFO ]: User demoroot logged out
+[2017-09-07 12:45:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:52:57] [L2-WARN ]: Login failed for user member01- incorrect password
+[2017-09-07 12:52:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:53:03] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-07 12:53:03] [L3-INFO ]: User member01 logged in
+[2017-09-07 12:53:03] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-07 12:53:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:54:48] [L3-INFO ]: User member01 logged out
+[2017-09-07 12:54:48] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:54:55] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 12:54:55] [L3-INFO ]: User demoroot logged in
+[2017-09-07 12:54:55] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 12:54:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:55:34] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 12:55:42] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=8
+[2017-09-07 12:57:42] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:57:49] [L4-DEBUG]: getGuestListByEvent returned 8 rows for event id=10
+[2017-09-07 12:57:58] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 12:57:58] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 10
+[2017-09-07 12:57:58] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-07 12:57:58] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-07 12:58:31] [L3-INFO ]: User demoroot logged out
+[2017-09-07 12:58:32] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 12:58:42] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-07 12:58:42] [L3-INFO ]: User member01 logged in
+[2017-09-07 12:58:42] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-07 12:58:42] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 13:01:55] [L3-INFO ]: User member01 logged out
+[2017-09-07 13:01:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 13:02:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 13:02:11] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:02:20] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:02:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:02:55] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:03:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:03:14] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:03:20] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:03:50] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:04:04] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-07 18:04:04] [L3-INFO ]: User member01 logged in
+[2017-09-07 18:04:04] [L4-DEBUG]: getAccountStatus returned 0 for user=member01
+[2017-09-07 18:04:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:04:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:04:14] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:04:29] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 18:04:29] [L3-INFO ]: User demoroot logged in
+[2017-09-07 18:04:29] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 18:04:29] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:04:33] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 18:04:38] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:04:38] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:04:41] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:04:41] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:05:37] [L4-DEBUG]: getGuestListByEvent returned 8 rows for event id=10
+[2017-09-07 18:05:48] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 18:05:48] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 10
+[2017-09-07 18:05:49] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-07 18:05:49] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-07 18:05:56] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:05:56] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:06:15] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:06:59] [L3-INFO ]: Queued match #14 was closed.
+[2017-09-07 18:07:34] [L3-INFO ]: Queued match #15 was closed.
+[2017-09-07 18:07:34] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 18:07:44] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 18:07:52] [L4-DEBUG]: getGuestListByEvent returned 8 rows for event id=10
+[2017-09-07 18:07:56] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 18:07:56] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 10
+[2017-09-07 18:07:56] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-07 18:07:56] [L3-INFO ]: User demoroot started event play with ranked=1
+[2017-09-07 18:08:14] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:08:30] [L3-INFO ]: Queued match #16 was closed.
+[2017-09-07 18:08:30] [L3-INFO ]: --------
+[2017-09-07 18:08:30] [L3-INFO ]: A match was recorded by demoroot
+[2017-09-07 18:08:30] [L3-INFO ]: Context: FREEPLAY, Type: SINGLES
+[2017-09-07 18:08:30] [L3-INFO ]: Player[1]: member01, Score: 1, Old rank: 1233, New rank: 1322, PM Counter: 3
+[2017-09-07 18:08:30] [L3-INFO ]: Player[2]: member02, Score: 0, Old rank: 1167, New rank: 1078, PM Counter: 3
+[2017-09-07 18:08:30] [L3-INFO ]: --------
+[2017-09-07 18:08:30] [L3-INFO ]: User ID 13 rank was updated to 1322 in database.
+[2017-09-07 18:08:30] [L3-INFO ]: User ID 14 rank was updated to 1078 in database.
+[2017-09-07 18:08:30] [L3-INFO ]: Posted to activity feed with type: RESULTS_FREEPLAY
+[2017-09-07 18:08:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:08:41] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:23:13] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 18:23:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:23:24] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:23:43] [L4-DEBUG]: getGuestListByEvent returned 8 rows for event id=10
+[2017-09-07 18:23:46] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 18:23:46] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 10
+[2017-09-07 18:23:46] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-07 18:23:46] [L3-INFO ]: User demoroot started event play with ranked=0
+[2017-09-07 18:23:53] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:25:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:25:37] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 18:27:01] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 18:27:01] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:28:12] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 18:28:12] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:28:51] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 18:28:51] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:29:41] [L4-DEBUG]: getEventIdsByUser returned 4 results for userid=1
+[2017-09-07 18:29:41] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:29:50] [L3-INFO ]: User demoroot signed up for event with id 10
+[2017-09-07 18:29:50] [L4-DEBUG]: getEventIdsByUser returned 5 results for userid=1
+[2017-09-07 18:29:50] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:29:55] [L3-INFO ]: User demoroot signed up for event with id 7
+[2017-09-07 18:29:55] [L4-DEBUG]: getEventIdsByUser returned 6 results for userid=1
+[2017-09-07 18:29:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:29:59] [L3-INFO ]: User demoroot cancelled signup for event with id 10
+[2017-09-07 18:29:59] [L4-DEBUG]: getEventIdsByUser returned 5 results for userid=1
+[2017-09-07 18:29:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:30:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:30:06] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:30:06] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:30:23] [L3-INFO ]: User member01 cancelled signup for event with id 10
+[2017-09-07 18:30:24] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-07 18:30:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:30:27] [L3-INFO ]: User member01 signed up for event with id 10
+[2017-09-07 18:30:27] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-07 18:30:27] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:31:06] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-07 18:31:21] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-07 18:31:22] [L3-INFO ]: User demoroot logged out
+[2017-09-07 18:31:22] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:31:25] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:31:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:31:40] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-07 18:31:40] [L3-INFO ]: User demoroot logged in
+[2017-09-07 18:31:40] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-07 18:31:40] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:31:42] [L4-DEBUG]: getEventIdsByUser returned 5 results for userid=1
+[2017-09-07 18:31:42] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:31:54] [L4-DEBUG]: getGuestListByEvent returned 1 rows for event id=9
+[2017-09-07 18:31:57] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-07 18:31:57] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 9
+[2017-09-07 18:31:57] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-07 18:31:57] [L3-INFO ]: User demoroot started event play with ranked=1
+[2017-09-07 18:32:00] [L4-DEBUG]: getEventIdsByUser returned 5 results for userid=1
+[2017-09-07 18:32:00] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-07 18:32:14] [L3-INFO ]: User demoroot logged out
+[2017-09-07 18:32:15] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:32:16] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:32:16] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:32:36] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:32:36] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:32:50] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:32:50] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-07 18:33:43] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-07 18:33:43] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:35:04] [L1-ERROR]: MySQL Connection failed! 503 errors will be shown until this is resolved.
+[2017-09-13 12:35:04] [L1-ERROR]: 
+[2017-09-13 12:35:04] [L1-ERROR]: MySQL Connection failed! 503 errors will be shown until this is resolved.
+[2017-09-13 12:35:04] [L1-ERROR]: 
+[2017-09-13 12:35:04] [L3-INFO ]: Error page was displayed with e=503
+[2017-09-13 12:42:56] [L1-ERROR]: Season portlet has an error, you may have invalid data configuration.
+[2017-09-13 12:42:56] [L1-ERROR]: Correct this error ASAP to avoid corrupting your rank records.
+[2017-09-13 12:42:56] [L1-ERROR]: getAllUpcomingEvents failed
+[2017-09-13 12:42:56] [L1-ERROR]: Table 'smashclub_dvlp_01.event_schedule' doesn't exist
+[2017-09-13 12:44:07] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:44:25] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-13 12:44:25] [L3-INFO ]: User demoroot logged in
+[2017-09-13 12:44:25] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-13 12:44:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:44:26] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-13 12:44:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-13 12:44:38] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=1
+[2017-09-13 12:44:38] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-13 12:45:28] [L3-INFO ]: User demoroot logged out
+[2017-09-13 12:45:28] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:45:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-13 12:45:47] [L2-WARN ]: Login failed for user admin10- incorrect password
+[2017-09-13 12:45:48] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-13 12:46:10] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=demoroot
+[2017-09-13 12:46:10] [L3-INFO ]: User demoroot logged in
+[2017-09-13 12:46:10] [L4-DEBUG]: getAccountStatus returned 0 for user=demoroot
+[2017-09-13 12:46:10] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:46:18] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=22
+[2017-09-13 12:46:18] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=4
+[2017-09-13 12:46:18] [L2-WARN ]: User ID 22 password was reset using a temporary password. demoroot requested the reset and was shown the new password.
+[2017-09-13 12:46:37] [L3-INFO ]: User demoroot logged out
+[2017-09-13 12:46:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:46:47] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-13 12:46:47] [L3-INFO ]: User admin10 logged in
+[2017-09-13 12:46:47] [L4-DEBUG]: getAccountStatus returned 1 for user=admin10
+[2017-09-13 12:46:47] [L3-INFO ]: User admin10 has expired password flag. Redirecting to password change form.
+[2017-09-13 12:47:03] [L3-INFO ]: User admin10 successfully changed their password
+[2017-09-13 12:47:03] [L3-INFO ]: User admin10 logged out
+[2017-09-13 12:47:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:47:13] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-13 12:47:13] [L3-INFO ]: User admin10 logged in
+[2017-09-13 12:47:13] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-13 12:47:13] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-13 12:48:39] [L3-INFO ]: A new event was created by admin10: Naruto Run Around Game Room
+[2017-09-13 12:48:39] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
+[2017-09-13 12:48:40] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:48:40] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:48:57] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:48:57] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:49:29] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:49:29] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:54:37] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:54:37] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:57:50] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-09-13 12:58:03] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-13 12:58:03] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-09-13 12:58:42] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-13 12:58:42] [L3-INFO ]: User admin10 logged in
+[2017-09-13 12:58:42] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-13 12:58:42] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=
+[2017-09-13 12:58:47] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:58:47] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:58:58] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:58:58] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:59:39] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:59:39] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 12:59:40] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 12:59:40] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 13:00:04] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 13:00:04] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 13:00:28] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 13:00:28] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 13:00:31] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-13 13:00:31] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 13:00:38] [L3-INFO ]: User admin10 signed up for event with id 9
+[2017-09-13 13:00:38] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-13 13:00:38] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-13 13:00:55] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-13 13:00:55] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows, private=1
+[2017-09-14 12:12:49] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:12:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:13:33] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:13:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:13:39] [L3-INFO ]: User admin10 cancelled signup for event with id 9
+[2017-09-14 12:13:39] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-14 12:13:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:13:48] [L3-INFO ]: User admin10 signed up for event with id 7
+[2017-09-14 12:13:49] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:13:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:13:52] [L3-INFO ]: User admin10 cancelled signup for event with id 7
+[2017-09-14 12:13:53] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-14 12:13:53] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:14:52] [L3-INFO ]: User admin10 signed up for event with id 7
+[2017-09-14 12:14:52] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:14:52] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:16:05] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:16:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:16:37] [L3-INFO ]: User admin10 cancelled signup for event with id 7
+[2017-09-14 12:16:37] [L4-DEBUG]: getEventIdsByUser returned 0 results for userid=22
+[2017-09-14 12:16:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:16:39] [L3-INFO ]: User admin10 signed up for event with id 7
+[2017-09-14 12:16:39] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:16:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:17:04] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:17:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:17:12] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:17:12] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:18:33] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:18:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:19:01] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:19:01] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:20:25] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:20:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:20:41] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:20:41] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:20:50] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:20:50] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:20:55] [L3-INFO ]: User admin10 logged out
+[2017-09-14 12:20:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:20:57] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:20:57] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:21:27] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:21:27] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:21:33] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:21:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:22:09] [L2-WARN ]: Login failed for user Member01- incorrect password
+[2017-09-14 12:22:10] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:22:10] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:22:17] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=member01
+[2017-09-14 12:22:17] [L3-INFO ]: User Member01 logged in
+[2017-09-14 12:22:17] [L4-DEBUG]: getAccountStatus returned 0 for user=Member01
+[2017-09-14 12:22:17] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:22:24] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-14 12:22:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:22:33] [L3-INFO ]: User member01 signed up for event with id 7
+[2017-09-14 12:22:33] [L4-DEBUG]: getEventIdsByUser returned 3 results for userid=13
+[2017-09-14 12:22:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:22:39] [L3-INFO ]: User member01 cancelled signup for event with id 7
+[2017-09-14 12:22:39] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-14 12:22:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:25:13] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-14 12:25:13] [L3-INFO ]: User admin10 logged in
+[2017-09-14 12:25:13] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-14 12:25:13] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:25:15] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-14 12:25:16] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:25:16] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:25:32] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-14 12:25:32] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:31:09] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:31:09] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:31:37] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=6
+[2017-09-14 12:31:44] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-14 12:31:44] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 6
+[2017-09-14 12:31:44] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-14 12:31:44] [L3-INFO ]: User admin10 started event play with ranked=0
+[2017-09-14 12:31:54] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=22
+[2017-09-14 12:31:54] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:32:07] [L3-INFO ]: User admin10 signed up for event with id 6
+[2017-09-14 12:32:07] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=22
+[2017-09-14 12:32:07] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:32:30] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=13
+[2017-09-14 12:32:30] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=1
+[2017-09-14 12:32:33] [L3-INFO ]: User member01 logged out
+[2017-09-14 12:32:33] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:32:35] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:32:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:40:25] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:40:25] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:42:09] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
+[2017-09-14 12:42:09] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 12:47:32] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-14 12:57:16] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-14 12:58:25] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-14 12:58:25] [L3-INFO ]: User admin10 logged in
+[2017-09-14 12:58:25] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-14 12:58:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 13:00:37] [L3-INFO ]: User admin10 logged out
+[2017-09-14 13:00:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows, private=
+[2017-09-14 18:10:39] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-17 13:51:47] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 13:56:34] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 13:56:46] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-17 13:56:46] [L3-INFO ]: User admin10 logged in
+[2017-09-17 13:56:46] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-17 13:56:46] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 13:56:51] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-17 13:56:55] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 13:58:00] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 13:58:37] [L4-DEBUG]: getAllCurrentRankData called with order=0
+[2017-09-17 13:58:41] [L3-INFO ]: Error page was displayed with e=404
+[2017-09-17 14:23:13] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:23:38] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:24:35] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:25:27] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:25:29] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:26:27] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:26:51] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:26:53] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:27:04] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:27:24] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:27:56] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:28:25] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:30:27] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:30:54] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:31:03] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-17 14:31:03] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 0
+[2017-09-17 14:31:03] [L3-INFO ]: Site setting [EventIsRanked] changed to 0
+[2017-09-17 14:31:03] [L3-INFO ]: User admin10 started free play with ranked=0
+[2017-09-17 14:31:06] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:31:06] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:32:21] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:32:21] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:35:22] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:35:22] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:35:25] [L3-INFO ]: User admin10 logged out
+[2017-09-17 14:35:25] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:35:25] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:35:45] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-17 14:35:45] [L3-INFO ]: User admin10 logged in
+[2017-09-17 14:35:45] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-17 14:35:45] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:35:45] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:35:55] [L3-INFO ]: Site setting [TourneyStatus] changed to 0
+[2017-09-17 14:35:57] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
+[2017-09-17 14:35:58] [L2-WARN ]: getEventDataById called for unknown event ID = 0, no rows returned
+[2017-09-17 14:35:58] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:36:13] [L4-DEBUG]: getGuestListByEvent returned 3 rows for event id=6
+[2017-09-17 14:36:16] [L3-INFO ]: Site setting [TourneyStatus] changed to 3
+[2017-09-17 14:36:16] [L3-INFO ]: Site setting [MatchMakingEvent] changed to 6
+[2017-09-17 14:36:16] [L3-INFO ]: Site setting [EventIsRanked] changed to 1
+[2017-09-17 14:36:16] [L3-INFO ]: User admin10 started event play with ranked=1
+[2017-09-17 14:36:23] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:36:51] [L3-INFO ]: User admin10 logged out
+[2017-09-17 14:36:52] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:37:19] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:37:29] [L4-DEBUG]: Authentication successful: type=4, uuid=22, username=admin10
+[2017-09-17 14:37:29] [L3-INFO ]: User admin10 logged in
+[2017-09-17 14:37:29] [L4-DEBUG]: getAccountStatus returned 0 for user=admin10
+[2017-09-17 14:37:30] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
+[2017-09-17 14:39:47] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=22
+[2017-09-17 14:39:47] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=1
+[2017-09-17 14:45:52] [L4-DEBUG]: getEventIdsByUser returned 2 results for userid=22
+[2017-09-17 14:45:52] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=1
+[2017-09-17 14:45:59] [L4-DEBUG]: getAllUpcomingEvents returned 1 rows, private=
