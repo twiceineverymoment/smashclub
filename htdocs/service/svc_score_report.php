@@ -60,12 +60,18 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		writeLog(INFO, "--------");
 
 		//Perform database update
-		if (!svc_updateRank($id1, $new1)){
-			return false;
+		if (($score1 == 0) && ($score2 == 0)){
 		}
-		if (!svc_updateRank($id2, $new2)){
-			return false;
+		else {
+
+			if (!svc_updateRank($id1, $new1)){
+				return false;
+			}
+			if (!svc_updateRank($id2, $new2)){
+				return false;
+			}
 		}
+		
 
 		$infotext = $p1data['user_username']." <h3 style=\'display: inline-block\'>".$score1."</h3><br/>".$p2data['user_username']." <h3 style=\'display: inline-block\'>".$score2."</h3>";
 
