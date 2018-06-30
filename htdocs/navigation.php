@@ -6,6 +6,7 @@
 	$guestmode = svc_getSetting("EnableGuestBrowsing");
 	//session_start();
 	$eventActive = svc_getSetting("TourneyStatus");
+	$live = svc_getSetting("TwitchOnAir");
 	?>
 
 	<table style="height: 100%; border-collapse: collapse; margin: 0 auto;">
@@ -31,6 +32,12 @@
 	<div class="sidebarlink">
 		<img src="/resource/tab_tourney.png" width="50" />
 		<a href="/tourney/" style="color: orangered !important">Tournament</a>
+	</div>
+	<?php endif; ?>
+	<?php if ($live==1) : ?>
+	<div class="sidebarlink">
+		<img src="/resource/tab_stream.png" width="50" />
+		<a href="/stream/" style="color: mediumvioletred !important">LIVE</a>
 	</div>
 	<?php endif; ?>
 
@@ -99,11 +106,23 @@
 		</div>
 		<br />
 		<input type='submit' value='Log In' class="sc-button" />
-		<input type='button' onClick="window.location='/register/'" value='Sign Up' class="sc-button" />
+		<input type='button' onClick="window.location='/register/createUser.php'" value='Sign Up' class="sc-button" />
 		<br/><br/><a id="forgot-password" href="/forms/forgot_password.php">Forgot Password?</a>
 		</form>
 	<?php else : ?>
 		<h3>Hello, <?php echo svc_getFirstNameForNavBar($_SESSION['uuid']); ?> </h3>
+		<a id="nav-mail" href="/inbox/">
+			<img src="/resource/inbox_reg.png" width="20" />
+			<?php
+				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_messaging.php");
+				$unread = svc_getUnreadMessageCount($_SESSION['uuid']);
+				if ($unread==0){
+					echo "0";
+				} else {
+					echo "<div style='display: inline; color: yellow; font-weight: bold'>".$unread."</div>";
+				}
+			?>
+		</a>
 		<input type='button' onClick="window.location='/account/'" value='My Account' class="sc-button" />
 		<input type='button' onClick="window.location='/script/logout.php'" value='Log Out' class="sc-button" />
 	<?php endif; ?>

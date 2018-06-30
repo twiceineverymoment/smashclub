@@ -100,7 +100,7 @@
 		$showprivate = ($_SESSION['type']>0) ? true : false ;
 		$results1 = svc_getAllUpcomingEvents($showprivate);
 		if (mysqli_num_rows($results1)==0){
-			echo "<h3>There are no upcoming events to show right now.</h3>";
+			echo "<h2 align='center'>No upcoming events.</h2><h3 align='center'>Please check back later!</h3>";
 		}
 
 		?>

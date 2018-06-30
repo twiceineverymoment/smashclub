@@ -220,6 +220,21 @@
 
 			<div class="acp-block">
 				<h2>Communication</h2>
+				<?php if (svc_getSetting("TwitchOnAir")==0) : ?>
+				<div class="acp-icon">
+				<a href="/script/stream.php?live=1">
+				<img src="/resource/admincp/go_live.png" />
+				Open Live Stream
+				</a>
+				</div>
+				<?php else : ?>
+				<div class="acp-icon">
+				<a href="/script/stream.php?live=0">
+				<img src="/resource/admincp/go_live.png" />
+				Close Live Stream
+				</a>
+				</div>
+				<?php endif; ?>
 				<div class="acp-icon">
 					<a href="/forms/post_announcement.php">
 					<img src="/resource/admincp/announcement.png" />

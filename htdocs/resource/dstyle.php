@@ -630,6 +630,16 @@ body {
 	vertical-align: middle;
 }
 
+#nav-mail {
+	display: block;
+	color: <?php echo $theme['BlockTextColor']; ?>;
+}
+
+#nav-mail img {
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
 #tourney-score-table {
 	text-align: center;
 }
@@ -640,7 +650,7 @@ body {
 
 @font-face{
 	font-family: MavenPro;
-	src: url(/resource/MavenProLight-300.otf);
+	src: url(/resource/MavenProLight-200.otf);
 }
 
 @font-face{

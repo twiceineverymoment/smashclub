@@ -45,7 +45,8 @@
 					<span>Confirm Password: *</span>
 					<input type="password" id="pw2" size="30" required/>
 					<hr/>
-					<h3>Contact Information (required, will not be shown publicly)</h3>
+					<h3>Contact Information</h3>
+					<h4><i>This information will only be visible to administrators in order to contact you during events. We will never release your information to third parties.</i></h4>
 					<span>E-mail Address: *</span>
 					<input type="email" name="email" size="30" required/>
 					<span>Phone Number (digits only, include area code):</span>

@@ -382,4 +382,8 @@ function svc_selfResetPassword($username, $email){
 	}
 }
 
+function svc_createGuestDummyID($gamertag, $email, $phone){
+	
+}
+
 ?>

@@ -109,11 +109,8 @@ function svc_updateRank($uuid, $rank){
 	SET rank_current = '$rank', 
 	rank_season_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_season_high, rank_current) ELSE rank_season_high END, 
 	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_high, rank_current) ELSE rank_career_high END, 
-	rank_placements = GREATEST(0, rank_placements-1)
-
+	rank_placements = GREATEST(0, rank_placements-1) 
 	WHERE uuid='$uuid'";
-	
-	
 	//case is <2 because if placements is 1, then it will go to 0 and the member will place. If 0, it will not decrement
 
 	if (mysqli_query($db, $query)){
