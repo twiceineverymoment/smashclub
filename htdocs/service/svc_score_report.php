@@ -60,11 +60,13 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		writeLog(INFO, "--------");
 
 		//Perform database update
-		if (!svc_updateRank($id1, $new1)){
-			return false;
-		}
-		if (!svc_updateRank($id2, $new2)){
-			return false;
+		if ($score1 > 0 or $score2 > 0){
+			if (!svc_updateRank($id1, $new1)){
+				return false;
+			}
+			if (!svc_updateRank($id2, $new2)){
+				return false;
+			}
 		}
 
 		$infotext = $p1data['user_username']." <h3 style=\'display: inline-block\'>".$score1."</h3><br/>".$p2data['user_username']." <h3 style=\'display: inline-block\'>".$score2."</h3>";
@@ -171,6 +173,7 @@ function svc_reportDoublesScore($id11, $id12, $score1, $id21, $id22, $score2){
 		writeLog(INFO, "--------");
 
 		//Perform database update
+		if ($score1 > 0 or $score2 > 0){
 		if (!svc_updateRank($id11, $new11)){
 			return false;
 		}
@@ -182,6 +185,7 @@ function svc_reportDoublesScore($id11, $id12, $score1, $id21, $id22, $score2){
 		}
 		if (!svc_updateRank($id22, $new22)){
 			return false;
+		}
 		}
 
 		$infotext = $p11data['user_username']." & ".$p12data['user_username']." <h3 style=\'display: inline-block\'>".$score1."</h3><br/>".$p21data['user_username']." & ".$p22data['user_username']." <h3 style=\'display: inline-block\'>".$score2."</h3>";
