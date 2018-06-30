@@ -1,404 +1,0 @@
-[2017-08-10 21:27:01] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-10 21:27:14] [L3-INFO ]: User TestMember1 logged out
-[2017-08-10 21:27:15] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-10 21:27:33] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-10 21:27:33] [L3-INFO ]: User testmember1 logged in
-[2017-08-10 21:27:33] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-10 21:27:33] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-10 21:28:04] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-10 21:29:16] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 21:31:10] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 21:32:25] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 21:34:32] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 21:38:09] [L4-DEBUG]: ProfileUpdate: id_nnw=nintendo = bees
-[2017-08-10 21:38:09] [L4-DEBUG]: ProfileUpdate: catch=bees = bees
-[2017-08-10 21:38:09] [L4-DEBUG]: ProfileDetails Query: UPDATE user_profile SET 
-	prof_main_character = 'darkpit', 
-	prof_catchphrase = 'bees', 
-	prof_connect_nintendo = 'bees',
-	prof_connect_xbox = 'xbox',
-	prof_connect_psn = 'psn',
-	prof_connect_steam = 'steam',
-	prof_connect_origin = 'origin',
-	prof_connect_other_name = 'site',
-	prof_connect_other_value = 'name' 
-	WHERE uuid = '13'
-[2017-08-10 21:38:09] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 21:43:50] [L4-DEBUG]: ProfileUpdate: id_nnw=nintendo = nintendo
-[2017-08-10 21:43:50] [L4-DEBUG]: ProfileUpdate: catch=bees? = bees?
-[2017-08-10 21:43:50] [L4-DEBUG]: ProfileDetails Query: UPDATE user_profile SET 
-	prof_main_character = 'duckhunt', 
-	prof_catchphrase = 'bees?', 
-	prof_connect_nintendo = 'nintendo',
-	prof_connect_xbox = 'xbox',
-	prof_connect_psn = 'psn',
-	prof_connect_steam = 'steam',
-	prof_connect_origin = 'origin',
-	prof_connect_other_name = 'site',
-	prof_connect_other_value = 'name' 
-	WHERE uuid = '13'
-[2017-08-10 21:43:50] [L3-INFO ]: User TestMember1 updated profile information
-[2017-08-10 22:12:30] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-10 22:21:40] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-10 22:22:41] [L3-INFO ]: User TestMember1 updated contact information
-[2017-08-10 22:22:41] [L4-DEBUG]: Query: UPDATE user_profile SET 
-	prof_first_name = '', 
-	prof_last_name = '', 
-	prof_email_address = '',
-	prof_phone_number = '',
-	prof_show_phone = '0',
-	prof_show_email = '1', 
-	prof_receive_email = '1' 
-	WHERE uuid = '13'
-[2017-08-10 22:23:16] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-10 22:24:22] [L3-INFO ]: User TestMember1 updated contact information
-[2017-08-10 22:24:22] [L4-DEBUG]: Query: UPDATE user_profile SET 
-	prof_first_name = 'Karl', 
-	prof_last_name = 'Garrison', 
-	prof_email_address = 'bushplow365@yahoo.com',
-	prof_phone_number = '1234567890',
-	prof_show_phone = '0',
-	prof_show_email = '1', 
-	prof_receive_email = '1' 
-	WHERE uuid = '13'
-[2017-08-10 22:25:02] [L3-INFO ]: User TestMember1 updated contact information
-[2017-08-10 22:25:02] [L4-DEBUG]: Query: UPDATE user_profile SET 
-	prof_first_name = 'Karl', 
-	prof_last_name = 'Garrison', 
-	prof_email_address = 'bushplow365@yahoo.com',
-	prof_phone_number = '1234567890',
-	prof_show_phone = '1',
-	prof_show_email = '1', 
-	prof_receive_email = '1' 
-	WHERE uuid = '13'
-[2017-08-10 22:26:16] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-11 12:17:49] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:18:00] [L3-INFO ]: User TestMember1 logged out
-[2017-08-11 12:18:00] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:19:17] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-11 12:19:17] [L3-INFO ]: User testmember1 logged in
-[2017-08-11 12:19:17] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-11 12:19:17] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:28:12] [L3-INFO ]: User TestMember1 logged out
-[2017-08-11 12:28:12] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:28:14] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:28:14] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-11 12:33:43] [L1-ERROR]: getEventDataById Failed for ID = 3
-[2017-08-11 12:33:43] [L1-ERROR]: MySQL Error: 
-[2017-08-11 12:35:31] [L3-INFO ]: Guest signed up for event with id 3 using name bushplow
-[2017-08-11 12:35:34] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:35:34] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-11 12:35:43] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-11 12:35:43] [L3-INFO ]: User testroot logged in
-[2017-08-11 12:35:43] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-11 12:35:43] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 12:35:54] [L4-DEBUG]: getGuestListByEvent returned 2 rows for event id=3
-[2017-08-11 12:37:04] [L3-INFO ]: Posted to activity feed with type: ANNOUNCEMENT
-[2017-08-11 12:45:57] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-11 12:46:44] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-11 12:47:09] [L3-INFO ]: Error page was displayed with e=403
-[2017-08-11 12:47:41] [L3-INFO ]: Error page was displayed with e=401
-[2017-08-11 12:47:49] [L3-INFO ]: Error page was displayed with e=500
-[2017-08-11 12:47:56] [L3-INFO ]: Error page was displayed with e=503
-[2017-08-11 12:48:07] [L3-INFO ]: Error page was displayed with e=400
-[2017-08-11 22:01:59] [L3-INFO ]: An event was changed by TestRoot: Hangout
-[2017-08-11 22:01:59] [L3-INFO ]: Posted to activity feed with type: NEW_EVENT
-[2017-08-11 22:02:00] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:02:00] [L4-DEBUG]: getEventIdsByUser returned 1 results for userid=1
-[2017-08-11 22:05:01] [L3-INFO ]: User ID 19 was changed to account type 2 by TestRoot
-[2017-08-11 22:05:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-11 22:05:33] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=19
-[2017-08-11 22:05:33] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=2
-[2017-08-11 22:05:33] [L3-INFO ]: User ID 19 was changed to account type 1 by TestRoot
-[2017-08-11 22:06:09] [L4-DEBUG]: PollChoices size=3, value=Array
-[2017-08-11 22:06:53] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:08:00] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-11 22:08:34] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=14
-[2017-08-11 22:08:34] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:08:34] [L2-WARN ]: User ID 14 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:09:07] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=15
-[2017-08-11 22:09:07] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:09:08] [L2-WARN ]: User ID 15 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:09:32] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=16
-[2017-08-11 22:09:32] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:09:32] [L2-WARN ]: User ID 16 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:09:55] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=17
-[2017-08-11 22:09:55] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:09:55] [L2-WARN ]: User ID 17 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:10:42] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=18
-[2017-08-11 22:10:42] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:10:42] [L2-WARN ]: User ID 18 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:11:08] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=19
-[2017-08-11 22:11:08] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:11:08] [L2-WARN ]: User ID 19 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:11:36] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=20
-[2017-08-11 22:11:36] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:11:36] [L2-WARN ]: User ID 20 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:12:00] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=25
-[2017-08-11 22:12:00] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:12:00] [L2-WARN ]: User ID 25 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:12:23] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=26
-[2017-08-11 22:12:23] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=1
-[2017-08-11 22:12:23] [L2-WARN ]: User ID 26 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:12:49] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=21
-[2017-08-11 22:12:49] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=2
-[2017-08-11 22:12:49] [L2-WARN ]: User ID 21 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:13:14] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=22
-[2017-08-11 22:13:14] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=2
-[2017-08-11 22:13:14] [L2-WARN ]: User ID 22 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:13:41] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=23
-[2017-08-11 22:13:41] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=3
-[2017-08-11 22:13:41] [L2-WARN ]: User ID 23 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:14:05] [L4-DEBUG]: Entering compareUserAccess, user1=1, user2=24
-[2017-08-11 22:14:05] [L4-DEBUG]: Running compareUserAccess, type1=5, type2=4
-[2017-08-11 22:14:06] [L2-WARN ]: User ID 24 password was reset using a temporary password. TestRoot requested the reset and was shown the new password.
-[2017-08-11 22:14:27] [L3-INFO ]: User TestRoot logged out
-[2017-08-11 22:14:27] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:15:56] [L4-DEBUG]: Authentication successful: type=2, uuid=21, username=TestReferee1
-[2017-08-11 22:15:56] [L3-INFO ]: User testreferee1 logged in
-[2017-08-11 22:15:56] [L4-DEBUG]: getAccountStatus returned 1 for user=testreferee1
-[2017-08-11 22:15:56] [L3-INFO ]: User TestReferee1 has expired password flag. Redirecting to password change form.
-[2017-08-11 22:16:10] [L3-INFO ]: User TestReferee1 successfully changed their password
-[2017-08-11 22:16:10] [L3-INFO ]: User TestReferee1 logged out
-[2017-08-11 22:16:11] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:16:18] [L4-DEBUG]: Authentication successful: type=2, uuid=21, username=TestReferee1
-[2017-08-11 22:16:18] [L3-INFO ]: User testreferee1 logged in
-[2017-08-11 22:16:18] [L4-DEBUG]: getAccountStatus returned 0 for user=testreferee1
-[2017-08-11 22:16:18] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:20:43] [L3-INFO ]: User TestReferee1 logged out
-[2017-08-11 22:20:43] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:20:58] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-11 22:20:58] [L3-INFO ]: User testofficer1 logged in
-[2017-08-11 22:20:58] [L4-DEBUG]: getAccountStatus returned 1 for user=testofficer1
-[2017-08-11 22:20:58] [L3-INFO ]: User TestOfficer1 has expired password flag. Redirecting to password change form.
-[2017-08-11 22:21:15] [L3-INFO ]: User TestOfficer1 successfully changed their password
-[2017-08-11 22:21:15] [L3-INFO ]: User TestOfficer1 logged out
-[2017-08-11 22:21:17] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:21:32] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-11 22:21:32] [L3-INFO ]: User testofficer1 logged in
-[2017-08-11 22:21:32] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
-[2017-08-11 22:21:32] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:22:23] [L3-INFO ]: User TestOfficer1 logged out
-[2017-08-11 22:22:23] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:25:35] [L4-DEBUG]: getAllUpcomingEvents returned 4 rows
-[2017-08-11 22:25:37] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-11 22:27:26] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
-[2017-08-11 22:27:26] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:31:46] [L4-DEBUG]: getAllUpcomingEvents returned 3 rows
-[2017-08-12 11:31:46] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:38:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:38:49] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:39:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:39:55] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:40:14] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-12 11:40:18] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:40:18] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:40:57] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:41:01] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:41:01] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 11:41:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 11:41:59] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-12 17:27:03] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:04:21] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:04:34] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-12 18:04:34] [L3-INFO ]: User testmember1 logged in
-[2017-08-12 18:04:34] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-12 18:04:35] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:05:13] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 18:05:46] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 18:06:45] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 18:06:52] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-12 18:07:17] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:07:19] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 18:20:53] [L3-INFO ]: User TestMember1 logged out
-[2017-08-12 18:20:54] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:21:05] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-12 18:21:05] [L3-INFO ]: User testofficer1 logged in
-[2017-08-12 18:21:05] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
-[2017-08-12 18:21:06] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-12 18:59:03] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 18:59:09] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-12 18:59:10] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 19:12:22] [L2-WARN ]: Unauthorized or improper attempt to load POLL RESPONSE script page.
-[2017-08-12 19:12:22] [L3-INFO ]: Error page was displayed with e=401
-[2017-08-12 19:14:00] [L3-INFO ]: Site setting [PollStatus] changed to 0
-[2017-08-12 19:14:00] [L3-INFO ]: The active poll was closed by TestOfficer1
-[2017-08-12 19:14:08] [L4-DEBUG]: PollChoices size=3, value=At Midnight!,At HIGH NOON!,When it feels like it.
-[2017-08-12 19:59:17] [L3-INFO ]: Site setting [PollStatus] changed to 1
-[2017-08-12 19:59:17] [L3-INFO ]: Site setting [PollResponses] changed to Gamepad|Pro controller|Wiimote|Gamecube
-[2017-08-12 19:59:17] [L3-INFO ]: Site setting [PollQuestion] changed to Which controller do you prefer?
-[2017-08-12 19:59:17] [L3-INFO ]: A new multiple-choice poll was opened by TestOfficer1
-[2017-08-12 19:59:17] [L3-INFO ]: Error page was displayed with e=500
-[2017-08-12 20:00:22] [L4-DEBUG]: PollChoices size=4, value=Gamepad,Pro controller,Wiimote,Gamecube
-[2017-08-12 20:03:10] [L3-INFO ]: Site setting [PollStatus] changed to 0
-[2017-08-12 20:03:10] [L3-INFO ]: The active poll was closed by TestOfficer1
-[2017-08-12 20:03:15] [L4-DEBUG]: PollChoices size=4, value=Gamepad,Pro controller,Wiimote,Gamecube
-[2017-08-12 20:11:33] [L3-INFO ]: Site setting [PollStatus] changed to 1
-[2017-08-12 20:11:33] [L3-INFO ]: Site setting [PollResponses] changed to Gamecube|Wii U Gamepad|Pro Controller|Wiimote|Wiimote with Nunchuk|Classic Controller
-[2017-08-12 20:11:33] [L3-INFO ]: Site setting [PollQuestion] changed to What is your preferred controller type?
-[2017-08-12 20:11:33] [L3-INFO ]: A new multiple-choice poll was opened by TestOfficer1
-[2017-08-12 20:11:34] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-12 20:11:56] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:18:36] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:18:43] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-13 09:18:43] [L3-INFO ]: User testofficer1 logged in
-[2017-08-13 09:18:43] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
-[2017-08-13 09:18:44] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:20:06] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:20:52] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-13 09:20:52] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:20:55] [L3-INFO ]: User TestOfficer1 logged out
-[2017-08-13 09:20:55] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:21:01] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-13 09:21:01] [L3-INFO ]: User testmember1 logged in
-[2017-08-13 09:21:01] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-13 09:21:02] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:21:04] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:21:09] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-13 09:21:09] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:21:14] [L3-INFO ]: User TestMember1 logged out
-[2017-08-13 09:21:14] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:21:19] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-13 09:21:19] [L3-INFO ]: User testroot logged in
-[2017-08-13 09:21:19] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-13 09:21:20] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:21:24] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:21:30] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-13 09:21:30] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:29:18] [L4-DEBUG]: MCPollResults = 
-[2017-08-13 09:31:31] [L4-DEBUG]: MCPollResults = 2,1
-[2017-08-13 09:39:00] [L4-DEBUG]: MCPollResults = 2,1
-[2017-08-13 09:41:04] [L4-DEBUG]: MCPollResults = 2,1
-[2017-08-13 09:42:06] [L4-DEBUG]: MCPollResults = 2,1
-[2017-08-13 09:42:32] [L4-DEBUG]: MCPollResults = 2,1
-[2017-08-13 09:43:32] [L4-DEBUG]: MCPollResults = 2,0,1,0,0,0
-[2017-08-13 09:49:41] [L4-DEBUG]: MCPollResults = 2,0,1,0,0,0
-[2017-08-13 09:50:23] [L4-DEBUG]: MCPollResults = 2,0,1,0,0,0
-[2017-08-13 09:51:01] [L4-DEBUG]: MCPollResults = 2,0,1,0,0,0
-[2017-08-13 09:51:20] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:51:23] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:51:29] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:51:34] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:51:38] [L3-INFO ]: User TestRoot logged out
-[2017-08-13 09:51:39] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:51:49] [L4-DEBUG]: Authentication successful: type=2, uuid=21, username=TestReferee1
-[2017-08-13 09:51:49] [L3-INFO ]: User testreferee1 logged in
-[2017-08-13 09:51:49] [L4-DEBUG]: getAccountStatus returned 0 for user=testreferee1
-[2017-08-13 09:51:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:52:03] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:52:12] [L3-INFO ]: A poll response was recorded (multiple choice).
-[2017-08-13 09:52:12] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:52:20] [L2-WARN ]: User TestReferee1 attempted to load POLL RESULTS
-[2017-08-13 09:52:20] [L3-INFO ]: Error page was displayed with e=403
-[2017-08-13 09:52:26] [L3-INFO ]: User TestReferee1 logged out
-[2017-08-13 09:52:26] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:52:45] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-13 09:52:46] [L3-INFO ]: User testofficer1 logged in
-[2017-08-13 09:52:46] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
-[2017-08-13 09:52:46] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 09:52:53] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:52:56] [L4-DEBUG]: MCPollResults = 2,1,1,0,0,0
-[2017-08-13 09:53:10] [L3-INFO ]: Site setting [PollStatus] changed to 0
-[2017-08-13 09:53:10] [L3-INFO ]: The active poll was closed by TestOfficer1
-[2017-08-13 09:53:14] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:56:23] [L3-INFO ]: Site setting [PollStatus] changed to 2
-[2017-08-13 09:56:24] [L3-INFO ]: Site setting [PollQuestion] changed to What is your opinion of the Swiss System bracket?
-[2017-08-13 09:56:24] [L3-INFO ]: A new text poll was opened by TestOfficer1
-[2017-08-13 09:56:24] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:57:15] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:58:25] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:58:32] [L3-INFO ]: A poll response was recorded (open ended).
-[2017-08-13 09:58:32] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 09:58:39] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 10:01:25] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 10:01:34] [L3-INFO ]: A poll response was recorded (open ended).
-[2017-08-13 10:01:34] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 10:21:49] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:21:51] [L3-INFO ]: User TestOfficer1 logged out
-[2017-08-13 10:21:51] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:21:57] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-13 10:21:57] [L3-INFO ]: User testmember1 logged in
-[2017-08-13 10:21:57] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-13 10:21:57] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:22:01] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 10:22:15] [L3-INFO ]: A poll response was recorded (open ended).
-[2017-08-13 10:22:15] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 10:22:17] [L3-INFO ]: User TestMember1 logged out
-[2017-08-13 10:22:17] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:22:23] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-13 10:22:23] [L3-INFO ]: User testroot logged in
-[2017-08-13 10:22:23] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-13 10:22:23] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:22:38] [L3-INFO ]: Site setting [PollStatus] changed to 0
-[2017-08-13 10:22:38] [L3-INFO ]: The active poll was closed by TestRoot
-[2017-08-13 10:28:46] [L3-INFO ]: User TestRoot logged out
-[2017-08-13 10:28:46] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:36:22] [L3-INFO ]: New user TestMember1 self-registered successfully
-[2017-08-13 10:36:22] [L3-INFO ]: Posted to activity feed with type: NEW_USER
-[2017-08-13 10:36:24] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:36:29] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:43:32] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:45:55] [L3-INFO ]: New user testmember2 self-registered successfully
-[2017-08-13 10:45:55] [L3-INFO ]: Posted to activity feed with type: NEW_USER
-[2017-08-13 10:46:11] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:46:13] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:47:06] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:47:15] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:47:18] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:47:52] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:47:55] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:48:31] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-13 10:48:31] [L3-INFO ]: User testroot logged in
-[2017-08-13 10:48:31] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-13 10:48:31] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:49:51] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:49:57] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:50:03] [L3-INFO ]: User TestRoot logged out
-[2017-08-13 10:50:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:51:58] [L3-INFO ]: New user testbannedmember self-registered successfully
-[2017-08-13 10:51:58] [L3-INFO ]: Posted to activity feed with type: NEW_USER
-[2017-08-13 10:52:05] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:52:07] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:52:08] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:52:23] [L4-DEBUG]: Authentication successful: type=3, uuid=23, username=TestOfficer1
-[2017-08-13 10:52:23] [L3-INFO ]: User testofficer1 logged in
-[2017-08-13 10:52:23] [L4-DEBUG]: getAccountStatus returned 0 for user=testofficer1
-[2017-08-13 10:52:23] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 10:52:35] [L4-DEBUG]: Entering compareUserAccess, user1=23, user2=33
-[2017-08-13 10:52:35] [L4-DEBUG]: Running compareUserAccess, type1=3, type2=1
-[2017-08-13 10:52:35] [L3-INFO ]: User ID 33 was changed to account status: BANNED by TestOfficer1
-[2017-08-13 10:52:39] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 10:56:56] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 11:03:46] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 11:03:53] [L4-DEBUG]: getAllCurrentRankData called with order=0
-[2017-08-13 15:34:08] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 15:34:23] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 15:34:23] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-13 16:13:28] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-13 16:13:28] [L3-INFO ]: User testroot logged in
-[2017-08-13 16:13:28] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-13 16:13:28] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 16:55:04] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 16:55:06] [L4-DEBUG]: PollChoices size=6, value=Gamecube,Wii U Gamepad,Pro Controller,Wiimote,Wiimote with Nunchuk,Classic Controller
-[2017-08-13 16:58:18] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:30:16] [L3-INFO ]: User TestRoot logged out
-[2017-08-13 18:30:16] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:36:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:36:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:37:01] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 18:38:07] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 18:38:21] [L4-DEBUG]: getProfilesByUsername called with search=, staffonly=
-[2017-08-13 18:38:37] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:38:37] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-13 18:39:59] [L3-INFO ]: Guest signed up for event with id 6 using name Dwarf Dwarfishson
-[2017-08-13 18:40:02] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-13 18:40:02] [L4-DEBUG]: getEventIdsByUser called for guest, returning an empty array.
-[2017-08-13 19:09:38] [L4-DEBUG]: Authentication successful: type=1, uuid=13, username=TestMember1
-[2017-08-13 19:09:38] [L3-INFO ]: User testmember1 logged in
-[2017-08-13 19:09:38] [L4-DEBUG]: getAccountStatus returned 0 for user=testmember1
-[2017-08-13 19:09:38] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-14 12:37:52] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
-[2017-08-14 12:37:59] [L4-DEBUG]: Authentication successful: type=5, uuid=1, username=TestRoot
-[2017-08-14 12:37:59] [L3-INFO ]: User testroot logged in
-[2017-08-14 12:37:59] [L4-DEBUG]: getAccountStatus returned 0 for user=testroot
-[2017-08-14 12:37:59] [L4-DEBUG]: getAllUpcomingEvents returned 2 rows
