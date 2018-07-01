@@ -27,7 +27,7 @@ body {
 .sidebar .sidebarlink {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: <?php echo $theme['SidebarTextColor']; ?> ;
     display: block;
     transition: 0.3s
@@ -35,14 +35,14 @@ body {
 
 .sidebarlink img {
 	display: inline;
-	width: 36px;
+	width: 30px;
 	vertical-align: middle;
 }
 
 .sidebarlink a {
 	font-family: MavenPro;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: <?php echo $theme['SidebarTextColor']; ?> !important ;
     display: inline;
     transition: 0.3s
@@ -630,6 +630,27 @@ body {
 	vertical-align: middle;
 }
 
+.sidebar .sidebartitle {
+	font-family: PerpetuaBold;
+	padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    transition: 0.3s
+}
+
+.sidebar .sidebartitle a {
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 2px 2px black;
+}
+
+.sidebar .sidebartitle a:hover {
+	text-decoration: underline;
+}
+
 #nav-mail {
 	display: block;
 	color: <?php echo $theme['BlockTextColor']; ?>;
@@ -656,4 +677,9 @@ body {
 @font-face{
 	font-family: BigNoodleTitling;
 	src: url(/resource/big_noodle_titling.ttf);
+}
+
+@font-face{
+	font-family: PerpetuaBold;
+	src: url(/resource/perpetua_bold.ttf);
 }

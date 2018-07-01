@@ -36,7 +36,7 @@
 
 			<div class="pview-block">
 				<div id="pview-title">
-					<img id="pview-image" src=<?php echo "'/resource/character/".$profile['prof_main_character'].".png'"; ?> />
+					<img id="pview-image" src=<?php echo "'/resource/character/ultimate/".$profile['prof_main_character'].".png'"; ?> />
 					<h2><?php echo $profile['user_username']; ?></h2>
 					<h3>Member since <?php echo $joindate; ?></h3>
 				</div>

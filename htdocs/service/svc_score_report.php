@@ -20,16 +20,16 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		$diff = $score1 - $score2;
 
 		if ($diff>0){ //P1 wins
-			$p1add = getWinnerRatingIncrease($curr1, $curr2) * abs($diff);
-			$p2sub = getLoserRatingDecrease($curr2, $curr1) * abs($diff);
+			$p1add = getPointsWon($curr1, $curr2) * abs($diff);
+			$p2sub = getPointsLost($curr2, $curr1) * abs($diff);
 			if ($pl1>0) $p1add *= 2;
 			if ($pl2>0) $p2sub *= 2;
 			$new1 = $curr1 + $p1add;
 			$new2 = $curr2 - $p2sub;
 		}
 		elseif ($diff<0){ //P2 wins
-			$p1sub = getLoserRatingDecrease($curr1, $curr2) * abs($diff);
-			$p2add = getWinnerRatingIncrease($curr2, $curr1) * abs($diff);
+			$p1sub = getPointsWon($curr1, $curr2) * abs($diff);
+			$p2add = getPointsLost($curr2, $curr1) * abs($diff);
 			if ($pl1>0) $p1sub *= 2;
 			if ($pl2>0) $p2add *= 2;
 			$new1 = $curr1 - $p1sub;
@@ -59,7 +59,7 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		writeLog(INFO, "Player[2]: ".$p2data['user_username'].", Score: ".$score2.", Old rank: ".$curr2.", New rank: ".$new2.", PM Counter: ".$pl2);
 		writeLog(INFO, "--------");
 
-		//Perform database update
+		//Perform database update, unless the match was a scoreless tie (forfeit)
 		if ($score1 > 0 or $score2 > 0){
 			if (!svc_updateRank($id1, $new1)){
 				return false;
@@ -239,6 +239,56 @@ function getTeamLoserRatingDecrease($curr, $team, $opp){
 	$yield = (50 + ($diff / 12.0));
 	if ($yield <= 0) $yield = 1;
 	return $yield;
+}
+
+/* v2.5 experimental rank calculations */
+
+function getPointsWon($win, $opp){
+	$cons = floatval(svc_getSetting("RankCalcPrimConstant"));
+	writeLog(TRACE, "WIN cons=".$cons);
+	$pow = pow(abs($opp-$win), 1/3);
+	writeLog(TRACE, "WIN pow=".$pow);
+	if ($win > $opp){ //Because pow() doesn't like negative roots for some reason
+		$pow *= -1;
+	}
+	$yield = 50 + ($cons * $pow);
+	writeLog(TRACE, "WIN yield=".$yield);
+	if ($yield < 1){
+		return 1;
+	} else {
+		return $yield;
+	}
+}
+
+function getPointsLost($los, $opp){
+	$cons = floatval(svc_getSetting("RankCalcPrimConstant"));
+	$scale = floatval(svc_getSetting("RankCalcLossScalar"));
+	writeLog(TRACE, "LOSS cons=".$cons." scale=".$scale);
+	$pow = pow(abs($opp-$los), 1/3);
+	writeLog(TRACE, "LOSS pow=".$pow);
+	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
+		$pow *= -1;
+	}
+	$yield = 50 + (-1 * $cons * $pow);
+	writeLog(TRACE, "LOSS yield before scale=".$yield);
+	$yield *= $scale;
+	writeLog(TRACE, "LOSS yield=".$yield);
+	if ($yield < 1){
+		return 1;
+	} else {
+		return $yield;
+	}
+}
+
+function getPointsLostv2($los, $opp){
+	$exp = -1 * B * pow($opp-$los, 2);
+	$yield = 50 * pow(M_E, $exp);
+	writeLog(TRACE, "Someone just lost! los=".$los." opp=".$opp." exp=".$exp." yield=".$yield);
+	if ($yield < 1){
+		return 1;
+	} else {
+		return $yield;
+	}
 }
 
 ?>

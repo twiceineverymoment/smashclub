@@ -13,14 +13,13 @@
 
 	<tr><td valign="top">
 
-	<div class="sidebarlink">
-		<img src="/resource/tab_home.png" width="50" />
+	<div class="sidebartitle">
 		<a href="/"><b><?php echo $orgname; ?></b></a>
 	</div>
 
 	<?php if ($_SESSION['type']>0 and $eventActive>=3) : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_matchmaking.png" width="50" />
+		<img src="/resource/tab_matchmaking.png" width="30" />
 		<?php if (svc_getSetting("EventIsRanked")==1) : ?>
 			<a href="/matchmaking/" style="color: orange !important">Matchmaking</a>
 		<?php else : ?>
@@ -30,66 +29,66 @@
 	<?php endif; ?>
 	<?php if ($_SESSION['type']>0 and in_array($eventActive, array(1, 2, 4))) : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_tourney.png" width="50" />
+		<img src="/resource/tab_tourney.png" width="30" />
 		<a href="/tourney/" style="color: orangered !important">Tournament</a>
 	</div>
 	<?php endif; ?>
 	<?php if ($live==1) : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_stream.png" width="50" />
+		<img src="/resource/tab_stream.png" width="30" />
 		<a href="/stream/" style="color: mediumvioletred !important">LIVE</a>
 	</div>
 	<?php endif; ?>
 
 	<?php if($guestmode=='1' or $_SESSION['type']>0) : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_members.png" width="50" />
+		<img src="/resource/tab_members.png" width="30" />
 		<a href="/directory/">Members</a>
 	</div>
 	<div class="sidebarlink">
-		<img src="/resource/tab_activity.png" width="50" />
+		<img src="/resource/tab_activity.png" width="30" />
 		<a href="/activity/">Activity</a>
 	</div>
 	<div class="sidebarlink">
-		<img src="/resource/tab_events.png" width="50" />
+		<img src="/resource/tab_events.png" width="30" />
 		<a href="/events/">Events</a>
 	</div>
 	<?php endif; ?>
 
 	<?php if ($_SESSION['type']>0) : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_leaderboard.png" width="50" />
+		<img src="/resource/tab_leaderboard.png" width="30" />
 		<a href="/leaderboard/">Rankings</a>
 	</div>
 	<div class="sidebarlink">
-		<img src="/resource/tab_records.png" width="50" />
+		<img src="/resource/tab_records.png" width="30" />
 		<a href="/records/">Records</a>
 	</div>
 	<div class="sidebarlink">
-		<img src="/resource/tab_polls.png" width="50" />
+		<img src="/resource/tab_polls.png" width="30" />
 		<a href="/poll/">Polls</a>
 	</div>
 	<div class="sidebarlink">
-		<img src="/resource/tab_profile.png" width="50" />
+		<img src="/resource/tab_profile.png" width="30" />
 		<a href=<?php echo "/profile/?u=".$_SESSION['name']; ?>>My Profile</a>
 	</div>
 	<?php else : ?>
 	<div class="sidebarlink">
-		<img src="/resource/tab_contact.png" width="50" />
+		<img src="/resource/tab_contact.png" width="30" />
 		<a href="/contact/">Contact</a>
 	</div>
 	<?php endif; ?>
 
 	<?php if ($_SESSION['type']>1) : ?>
 		<div class="sidebarlink">
-		<img src="/resource/tab_scoreentry.png" width="50" />
+		<img src="/resource/tab_scoreentry.png" width="30" />
 		<a href="/scoring/">Score Entry</a>
 		</div>
 	<?php endif; ?>
 
 	<?php if ($_SESSION['type']>2) : ?>
 		<div class="sidebarlink">
-		<img src="/resource/tab_administration.png" width="50" />
+		<img src="/resource/tab_administration.png" width="30" />
 		<a href="/adminpanel/">Admin Panel</a>
 		</div>
 	<?php endif; ?>

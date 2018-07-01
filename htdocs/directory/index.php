@@ -35,7 +35,7 @@
 
 		function printProfileBlock($username, $main, $firstname, $lastname, $catchphrase, $type){
 			echo "<table class='profile-block'><tr>";
-			echo "<td width='30%' rowspan='2'><img src='/resource/character/".$main.".png' class='character-image' /></td>";
+			echo "<td width='30%' rowspan='2'><img src='/resource/character/ultimate/".$main.".png' class='character-image' /></td>";
 			echo "<td width='70%'><h2><a class='profile-name' href='/profile/?u=".$username."'>".$username."</a></h2></td></tr>";
 			echo "<tr><td width='70%'>";
 			if ($type==2){
