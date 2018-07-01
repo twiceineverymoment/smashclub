@@ -13,8 +13,7 @@
 
 	<tr><td valign="top">
 
-	<div class="sidebarlink">
-		<img src="/resource/tab_home.png" width="50" />
+	<div class="sidebartitle">
 		<a href="/"><b><?php echo $orgname; ?></b></a>
 	</div>
 

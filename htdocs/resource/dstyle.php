@@ -630,6 +630,27 @@ body {
 	vertical-align: middle;
 }
 
+.sidebar .sidebartitle {
+	font-family: PerpetuaBold;
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    transition: 0.3s
+}
+
+.sidebar .sidebartitle a {
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 2px 2px black;
+}
+
+.sidebar .sidebartitle a:hover {
+	text-decoration: underline;
+}
+
 #nav-mail {
 	display: block;
 	color: <?php echo $theme['BlockTextColor']; ?>;
@@ -656,4 +677,9 @@ body {
 @font-face{
 	font-family: BigNoodleTitling;
 	src: url(/resource/big_noodle_titling.ttf);
+}
+
+@font-face{
+	font-family: PerpetuaBold;
+	src: url(/resource/perpetua_bold.ttf);
 }
