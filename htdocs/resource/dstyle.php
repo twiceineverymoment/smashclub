@@ -27,7 +27,7 @@ body {
 .sidebar .sidebarlink {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: <?php echo $theme['SidebarTextColor']; ?> ;
     display: block;
     transition: 0.3s
@@ -35,14 +35,14 @@ body {
 
 .sidebarlink img {
 	display: inline;
-	width: 36px;
+	width: 30px;
 	vertical-align: middle;
 }
 
 .sidebarlink a {
 	font-family: MavenPro;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: <?php echo $theme['SidebarTextColor']; ?> !important ;
     display: inline;
     transition: 0.3s
@@ -632,7 +632,7 @@ body {
 
 .sidebar .sidebartitle {
 	font-family: PerpetuaBold;
-	padding: 8px 8px 8px 32px;
+	padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 32px;
     text-align: center;
