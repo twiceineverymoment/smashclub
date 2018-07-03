@@ -153,6 +153,44 @@ function svc_isNewCareerHighTier($new, $high){
 	return false;
 }
 
+function svc_getConsecutiveMatches($uuid){
+	global $db;
+	$query = "SELECT rank_consec_games FROM user_ranking 
+	WHERE uuid = '$uuid'";
+	$rs = mysqli_query($db, $query);
+	if ($row = mysqli_fetch_assoc($rs)){
+		return $row['rank_consec_games'];
+	} else {
+		return 0;
+	}
+}
+
+function svc_updateConsecutiveMatches($uuid, $win){
+	global $db;
+	$streak = svc_getConsecutiveMatches($uuid);
+	if ($win){
+		if ($streak >= 0){
+			$new = $streak + 1;
+		} else {
+			$new = 0;
+		}
+	} else {
+		if ($streak <= 0){
+			$new = $streak - 1;
+		} else {
+			$new = 0;
+		}
+	}
+	$query = "UPDATE user_ranking SET rank_consec_games = '$new' WHERE uuid = '$uuid'";
+	if (mysqli_query($db, $query)){
+		return true;
+	} else {
+		writeLog(ERROR, "updateConsecutiveMatches failed");
+		writeLog(ERROR, mysqli_error($db));
+		return false;
+	}
+}
+
 //End the current season.
 //Set the current season ID to 0 (offseason)
 //Copy current ranking data into the records table.

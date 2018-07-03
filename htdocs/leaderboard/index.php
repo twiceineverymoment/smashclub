@@ -89,6 +89,10 @@
 							elseif ($row['user_type']==3) { echo "<b style='color: gold'>&#10030; </b>"; }
 							elseif ($row['user_type']==4) { echo "<b style='color: dodgerblue'>&#10026; </b>"; }
 							echo $row['user_username'];
+							if ($row['rank_consec_games'] >= svc_getSetting("WinningStreakInterval")){
+								echo " &#x1F525;";
+								echo "<span style='font-weight: bold'>".$row['rank_consec_games']."</span>";
+							}
 							?></a></td>
 						<td><?php echo $row['rank_current']; ?></td>
 						<td><?php echo $row['rank_season_high']; ?></td>
