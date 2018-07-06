@@ -265,7 +265,7 @@ function getPointsWon($win, $opp){
 	if ($win > $opp){ //Because pow() doesn't like negative roots for some reason
 		$pow *= -1;
 	}
-	$yield = 50 + ($cons * $pow);
+	$yield = 30 + ($cons * $pow);
 	writeLog(TRACE, "WIN yield=".$yield);
 	if ($yield < 1){
 		return 1;
@@ -283,7 +283,7 @@ function getPointsLost($los, $opp){
 	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
 		$pow *= -1;
 	}
-	$yield = 50 + (-1 * $cons * $pow);
+	$yield = 30 + (-1 * $cons * $pow);
 	writeLog(TRACE, "LOSS yield before scale=".$yield);
 	$yield *= $scale;
 	writeLog(TRACE, "LOSS yield=".$yield);
@@ -295,10 +295,10 @@ function getPointsLost($los, $opp){
 }
 
 function svc_getStreakYieldMultiplier($streak){
-	if (abs($streak) > 3){
-		$streak = 3;
+	if (abs($streak) > 4){
+		$streak = 4;
 	}
-	return 0.5 + (abs($streak)*0.5);
+	return 0.75 + (abs($streak)*0.125);
 }
 
 function svc_doStreakAnnouncement($uuid, $streak){
