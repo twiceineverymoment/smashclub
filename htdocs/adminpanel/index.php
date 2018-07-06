@@ -212,7 +212,13 @@
 				<div class="acp-icon">
 					<a href="/forms/event_review.php" target="_blank">
 					<img src="/resource/admincp/attendance.png" />
-					Manage Guests
+					View Signups
+					</a>
+				</div>
+				<div class="acp-icon">
+					<a href="/forms/attendance.php" target="_blank">
+					<img src="/resource/admincp/event_attendance.png" />
+					Take Attendance
 					</a>
 				</div>
 				<hr />
