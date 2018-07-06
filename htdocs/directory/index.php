@@ -33,9 +33,13 @@
 
 		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
 
-		function printProfileBlock($username, $main, $firstname, $lastname, $catchphrase, $type){
+		function printProfileBlock($username, $main, $firstname, $lastname, $catchphrase, $type, $streak){
 			echo "<table class='profile-block'><tr>";
-			echo "<td width='30%' rowspan='2'><img src='/resource/character/ultimate/".$main.".png' class='character-image' /></td>";
+			if ($streak <= (-1 * svc_getSetting("WinningStreakInterval"))){
+				echo "<td width='30%' rowspan='2'><img src='/resource/waaah.png' class='character-image' /></td>";
+			} else {
+				echo "<td width='30%' rowspan='2'><img src='/resource/character/ultimate/".$main.".png' class='character-image' /></td>";
+			}
 			echo "<td width='70%'><h2><a class='profile-name' href='/profile/?u=".$username."'>".$username."</a></h2></td></tr>";
 			echo "<tr><td width='70%'>";
 			if ($type==2){
@@ -68,7 +72,7 @@
 		}
 
 		while ($profile = mysqli_fetch_assoc($rs)){
-			printProfileBlock($profile['user_username'], $profile['prof_main_character'], $profile['prof_first_name'], $profile['prof_last_name'], $profile['prof_catchphrase'], $profile['user_type']);
+			printProfileBlock($profile['user_username'], $profile['prof_main_character'], $profile['prof_first_name'], $profile['prof_last_name'], $profile['prof_catchphrase'], $profile['user_type'], $profile['rank_consec_games']);
 			echo "&nbsp;&nbsp;";
 		}
 
