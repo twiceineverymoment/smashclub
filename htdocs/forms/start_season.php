@@ -32,7 +32,7 @@
 					<span>Initialize Rankings To:</span>
 					<select name="seed-method">
 						<option value="0">Previous Related Season</option>
-						<option value="1" disabled>Average of Related Seasons</option><!--TODO Unlock this option-->
+						<option value="1">Average of Related Seasons</option>
 						<option value="2">Fresh Start</option>
 					</select>
 					<span>Number of Placement Matches (1 to 10):</span>
