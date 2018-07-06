@@ -36,6 +36,8 @@
 					<input type="datetime-local" name="datetime" required/>
 					<span>Event Location:</span>
 					<input type="text" name="location" maxlength="128" />
+					<span>Limit Signups (optional):</span>
+					<input type="number" name="limit" value="" min="1" max="99" />
 					<h3>Give a brief description of your event. Include rule sets for competitive events (1024 characters max)</h3>
 					<textarea rows="3" name="description"></textarea>
 					<input type="checkbox" name="private" />

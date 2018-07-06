@@ -74,6 +74,8 @@
 					<?php elseif(in_array($eactive['event_id'], $signedUpIds)) : ?>
 						<span style="color: white; display: inline-block">You are signed up for this event!</span>
 						<input type="submit" class="sc-button" name="cancel" style="background-color: firebrick; display: inline-block; width: 150px" value="&#128473; Leave Event" />
+					<?php elseif(svc_isEventFull($eactive['event_id'])) : ?>
+						<span style="color: white; display: inline-block">This event is full. Please contact the organizer.</span>
 					<?php else : ?>
 						<input type="submit" class="sc-button" name="member-rsvp" style="background-color: limegreen; display: inline-block; width: 150px" value="&#10004; Join Event" />
 					<?php endif; ?>
@@ -148,6 +150,8 @@
 					<?php elseif(in_array($e['event_id'], $signedUpIds)) : ?>
 						<span style="color: white; display: inline-block">You are signed up for this event!</span>
 						<input type="submit" class="sc-button" name="cancel" style="background-color: firebrick; display: inline-block; width: 150px" value="&#128473; Cancel" />
+					<?php elseif(svc_isEventFull($e['event_id'])) : ?>
+						<span style="color: white; display: inline-block">This event is full. Please contact the organizer.</span>
 					<?php else : ?>
 						<input type="submit" class="sc-button" name="member-rsvp" style="background-color: limegreen; display: inline-block; width: 150px" value="&#10004; Sign Up" />
 					<?php endif; ?>

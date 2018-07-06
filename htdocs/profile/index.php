@@ -17,6 +17,10 @@
 		$joindate = date_format(new DateTime($profile['date_member_join']), "F Y");
 		$pmleft = $profile['rank_placements'];
 		$pminit = svc_getSetting("InitialPlacementMatches");
+		$imagesrc = "/resource/character/ultimate/".$profile['prof_main_character'].".png";
+		if ($profile['rank_consec_games'] <= (-1 * svc_getSetting("WinningStreakInterval"))){
+			$imagesrc = "/resource/waaah.png";
+		}
 		?>
 
 		<?php if(svc_getSetting("EnableGuestProfileView")=="0" and $_SESSION['type']==0) : ?>
@@ -36,7 +40,7 @@
 
 			<div class="pview-block">
 				<div id="pview-title">
-					<img id="pview-image" src=<?php echo "'/resource/character/ultimate/".$profile['prof_main_character'].".png'"; ?> />
+					<img id="pview-image" src=<?php echo $imagesrc; ?> />
 					<h2><?php echo $profile['user_username']; ?></h2>
 					<h3>Member since <?php echo $joindate; ?></h3>
 				</div>

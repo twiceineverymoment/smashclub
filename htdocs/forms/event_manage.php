@@ -20,18 +20,27 @@
 	}
 
 	?>
+	<script type="text/javascript">
+	function deleteEvent(){
+		if (confirm('Are you sure you want to delete this event?')){
+			var form = document.getElementById('topForm');
+			form.action = '/script/event_update.php';
+			form.submit();
+		}
+	}
+	</script>
 
 		<div class="page-content">
 			<div class="formpage-block">
 				<h2>Manage Events</h2>
-				<form action="event_manage.php" method="post">
+				<form action="event_manage.php" method="post" id="topForm">
 					<span>Select Event:</span>
 					<select name="event-id" id="event-id">
 						<?php svc_getEventListAsOptions(true, false); ?>
 					</select>
 					<span>What would you like to do?</span><br/>
 					<input type="submit" class="sc-button" name="event-select" value="Edit Event" />
-					<input type="button" class="sc-button" style="background-color: firebrick" value="Delete Event" />
+					<input type="submit" class="sc-button" name="delete" style="background-color: firebrick" value="Delete Event" onClick="deleteEvent()" />
 				</form>
 				<hr/>
 				<?php if(isset($_POST['event-select'])) : ?>

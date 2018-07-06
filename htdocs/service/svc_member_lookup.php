@@ -9,9 +9,10 @@ function svc_getProfilesByUsername($search, $staffonly){
 	global $db, $debug;
 
 	$searchquery = "%".$search."%";
-	$query = "SELECT p.prof_first_name, p.prof_last_name, p.prof_main_character, p.prof_catchphrase, a.user_username, a.user_type 
+	$query = "SELECT p.prof_first_name, p.prof_last_name, p.prof_main_character, p.prof_catchphrase, a.user_username, a.user_type, r.rank_consec_games  
 	FROM user_profile p 
 	INNER JOIN user_authentication a on p.UUID = a.UUID 
+	INNER JOIN user_ranking r on r.UUID = p.UUID 
 	WHERE a.user_locked in (0, 1, 4) ";
 
 	if ($staffonly){

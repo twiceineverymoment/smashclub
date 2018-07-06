@@ -39,7 +39,7 @@
 			<?php
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
 				$seasons = svc_getSeasonListWithGameTitles();
-				$games=array("", "N64", "Melee", "Brawl", "Wii U");
+				$games=array("Mixed", "N64", "Melee", "Brawl", "Wii U");
 				while ($opt = mysqli_fetch_assoc($seasons)){
 					if ($opt['season_id']==svc_getSetting("CurrentSeasonNumber")) continue; //Added for issue #29
 					echo "<option value='".$opt['season_id']."'>";

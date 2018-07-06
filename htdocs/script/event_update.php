@@ -19,8 +19,9 @@ if (isset($_POST['create'])){
 	$description = mysqli_real_escape_string($db, $_POST['description']);
 	$location = mysqli_real_escape_string($db, $_POST['location']);
 	$datetime = $_POST['datetime'];
+	$limit = $_POST['limit'];
 
-	if (svc_addEvent($title, $datetime, $location, $type, $private, $description)){
+	if (svc_addEvent($title, $datetime, $location, $type, $private, $description, $limit)){
 		$when = new DateTime($datetime);
 
 		$emailmsg = $_SESSION['name']." just added a new event on SmashClub. \r\n".
@@ -50,8 +51,9 @@ elseif (isset($_POST['update'])){
 	$location = mysqli_real_escape_string($db, $_POST['location']);
 	$datetime = $_POST['datetime'];
 	$eid = $_POST['eid'];
+	$limit = $POST['limit'];
 
-	if (svc_updateEvent($eid, $title, $datetime, $location, $private, $description)){
+	if (svc_updateEvent($eid, $title, $datetime, $location, $private, $description, $limit)){
 		$when = new DateTime($datetime);
 
 		$emailmsg = $_SESSION['name']." changed details for the event ".$title.": "."\r\n".
@@ -64,7 +66,18 @@ elseif (isset($_POST['update'])){
 		sendRedirect("/events/");
 	}
 	else {
-		showJavascriptAlert("Event creation failed (500). See the logs for more information.");
+		showJavascriptAlert("Event operation failed (500). See the logs for more information.");
+		showErrorPage(500);
+	}
+}
+
+elseif (isset($_POST['delete'])){
+	writeLog(DEBUG, "Called deleteEvent");
+	if (svc_removeEvent($_POST['event-id'])){
+		showJavascriptAlert("Event deleted successfully.");
+		sendRedirect("/forms/event_manage.php");
+	} else {
+		showJavascriptAlert("Event operation failed (500). See the logs for more information.");
 		showErrorPage(500);
 	}
 }

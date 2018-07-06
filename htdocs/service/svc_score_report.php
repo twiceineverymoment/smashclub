@@ -22,6 +22,13 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		if ($diff>0){ //P1 wins
 			$p1add = getPointsWon($curr1, $curr2) * abs($diff);
 			$p2sub = getPointsLost($curr2, $curr1) * abs($diff);
+			svc_updateConsecutiveMatches($id1, true);
+			svc_updateConsecutiveMatches($id2, false);
+			$p1streak = svc_getConsecutiveMatches($id1);
+			$p2streak = svc_getConsecutiveMatches($id2);
+			$p1add *= svc_getStreakYieldMultiplier($p1streak);
+			$p2sub *= svc_getStreakYieldMultiplier($p2streak);
+			svc_doStreakAnnouncement($id1, $p1streak);
 			if ($pl1>0) $p1add *= 2;
 			if ($pl2>0) $p2sub *= 2;
 			$new1 = $curr1 + $p1add;
@@ -30,6 +37,13 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		elseif ($diff<0){ //P2 wins
 			$p1sub = getPointsWon($curr1, $curr2) * abs($diff);
 			$p2add = getPointsLost($curr2, $curr1) * abs($diff);
+			svc_updateConsecutiveMatches($id1, false);
+			svc_updateConsecutiveMatches($id2, true);
+			$p1streak = svc_getConsecutiveMatches($id1);
+			$p2streak = svc_getConsecutiveMatches($id2);
+			$p1sub *= svc_getStreakYieldMultiplier($p1streak);
+			$p2add *= svc_getStreakYieldMultiplier($p2streak);
+			svc_doStreakAnnouncement($id2, $p2streak);
 			if ($pl1>0) $p1sub *= 2;
 			if ($pl2>0) $p2add *= 2;
 			$new1 = $curr1 - $p1sub;
@@ -251,7 +265,7 @@ function getPointsWon($win, $opp){
 	if ($win > $opp){ //Because pow() doesn't like negative roots for some reason
 		$pow *= -1;
 	}
-	$yield = 50 + ($cons * $pow);
+	$yield = 30 + ($cons * $pow);
 	writeLog(TRACE, "WIN yield=".$yield);
 	if ($yield < 1){
 		return 1;
@@ -269,7 +283,7 @@ function getPointsLost($los, $opp){
 	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
 		$pow *= -1;
 	}
-	$yield = 50 + (-1 * $cons * $pow);
+	$yield = 30 + (-1 * $cons * $pow);
 	writeLog(TRACE, "LOSS yield before scale=".$yield);
 	$yield *= $scale;
 	writeLog(TRACE, "LOSS yield=".$yield);
@@ -280,14 +294,27 @@ function getPointsLost($los, $opp){
 	}
 }
 
-function getPointsLostv2($los, $opp){
-	$exp = -1 * B * pow($opp-$los, 2);
-	$yield = 50 * pow(M_E, $exp);
-	writeLog(TRACE, "Someone just lost! los=".$los." opp=".$opp." exp=".$exp." yield=".$yield);
-	if ($yield < 1){
-		return 1;
-	} else {
-		return $yield;
+function svc_getStreakYieldMultiplier($streak){
+	if (abs($streak) > 4){
+		$streak = 4;
+	}
+	return 0.75 + (abs($streak)*0.125);
+}
+
+function svc_doStreakAnnouncement($uuid, $streak){
+	$interval = svc_getSetting("WinningStreakInterval");
+	if ($streak == $interval){
+		$username = svc_getMemberNameByID($uuid);
+		svc_addActivityItem(5, null, $username." is on a <b>Winning Streak</b> (".$streak." wins in a row)", null);
+	} else if ($streak == $interval * 2){
+		$username = svc_getMemberNameByID($uuid);
+		svc_addActivityItem(5, null, $username." is <b>Unstoppable</b> (".$streak." wins in a row)", null);
+	} else if ($streak == $interval * 3){
+		$username = svc_getMemberNameByID($uuid);
+		svc_addActivityItem(5, null, $username." is <b>Legendary</b> (".$streak." wins in a row)", null);
+	} else if ($streak == $interval * 4){
+		$username = svc_getMemberNameByID($uuid);
+		svc_addActivityItem(5, null, $username." is <b>God-like</b> (".$streak." wins in a row)", null);
 	}
 }
 
