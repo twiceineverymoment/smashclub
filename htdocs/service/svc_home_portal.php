@@ -20,7 +20,7 @@ function svc_getSeasonPortletData(){
 
 function svc_echoSlideshowImages(){
 	$directory = $_SERVER['DOCUMENT_ROOT']."/customization/slideshow/";
-	$images = glob($directory . "*.{jpg,png,gif}", GLOB_BRACE);
+	$images = glob($directory . "*.{jpg,png}", GLOB_BRACE);
 	$first = true;
 	foreach($images as $image){
 		if ($first){

@@ -46,16 +46,16 @@
 					<textarea rows="3" cols="20" name="rules"></textarea>
 					<hr/>
 					<input type="radio" name="bracket" value="0" required>
-					<span><b>Single Elimination - </b>Good for very large groups. Winners move forward to the next round, and losers are eliminated, until only one contestant remains. If the number of contestants is not a power of 2 (8, 16, 32, etc) then some players will receive byes.</span>
+					<span><b>Single Elimination (4-32 players) - </b>Good for very large groups. Winners move forward to the next round, and losers are eliminated, until only one contestant remains. If the number of contestants is not a power of 2 (8, 16, 32, etc) then some players will receive byes.</span>
 					<hr/>
 					<input type="radio" name="bracket" value="1" required>
-					<span><b>Double Elimination - </b>Players are eliminated when they have lost twice. The first loss moves a player into the Losers Bracket, where they can reach the finals by defeating other one-time losers. The losers bracket winner must defeat the winners bracket finalist twice to claim the championship. If the number of contestants is not a power of 2 (8, 16, 32, etc) then some players will receive byes.</span>
+					<span><b>Double Elimination (4-32 players) - </b>Players are eliminated when they have lost twice. The first loss moves a player into the Losers Bracket, where they can reach the finals by defeating other one-time losers. The losers bracket winner must defeat the winners bracket finalist twice to claim the championship. If the number of contestants is not a power of 2 (8, 16, 32, etc) then some players will receive byes.</span>
 					<hr/>
 					<input type="radio" name="bracket" value="2" required>
-					<span><b>Round Robin - </b>Every player faces every other player exactly once, and the winner is the one with the most total points. This format has no eliminations, but can take a very long time with any moderately large group.</span>
+					<span><b>Round Robin (3-10 players) - </b>Every player faces every other player exactly once, and the winner is the one with the most total points. This format has no eliminations, but can take a very long time with any moderately large group.</span>
 					<hr/>
-					<input type="radio" name="bracket" value="3" required>
-					<span><b>Swiss System - </b>A non-eliminating format where players are paired up in each round with someone that has the same number of past wins as they do. This format has no eliminations and is more time-efficient than Round Robin. <b>Requires an even number of contestants</b></span>
+					<input type="radio" name="bracket" value="3" disabled required>
+					<span><b>Grouped Round Robin (8-64 players) - </b>Players are separated into groups of 4 and play in smaller round-robin tournaments. Each group will have a winner. This tournament can "feed" winners into an elimination tournament to save time with very large numbers of contestants. <b>Number of contestants must be a multiple of 4.</b></span>
 					<hr/>
 					<input type="hidden" name="event" value=<?php echo "\"".$eventdata['event_id']."\""; ?> />
 					<input type="submit" class="sc-button" name="update" value="Next Step" />

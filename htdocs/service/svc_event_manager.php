@@ -170,8 +170,10 @@ function svc_getEventListAsOptions($past, $tourneys){
 	} else {
 		$query .= " WHERE event_type <= 5";
 	}
-
-	if (!$past){
+	if ($past==2){
+		$query .= " AND event_time < NOW()";
+	}
+	elseif (!$past){
 		$query .= " AND event_time >= NOW()";
 	}
 

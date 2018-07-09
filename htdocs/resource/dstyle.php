@@ -541,6 +541,12 @@ body {
 	text-align: center;
 }
 
+.rec-menu-3 {
+	display: inline-block;
+	width: 1/3;
+	text-align: center;
+}
+
 .formpage-block {
 	display: block;
 	width: 50%;
