@@ -346,4 +346,53 @@ function svc_setSignupLock($event_id, $lock){
 	}
 }
 
+/*
+Record attendance for an event. Also applies ranking decay.
+Parameters: Event ID, and an array containing the UUIDs of all players who attended the event.
+*/
+function svc_saveAttendance($event_id, $attendees){
+	global $db;
+	$attendeestr = implode(",", $attendees);
+	$query1 = "UPDATE user_ranking SET rank_total_events = rank_total_events + 1, rank_missed_events = 0 WHERE uuid IN ($attendeestr)";
+	if (!mysqli_query($db, $query1)){
+		writeLog(SEVERE, "saveAttendance failed on present-count query");
+		writeLog(SEVERE, $query1);
+		writeLog(SEVERE, mysqli_error($db));
+		return false;
+	}
+	$query2 = "UPDATE user_ranking SET rank_missed_events = rank_missed_events + 1 WHERE uuid NOT IN ($attendeestr)";
+	if (!mysqli_query($db, $query2)){
+		writeLog(SEVERE, "saveAttendance failed on missed-count query");
+		writeLog(SEVERE, $query2);
+		writeLog(SEVERE, mysqli_error($db));
+		return false;
+	}
+	$query3 = "UPDATE user_ranking 
+	SET rank_current = (CASE 
+	WHEN rank_current >= 2000 AND rank_missed_events >= 2 THEN rank_current - 30 
+	WHEN rank_current >= 1200 AND rank_missed_events >= 3 THEN rank_current - 20 
+	ELSE rank_current
+	) WHERE uuid NOT IN ($attendeestr)";
+	if (!mysqli_query($db, $query3)){
+		writeLog(SEVERE, "saveAttendance failed on decay query");
+		writeLog(SEVERE, $query3);
+		writeLog(SEVERE, mysqli_error($db));
+		return false;
+	}
+	writeLog(INFO, Rating decay query applied.);
+	$query4 = "UPDATE event_schedule SET event_attendance_taken = 1 WHERE event_id = '$event_id'";
+	mysqli_query($db, $query4);
+	return true;
+}
+
+function svc_isAttendanceTaken($event_id){
+	global $db;
+	$query = "SELECT event_attendance_taken FROM event_schedule WHERE event_id = '$event_id'";
+	$rs = mysqli_query($db, $query);
+	if (mysqli_fetch_assoc($rs)['event_attendance_taken'] == 1){
+		return true;
+	}
+	return false;
+}
+
 ?>
