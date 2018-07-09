@@ -15,21 +15,40 @@
 		die();
 	}
 
-	if (isset($_POST['save'])){
-		svc_putSetting("OrganizationName", $_POST["orgname"]);
-		svc_putSetting("AboutPageSubtitle", $_POST["subtitle"]);
-		svc_putSetting("AboutPageBody", $_POST["about"]);
-		svc_putSetting("DonateURL", $_POST["donateLink"]);
-		if ($_POST["donateEnable"] == "on"){
-			svc_putSetting("EnableDonatePortlet", 1);
-		} else {
-			svc_putSetting("EnableDonatePortlet", 0);
+	if (isset($_POST['subPrivacy'])){
+		svc_putSetting("EnableGuestBrowsing", $_POST["guestBrowsing"]=="on" ? 1 : 0);
+		svc_putSetting("EnableGuestProfileView", $_POST["guestProfile"]=="on" ? 1 : 0);
+		svc_putSetting("GuestEnableFullMemberList", $_POST["guestDirectory"]=="on" ? 1 : 0);
+		showJavascriptAlert("Privacy settings saved.");
+	}
+
+	if (isset($_POST['subRegistration'])){
+		svc_putSetting("EnableSelfRegister", $_POST["openReg"]=="on" ? 1 : 0);
+		svc_putSetting("EnableGuestAccounts", $_POST["guestReg"]=="on" ? 1 : 0);
+		showJavascriptAlert("Registration settings saved.");
+	}
+
+	//TODO Messaging settings
+
+	if (isset($_POST['subStreaming'])){
+		svc_putSetting("TwitchChannelID", $_POST["channelId"]);
+		showJavascriptAlert("Twitch settings saved.");
+	}
+
+	if (isset($_POST['subRanks'])){
+		if ($_POST["rankOrder"]!="nochg"){
+			svc_putSetting("DefaultRankSortOrder", $_POST["rankOrder"]);
 		}
-		if ($_POST["slideshowSpeed"] != "nochg") {
-			svc_putSetting("SlideshowInterval", $_POST["slideshowSpeed"]);
-		}
-		showJavascriptAlert("Your changes have been saved.");
-		sendBack();
+		svc_putSetting("ShowRankColumn", $_POST["showRankColumn"]=="on" ? 1 : 0);
+		svc_putSetting("EnableFreePlayScoring", $_POST["freeplayScore"]=="on" ? 1 : 0);
+		showJavascriptAlert("Ranking settings saved.");
+	}
+
+	if (isset($_POST['subCalculations'])){
+		svc_putSetting("RankCalcPrimConstant", $_POST["primCons"]);
+		svc_putSetting("RankCalcLossScalar", $_POST["lossScale"]);
+		svc_putSetting("WinningStreakInterval", $_POST["streakInt"]);
+		showJavascriptAlert("Calculation settings saved.");
 	}
 
 	?>
@@ -41,11 +60,11 @@
 				<h2>Privacy</h2>
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 					<span style="width: 73%"><b>Guest Browsing: </b>Guests (users not signed in) can see the Members, Events, and Activity pages. Personal information will not be shown unless signed in. <span style="color: yellow; display: inline">NOTE: Disabling this setting will prevent guests from signing up for events.</span></span>
-					<input type="checkbox" name="donateEnable" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestBrowsing')==1) ? 'checked' : '';?> />
+					<input type="checkbox" name="guestBrowsing" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestBrowsing')==1) ? 'checked' : '';?> />
 					<span style="width: 73%"><b>Guest Directory: </b>Guests can see all members on the Members tab. If this is disabled, guests will only see officers and admins.</span></span>
-					<input type="checkbox" name="donateEnable" value="on" style="width: 23%" <?php echo (svc_getSetting('GuestEnableFullMemberList')==1) ? 'checked' : '';?> />
+					<input type="checkbox" name="guestDirectory" value="on" style="width: 23%" <?php echo (svc_getSetting('GuestEnableFullMemberList')==1) ? 'checked' : '';?> />
 					<span style="width: 73%"><b>Guest Profile Viewing: </b>Guests can see members' profiles. Personal info such as real name will not be shown.</span></span>
-					<input type="checkbox" name="donateEnable" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestProfileView')==1) ? 'checked' : '';?> />
+					<input type="checkbox" name="guestProfile" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestProfileView')==1) ? 'checked' : '';?> />
 					<p>&nbsp;</p>
 					<input type="submit" name="subPrivacy" value="Save Settings" class="sc-button" />
 				</form>
@@ -55,9 +74,9 @@
 				<h2>Registration</h2>
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 					<span style="width: 73%"><b>Open Registration: </b>Allow anyone browsing the site to register for an account. If this is turned off, only scorekeepers and officials can create accounts for new members.</span>
-					<input type="checkbox" name="donateEnable" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableSelfRegister')==1) ? 'checked' : '';?> />
+					<input type="checkbox" name="openReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableSelfRegister')==1) ? 'checked' : '';?> />
 					<span style="width: 73%"><b>Enable Guest Registration: </b>Guests signing up for certain events will have a guest account created for them, which can participate in the event and be converted into a full account later.</span>
-					<input type="checkbox" name="donateEnable" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestAccounts')==1) ? 'checked' : '';?> />
+					<input type="checkbox" name="guestReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestAccounts')==1) ? 'checked' : '';?> />
 					<p>&nbsp;</p>
 					<input type="submit" name="subRegistration" value="Save Settings" class="sc-button" />
 				</form>
@@ -106,7 +125,7 @@
 				<div class="formpage-block">
 				<h2>Calculations</h2>
 				<h3 style="color: orange">Warning: These settings govern the calculation of rankings. You should not adjust these values unless you know what you're doing!</h3>
-				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
+				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post" onSubmit="return confirm('Are you sure you want to tinker with these settings? Your rank calculations may misbehave!');">
 					<span style="width: 73%"><b>A Constant: </b>Set the value of A in the rank curve. Higher values equal a steeper curve.</span>
 					<input type="text" name="primCons" value="<?php echo svc_getSetting('RankCalcPrimConstant'); ?>" style="width: 23%" />
 					<span style="width: 73%"><b>Loss Scalar: </b>Set the scalar value for the ratio of win yield vs. loss yield.</span>
