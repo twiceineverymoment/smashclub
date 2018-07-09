@@ -18,18 +18,17 @@
 
 		<div id="recs-left" class="rec-menu" style="border-right: 1px solid #222222">
 			<h2>Tournament Results</h2>
-			<h3>This feature coming soon!</h3><!--TODO Remove this-->
-			<!--
 			<form action="/records/results/" method="get">
 			<h3>View tournament results by event:</h3>
 			<select name="event-id" value="0">
 			<?php
-				//TODO - Tournament event selection service when this feature exists.
+				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
+				svc_getEventListAsOptions(2, true);
+				echo "aaaa";
 			?>
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
 			</form>
-			-->
 		</div>
 		<div id="recs-right" class="rec-menu">
 			<h2>Rank History</h2>
