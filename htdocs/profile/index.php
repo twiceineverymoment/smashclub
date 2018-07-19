@@ -18,7 +18,7 @@
 		$pmleft = $profile['rank_placements'];
 		$pminit = svc_getSetting("InitialPlacementMatches");
 		$imagesrc = "/resource/character/ultimate/".$profile['prof_main_character'].".png";
-		if ($profile['rank_consec_games'] <= (-1 * svc_getSetting("WinningStreakInterval"))){
+		if ($profile['rank_consec_games'] <= (-2 * svc_getSetting("WinningStreakInterval"))){
 			$imagesrc = "/resource/waaah.png";
 		}
 		?>
@@ -33,7 +33,7 @@
 
 			<?php if ($_SESSION['name']==$_GET['u']) : ?>
 				<div style="width: 50%; margin: 0 auto;">
-					<input class="sc-button" onclick="window.location='edit'" type="button" value="Edit Details" style="float: right"/>
+					<input class="sc-button" onclick="window.location='edit'" type="button" value="Edit Profile" style="float: right"/>
 					<h1>Your Public Profile</h1>
 				</div>
 			<?php endif; ?>
@@ -138,6 +138,11 @@
 
 				?>
 				</div>
+				<?php if($_SESSION["name"] == $_GET["u"]) : ?>
+					<div id="pview-more-details">
+						<a href="/profile/stats-detail/">More Details &#9658;</a>
+					</div>
+				<?php endif; ?>
 			</div>
 
 		<?php endif; ?>
