@@ -657,6 +657,83 @@ body {
 	text-decoration: underline;
 }
 
+#pview-more-details {
+	display: block;
+	width: 80%;
+	margin: 6px auto;
+}
+
+#pview-more-details a {
+	font-family: BigNoodleTitling;
+	font-style: italic;
+	color: <?php echo $theme['BlockTextColor']; ?>;
+	font-size: 36px;
+	text-decoration: none;
+}
+
+#pview-more-details a:hover {
+	text-decoration: underline;
+}
+
+.records-display {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.hall-of-records {
+	display: table;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hall-of-records tbody {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.hall-of-records td {
+	width: 33%;
+	background-color: <?php echo $theme['RankBlockColor']; ?>;
+	border-radius: 2px;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 0;
+	vertical-align: top;
+	height: 100%;
+}
+
+.hall-of-records .records-header {
+	width: 100%;
+	background-color: <?php echo $theme['BlockBackgroundColor']; ?>;
+	margin-top: 0;
+	padding-top: 0;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	color: white;
+}
+
+.records-text {
+	margin: auto 0;
+	vertical-align: middle;
+	align-items: stretch;
+}
+
+.records-text h1, .records-text h2, .records-text h3 {
+	font-family: BigNoodleTitling;
+	font-style: italic;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+.records-emblem {
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+}
+
 #nav-mail {
 	display: block;
 	color: <?php echo $theme['BlockTextColor']; ?>;

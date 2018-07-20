@@ -7,6 +7,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_site_settings.php");
 
 function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 
+		writeLog(TRACE, "Entering reportSinglesScore id1=".$id1." score1=".$score1." id2=".$id2." score2=".$score2);
+
 		//Call ranking service to get current ranks and placement status
 		$p1data = svc_getMemberInfoByID($id1);
 		$p2data = svc_getMemberInfoByID($id2);
@@ -22,8 +24,11 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		if ($diff>0){ //P1 wins
 			$p1add = getPointsWon($curr1, $curr2) * abs($diff);
 			$p2sub = getPointsLost($curr2, $curr1) * abs($diff);
+			writeLog(TRACE, "Left side wins, p1add=".$p1add." p2sub=".$p2sub);
 			svc_updateConsecutiveMatches($id1, true);
 			svc_updateConsecutiveMatches($id2, false);
+			svc_updateMatchCounters($id1, M_WIN);
+			svc_updateMatchCounters($id2, M_LOSS);
 			$p1streak = svc_getConsecutiveMatches($id1);
 			$p2streak = svc_getConsecutiveMatches($id2);
 			$p1add *= svc_getStreakYieldMultiplier($p1streak);
@@ -33,12 +38,16 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 			if ($pl2>0) $p2sub *= 2;
 			$new1 = $curr1 + $p1add;
 			$new2 = $curr2 - $p2sub;
+			writeLog(TRACE, "After streak scalar, p1add=".$p1add." p2sub=".$p2sub);
 		}
 		elseif ($diff<0){ //P2 wins
-			$p1sub = getPointsWon($curr1, $curr2) * abs($diff);
-			$p2add = getPointsLost($curr2, $curr1) * abs($diff);
+			$p1sub = getPointsLost($curr1, $curr2) * abs($diff);
+			$p2add = getPointsWon($curr2, $curr1) * abs($diff);
+			writeLog(TRACE, "Right side wins, p1sub=".$p1sub." p2add=".$p2add);
 			svc_updateConsecutiveMatches($id1, false);
 			svc_updateConsecutiveMatches($id2, true);
+			svc_updateMatchCounters($id1, M_LOSS);
+			svc_updateMatchCounters($id2, M_WIN);
 			$p1streak = svc_getConsecutiveMatches($id1);
 			$p2streak = svc_getConsecutiveMatches($id2);
 			$p1sub *= svc_getStreakYieldMultiplier($p1streak);
@@ -48,11 +57,13 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 			if ($pl2>0) $p2add *= 2;
 			$new1 = $curr1 - $p1sub;
 			$new2 = $curr2 + $p2add;
+			writeLog(TRACE, "After streak scalar, p1sub=".$p1sub." p2add=".$p2add);
 		}
 		else { //Tie
 			$new1 = $curr1;
 			$new2 = $curr2;
-			//TODO Implement ties
+			svc_updateMatchCounters($id1, M_DRAW);
+			svc_updateMatchCounters($id2, M_DRAW);
 		}
 
 		//Round rankings to the nearest integer
@@ -73,7 +84,7 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		writeLog(INFO, "Player[2]: ".$p2data['user_username'].", Score: ".$score2.", Old rank: ".$curr2.", New rank: ".$new2.", PM Counter: ".$pl2);
 		writeLog(INFO, "--------");
 
-		//Perform database update, unless the match was a scoreless tie (forfeit)
+		//Perform database update, unless the match was a scoreless tie (forfeit) - Prevents placement counter from decrementing on forfeit
 		if ($score1 > 0 or $score2 > 0){
 			if (!svc_updateRank($id1, $new1)){
 				return false;
@@ -258,13 +269,14 @@ function getTeamLoserRatingDecrease($curr, $team, $opp){
 /* v2.5 experimental rank calculations */
 
 function getPointsWon($win, $opp){
+	writeLog(TRACE, "WIN win=".$win.", opp=".$opp);
 	$cons = floatval(svc_getSetting("RankCalcPrimConstant"));
 	writeLog(TRACE, "WIN cons=".$cons);
 	$pow = pow(abs($opp-$win), 1/3);
-	writeLog(TRACE, "WIN pow=".$pow);
 	if ($win > $opp){ //Because pow() doesn't like negative roots for some reason
-		$pow *= -1;
+		$pow = -1.0 * $pow;
 	}
+	writeLog(TRACE, "WIN pow=".$pow);
 	$yield = 30 + ($cons * $pow);
 	writeLog(TRACE, "WIN yield=".$yield);
 	if ($yield < 1){
@@ -275,15 +287,16 @@ function getPointsWon($win, $opp){
 }
 
 function getPointsLost($los, $opp){
+	writeLog(TRACE, "LOSS los=".$los.", opp=".$opp);
 	$cons = floatval(svc_getSetting("RankCalcPrimConstant"));
 	$scale = floatval(svc_getSetting("RankCalcLossScalar"));
 	writeLog(TRACE, "LOSS cons=".$cons." scale=".$scale);
 	$pow = pow(abs($opp-$los), 1/3);
-	writeLog(TRACE, "LOSS pow=".$pow);
 	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
-		$pow *= -1;
+		$pow -1.0 * $pow;
 	}
-	$yield = 30 + (-1 * $cons * $pow);
+	writeLog(TRACE, "LOSS pow=".$pow);
+	$yield = 30 + (-1.0 * $cons * $pow);
 	writeLog(TRACE, "LOSS yield before scale=".$yield);
 	$yield *= $scale;
 	writeLog(TRACE, "LOSS yield=".$yield);

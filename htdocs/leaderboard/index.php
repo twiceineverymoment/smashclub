@@ -36,8 +36,8 @@
 		<div id="main" class="page-content">
 
 		<?php if(svc_getSetting("CurrentSeasonNumber")=="0") : ?>
-			<h1>Off-Season</h1>
-			<h2>Ranks are not available during the off-season. Head over to <a href="/records/">Records</a> to see previous seasons!</h2>
+			<h2>Off-Season</h2>
+			<h3>The leaderboard is not available during the off-season. Looking for a past season? Visit the <a href="/records/">Hall of Records</a>.</h3>
 		<?php else : ?>
 			<h1 id="rankheader">Current Rankings</h1>
 			<div class="legend-link">
