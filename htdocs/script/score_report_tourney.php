@@ -73,6 +73,15 @@ elseif (isset($_POST['endmatch'])){
 			die();
 		}
 	}
+	//Op 5: Check if the tournament is over
+	if (svc_isTourneyFinished()){
+		showJavascriptAlert("The tournament is now over! Results have been saved to the Hall of Records. You may now end the event.");
+		if (!svc_endTournament($winner_id)){
+			showJavascriptAlert("There was an error finalizing the tournament. Please contact the site administrator as soon as possible.");
+			showErrorPage(500);
+			die();
+		}
+	}
 	sendBack();
 }
 

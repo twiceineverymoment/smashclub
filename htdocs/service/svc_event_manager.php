@@ -176,7 +176,9 @@ function svc_getEventListAsOptions($past, $tourneys){
 	elseif (!$past){
 		$query .= " AND event_time >= NOW()";
 	}
+	$query .= " ORDER BY event_time DESC";
 
+	writeLog(TRACE, $query);
 	$rs = mysqli_query($db, $query);
 
 	while ($opt = mysqli_fetch_assoc($rs)){
@@ -354,8 +356,11 @@ Parameters: Event ID, and an array containing the UUIDs of all players who atten
 */
 function svc_saveAttendance($event_id, $attendees){
 	global $db;
+	$eventType = svc_getEventDataById($event_id)["event_type"];
 	$attendeestr = implode(",", $attendees);
-	$query1 = "UPDATE user_ranking SET rank_total_events = rank_total_events + 1, rank_missed_events = 0 WHERE uuid IN ($attendeestr)";
+	$query1 = "UPDATE user_ranking SET rank_total_events = rank_total_events + 1, 
+	rank_tourney_count = (CASE WHEN '$eventType' = '0' THEN rank_tourney_count + 1 ELSE rank_tourney_count END), 
+	rank_missed_events = 0 WHERE uuid IN ($attendeestr)";
 	if (!mysqli_query($db, $query1)){
 		writeLog(SEVERE, "saveAttendance failed on present-count query");
 		writeLog(SEVERE, $query1);
