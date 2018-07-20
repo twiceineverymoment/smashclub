@@ -41,22 +41,22 @@ function svc_getAllCurrentRankData($order){
 
 function svc_getRankHistoryBySeason($seasonid, $order){
 	global $db;
-	$query = "SELECT * FROM user_rank_history
-	INNER JOIN user_authentication ON user_rank_history.uuid = user_authentication.uuid
+	$query = "SELECT * FROM records_user_ranking 
+	INNER JOIN user_authentication ON records_user_ranking.uuid = user_authentication.uuid 
 	WHERE season_number = '$seasonid'";
 	switch($order){
 		default:
 		case 0:
-		$query .= " ORDER BY rank_final DESC";
+		$query .= " ORDER BY rec_rank_final DESC";
 		break;
 		case 1:
-		$query .= " ORDER BY rank_final ASC";
+		$query .= " ORDER BY rec_rank_final ASC";
 		break;
 		case 2:
-		$query .= " ORDER BY rank_high DESC";
+		$query .= " ORDER BY rec_rank_season_high DESC";
 		break;
 		case 3:
-		$query .= " ORDER BY rank_high DESC";
+		$query .= " ORDER BY rec_rank_season_high DESC";
 		break;
 		case 4:
 		$query .= " ORDER BY user_username ASC";
@@ -109,6 +109,7 @@ function svc_updateRank($uuid, $rank){
 	SET rank_current = '$rank', 
 	rank_season_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_season_high, rank_current) ELSE rank_season_high END, 
 	rank_career_high = CASE WHEN rank_placements<2 THEN GREATEST(rank_career_high, rank_current) ELSE rank_career_high END, 
+	rank_initial = CASE WHEN rank_placements>=1 THEN '$rank' ELSE rank_initial END, 
 	rank_placements = GREATEST(0, rank_placements-1) 
 	WHERE uuid='$uuid'";
 	//case is <2 because if placements is 1, then it will go to 0 and the member will place. If 0, it will not decrement
@@ -181,11 +182,38 @@ function svc_updateConsecutiveMatches($uuid, $win){
 			$new = 0;
 		}
 	}
-	$query = "UPDATE user_ranking SET rank_consec_games = '$new' WHERE uuid = '$uuid'";
+	$query = "UPDATE user_ranking SET rank_consec_games = '$new', 
+	rank_consec_max = GREATEST(rank_consec_games, rank_consec_max) 
+	WHERE uuid = '$uuid'";
 	if (mysqli_query($db, $query)){
 		return true;
 	} else {
 		writeLog(ERROR, "updateConsecutiveMatches failed");
+		writeLog(ERROR, mysqli_error($db));
+		return false;
+	}
+}
+
+const M_WIN = 1;
+const M_DRAW = 0;
+const M_LOSS = -1;
+
+function svc_updateMatchCounters($uuid, $outcome){
+	global $db;
+	$query = "UPDATE user_ranking SET rank_career_games = rank_career_games + 1";
+	if ($outcome > 0){
+		$query .= ", rank_season_wins = rank_season_wins + 1, rank_career_wins = rank_career_wins + 1";
+	} elseif ($outcome < 0){
+		$query .= ", rank_season_losses = rank_season_losses + 1, rank_career_losses = rank_career_losses + 1";
+	}
+	$query .= " WHERE uuid = '$uuid'";
+
+	if (mysqli_query($db, $query)){
+		writeLog(DEBUG, "Successfully updated match counters for UUID ".$uuid);
+		return true;
+	} else {
+		writeLog(ERROR, "Failed to update match counters for UUID ".$uuid);
+		writeLog(ERROR, $query);
 		writeLog(ERROR, mysqli_error($db));
 		return false;
 	}
@@ -198,12 +226,12 @@ function svc_endCurrentSeason(){
 	global $db;
 	writeLog(TRACE, "Entering endCurrentSeason...");
 	//Copy the current rankings into the records table
-	$query1 = "INSERT INTO user_rank_history (uuid, rank_final, rank_high) 
-	SELECT uuid, rank_current, rank_season_high FROM user_ranking 
+	$query1 = "INSERT INTO records_user_ranking (uuid, rec_rank_final, rec_rank_season_high, rec_rank_initial, rec_season_wins, rec_season_losses) 
+	SELECT uuid, rank_current, rank_season_high, rank_initial, rank_season_wins, rank_season_losses FROM user_ranking 
 	WHERE user_ranking.rank_placements = 0";
 	//Update the newly inserted records to the outgoing season's number
 	$seasonnum = svc_getSetting("CurrentSeasonNumber");
-	$query2 = "UPDATE user_rank_history SET season_number = '$seasonnum' WHERE season_number = 0";
+	$query2 = "UPDATE records_user_ranking SET season_number = '$seasonnum' WHERE season_number = 0";
 	if (mysqli_query($db, $query1)){
 		writeLog(TRACE, "Copy query completed.");
 		if (mysqli_query($db, $query2)){
@@ -263,7 +291,7 @@ function svc_startSeason($title, $game, $method, $placements){
 function svc_populateInitRanks($method, $placements, $game){
 	global $db;
 	if ($method==INIT_FRESH_START){ //Set all rows to 1200 and reset placement matches
-		$query = "UPDATE user_ranking SET rank_current = 1200, rank_season_high = 0, rank_consec_games = 0, rank_placements = '$placements'";
+		$query = "UPDATE user_ranking SET rank_current = 1200, rank_initial = 1200, rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements'";
 		if (mysqli_query($db, $query)){
 			writeLog(DEBUG, "Initial season ratings have been populated using the fresh-start method,.");
 			return true;
@@ -275,7 +303,7 @@ function svc_populateInitRanks($method, $placements, $game){
 		}
 	} elseif ($method==INIT_LAST_SEASON) {
 		$games = implode("','", svc_getSeasonsByGame($game));
-		$query1 = "SELECT uuid, rank_final FROM user_rank_history WHERE season_number IN ('$games') ORDER BY season_number DESC"; //If we select relevant seasons and order highest first, then the first row we hit for each player is the last relevant season we have data for.
+		$query1 = "SELECT uuid, rec_rank_final FROM records_user_ranking WHERE season_number IN ('$games') ORDER BY season_number DESC"; //If we select relevant seasons and order highest first, then the first row we hit for each player is the last relevant season we have data for.
 		$user_array = svc_getActiveUUIDArray();
 		$rs1 = mysqli_query($db, $query1);
 		if (!$rs1){
@@ -292,14 +320,14 @@ function svc_populateInitRanks($method, $placements, $game){
 			mysqli_data_seek($rs1, 0);
 			while ($rec = mysqli_fetch_assoc($rs1)){
 				if ($rec['uuid']==$key){
-					writeLog(TRACE, "Found a record for UUID ".$key." = ".$rec['rank_final']);
-					$init_ranks[$key]=$rec['rank_final'];
+					writeLog(TRACE, "Found a record for UUID ".$key." = ".$rec['rec_rank_final']);
+					$init_ranks[$key]=$rec['rec_rank_final'];
 					break; //Stop at the first hit, as it will be the most recent season that came back in the records query.
 				}
 			}
 		}
 		foreach($init_ranks as $rkey => $rval){ //Perform database updates.
-			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
+			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
 			if (mysqli_query($db, $query2)){
 				writeLog(TRACE, "init_ranks query: ".$query2);
 			} else {
@@ -313,7 +341,7 @@ function svc_populateInitRanks($method, $placements, $game){
 		return true;
 	} elseif ($method == INIT_AVG_SEASONS) {
 		$games = implode("','", svc_getSeasonsByGame($game));
-		$query3 = "SELECT uuid, rank_final FROM user_rank_history WHERE season_number IN ('$games') ORDER BY season_number DESC";
+		$query3 = "SELECT uuid, rec_rank_final FROM records_user_ranking WHERE season_number IN ('$games') ORDER BY season_number DESC";
 		$user_array = svc_getActiveUUIDArray();
 		$rs3 = mysqli_query($db, $query3);
 		if (!$rs3){
@@ -325,11 +353,11 @@ function svc_populateInitRanks($method, $placements, $game){
 		$init_ranks = array();
 		foreach($user_array as $user){
 			$total=0; $count=0;
-			mysql_data_seek($rs3, 0);
+			mysqli_data_seek($rs3, 0);
 			while ($record = mysqli_fetch_assoc($rs3)){
 				if ($record['uuid']==$user){
 					$count++;
-					$total += $record['rank_final'];
+					$total += $record['rec_rank_final'];
 				}
 			}
 			if ($count==0){
@@ -341,7 +369,7 @@ function svc_populateInitRanks($method, $placements, $game){
 			$init_ranks[$user] = $average;
 		}
 		foreach($init_ranks as $rkey => $rval){ //Perform database updates.
-			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
+			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
 			if (mysqli_query($db, $query2)){
 				writeLog(TRACE, "init_ranks query: ".$query2);
 			} else {

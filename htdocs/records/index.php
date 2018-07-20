@@ -16,15 +16,15 @@
 
 		<h1>Hall of Records</h1>
 
+		<div class="records-display">
 		<div id="recs-left" class="rec-menu" style="border-right: 1px solid #222222">
 			<h2>Tournament Results</h2>
 			<form action="/records/results/" method="get">
 			<h3>View tournament results by event:</h3>
-			<select name="event-id" value="0">
+			<select name="event_id" value="0">
 			<?php
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
 				svc_getEventListAsOptions(2, true);
-				echo "aaaa";
 			?>
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
@@ -37,6 +37,7 @@
 			<select name="season-id" value="0" />
 			<?php
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
+				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
 				$seasons = svc_getSeasonListWithGameTitles();
 				$games=array("Mixed", "N64", "Melee", "Brawl", "Wii U");
 				while ($opt = mysqli_fetch_assoc($seasons)){
@@ -50,6 +51,75 @@
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
 			</form>
+		</div>
+		</div>
+		<div class="records-display">
+			<h2>Club Records</h2>
+			<?php $records = svc_getLandingPageRecordData(); ?>
+			<table class="hall-of-records">
+				<tr>
+					<td rowspan="2">
+						<h3 class="records-header">Highest Rank This Season</h3>
+						<div class="records-text">
+						<?php if (svc_getSetting("CurrentSeasonNumber")==0) : ?>
+							<h3>Not available during off-season</h3>
+						<?php elseif (!isset($records["HighestRankThisSeason"])) : ?>
+							<h3>Insufficient Data</h3>
+						<?php else : ?>
+							<img class="records-emblem" src=<?php echo svc_getEmblemByRank($records["HighestRankThisSeason"]["rank"], $records["HighestRankThisSeason"]["rank"]); ?> />
+							<h1><?php echo $records["HighestRankThisSeason"]["rank"]; ?></h1>
+							<h3><?php echo $records["HighestRankThisSeason"]["user"]; ?></h3>
+						<?php endif; ?>
+						</div>
+					</td>
+					<td>
+						<h3 class="records-header">Highest Rank of All-Time</h3>
+						<div class="records-text">
+							<?php if (!isset($records["HighestRankAllTime"])) : ?>
+								<h3>Insufficient Data</h3>
+							<?php else : ?>
+								<h2><?php echo $records["HighestRankAllTime"]["rank"]; ?></h2>
+								<h3><?php echo $records["HighestRankAllTime"]["user"]; ?></h3>
+							<?php endif; ?>
+						</div>
+					</td>
+					<td>
+						<h3 class="records-header">Longest Winning Streak</h3>
+						<div class="records-text">
+							<?php if (!isset($records["LongestWinningStreak"])) : ?>
+								<h3>Insufficient Data</h3>
+							<?php else : ?>
+								<h2><?php echo $records["LongestWinningStreak"]["streak"]; ?></h2>
+								<h3><?php echo $records["LongestWinningStreak"]["user"]; ?></h3>
+							<?php endif; ?>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3 class="records-header">Most Matches Won</h3>
+						<div class="records-text">
+							<?php if (!isset($records["MostMatchesWon"])) : ?>
+								<h3>Insufficient Data</h3>
+							<?php else : ?>
+								<h2><?php echo $records["MostMatchesWon"]["wins"]; ?></h2>
+								<h3><?php echo $records["MostMatchesWon"]["user"]; ?></h3>
+							<?php endif; ?>
+						</div>
+					</td>
+					<td>
+						<h3 class="records-header">Most Tournaments Won</h3>
+						<div class="records-text">
+							<?php if (!isset($records["MostTournamentsWon"])) : ?>
+								<h3>Insufficient Data</h3>
+							<?php else : ?>
+								<h2><?php echo $records["MostTournamentsWon"]["wins"]; ?></h2>
+								<h3><?php echo $records["MostTournamentsWon"]["user"]; ?></h3>
+							<?php endif; ?>
+						</div>
+					</td>
+				</tr>
+			</table>
 		</div>
 		</div>
 	</body>
