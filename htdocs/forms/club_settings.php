@@ -75,7 +75,7 @@
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 					<span style="width: 73%"><b>Open Registration: </b>Allow anyone browsing the site to register for an account. If this is turned off, only scorekeepers and officials can create accounts for new members.</span>
 					<input type="checkbox" name="openReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableSelfRegister')==1) ? 'checked' : '';?> />
-					<span style="width: 73%"><b>Enable Guest Registration: </b>Guests signing up for certain events will have a guest account created for them, which can participate in the event and be converted into a full account later.</span>
+					<span style="width: 73%"><b>Guest Accounts for Tournaments: </b>Guests signing up for tournaments will have a guest account created for them, which can participate in the bracket without receiving a rank, and be converted into a full account later.</span>
 					<input type="checkbox" name="guestReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestAccounts')==1) ? 'checked' : '';?> />
 					<p>&nbsp;</p>
 					<input type="submit" name="subRegistration" value="Save Settings" class="sc-button" />

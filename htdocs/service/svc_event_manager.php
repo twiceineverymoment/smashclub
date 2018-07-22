@@ -1,6 +1,7 @@
 <?php
 
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_authentication.php");
 
 /*
 Converts a SQL date object into a detailed date for displaying on the Events page.
@@ -400,6 +401,34 @@ function svc_isAttendanceTaken($event_id){
 		return true;
 	}
 	return false;
+}
+
+function svc_createGuestAndSignUp($event_id, $username, $firstname, $lastname, $email, $phone){
+	writeLog(DEBUG, "Entering createGuestAndSignUp");
+	global $db;
+	if (svc_createNewUser($username, null, 0, $email, $phone, $firstname, $lastname)){
+		$uuid = mysqli_insert_id($db);
+		if (svc_addSignup($uuid, $event_id)){
+			writeLog(INFO, "Created a guest account: ".$username." with UUID ".$uuid);
+			return true;
+		} else {
+			writeLog(ERROR, "Failed to signup guest account for event, see previous log entries");
+			return false;
+		}
+	} else {
+		writeLog(ERROR, "Failed to create guest account, see previous log entries");
+		return false;
+	}
+}
+
+function svc_getEventNameByGuestID($uuid){
+	global $db;
+	$query = "SELECT e.event_title FROM event_schedule e  
+	INNER JOIN event_user_signup s ON s.event_id = e.event_id 
+	WHERE s.uuid = '$uuid' 
+	LIMIT 1";
+
+	return mysqli_fetch_assoc(mysqli_query($db, $query))["event_title"];
 }
 
 ?>

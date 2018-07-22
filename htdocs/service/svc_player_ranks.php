@@ -78,7 +78,7 @@ function svc_getRankHistoryBySeason($seasonid, $order){
 //Echoes a set of dropdown menu options for each account that is active. Excludes type 5 (invisible admin)
 function svc_getEligiblePlayersHTML(){
 	global $db;
-	$query = "SELECT uuid, user_username FROM user_authentication WHERE user_locked < 2 AND user_type < 5 ORDER BY user_username ASC";
+	$query = "SELECT uuid, user_username FROM user_authentication WHERE user_locked < 2 AND (user_type BETWEEN 1 AND 4) ORDER BY user_username ASC";
 
 	$rs = mysqli_query($db, $query);
 
