@@ -734,6 +734,15 @@ body {
 	margin: 0 auto;
 }
 
+.bracket-username {
+	color: <?php echo $theme['BlockTextColor']; ?>;
+	text-decoration: none;
+}
+
+.bracket-username:hover {
+	text-decoration: underline;
+}
+
 #nav-mail {
 	display: block;
 	color: <?php echo $theme['BlockTextColor']; ?>;
