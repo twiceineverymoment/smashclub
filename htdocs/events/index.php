@@ -179,6 +179,9 @@
 
 		<?php endwhile; ?>
 		<hr/>
+		<div style="float: right">
+			<p>Showing past events up to <?php echo svc_getSetting("PastEventAgeLimit"); ?> days ago</p>
+		</div>
 		<h2>Past Events</h2>
 		<?php
 		$results2 = svc_getAllPastEvents($showprivate);

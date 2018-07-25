@@ -62,13 +62,15 @@ Returns a MySQL result set of all past events from the event_schedule table.
 */
 function svc_getAllPastEvents($showprivate){
 	if (is_null($showprivate)) $showprivate = false;
+	$int = svc_getSetting("PastEventAgeLimit");
 	global $db;
-	$query = "SELECT * FROM event_schedule WHERE event_time < NOW()";
+	$query = "SELECT * FROM event_schedule WHERE (event_time BETWEEN DATE_SUB(NOW(), INTERVAL $int day) AND NOW())";
 	if (!$showprivate) $query .= " AND event_signup_access = 0";
 	$query .= " ORDER BY event_time DESC";
 	$result = mysqli_query($db, $query);
 	if (!$result){
 		writeLog(SEVERE, "getAllPastEvents failed");
+		writeLog(SEVERE, $query);
 		writeLog(SEVERE, mysqli_error($db));
 		return false;
 	} else {
@@ -235,7 +237,7 @@ function svc_getEventDataById($event_id){
 		writeLog(SEVERE, "MySQL Error: ".mysqli_error($db));
 		return false;
 	}
-	if (mysqli_num_rows($rs)==0){
+	if (mysqli_num_rows($rs)==0 && $event_id != 0){ //Added the event_id check because the match log page will call this method with event_id=0
 		writeLog(ERROR, "getEventDataById called for unknown event ID = ".$event_id.", no rows returned");
 		return false;
 	}
