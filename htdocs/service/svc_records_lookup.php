@@ -21,6 +21,22 @@ function svc_getSeasonListWithGameTitles(){
 }
 
 /*
+Prints the list of seasons w/ game titles as dropdown options.
+$current: If true, include the current season in the dropdown.
+$selectedId: The option to be initially selected.
+*/
+function svc_echoSeasonList($current, $selectedId = ""){
+	$seasons = svc_getSeasonListWithGameTitles();
+	$games=array("Mixed", "N64", "Melee", "Brawl", "Wii U");
+				while ($opt = mysqli_fetch_assoc($seasons)){
+					if ($opt['season_id']==svc_getSetting("CurrentSeasonNumber") && !$current) continue; //Added for issue #29
+					echo "<option value='".$opt['season_id']."'".($opt['season_id']==$selectedId ? "selected" : "").">";
+					echo $opt['season_title']." (".$games[$opt['season_game']].")";
+					echo "</option>";
+				}
+}
+
+/*
 Pulls the hall of records information for the Records landing page.
 Returns a 2-dimensional associative array, record name => user/value => data
 */
@@ -190,6 +206,42 @@ function svc_getPastTournamentMatches($event_id, $bracket, $roundno){
 	$query = "SELECT * FROM records_tourney_match WHERE event_id = '$event_id' AND match_round_no = '$roundno' AND match_bracket_level = '$bracket'";
 	$rs = mysqli_query($db, $query);
 	return $rs;
+}
+
+function svc_searchMatchLog($user, $opponent, $season_id, $event_id){ //TODO Update for doubles matches
+	global $db;
+	$query = "SELECT * FROM match_score_log 
+	WHERE 1=1 ";
+
+	if (!empty($user)){
+		$query .= "AND (match_p1_uuid = '$user' OR match_p2_uuid = '$user') ";
+	}
+	if (!empty($opponent)){
+		$query .= "AND (match_p1_uuid = '$opponent' OR match_p2_uuid = '$opponent') ";
+	}
+	if (!empty($season_id) or $season_id === "0"){
+		$query .= "AND season_id = '$season_id'";
+	}
+	if (!empty($event_id) or $event_id === "0"){
+		$query .= "AND event_id = '$event_id'";
+	}
+	$query .= " ORDER BY match_no DESC";
+
+	if ($rs = mysqli_query($db, $query)){
+		writeLog(TRACE, $query);
+		return $rs;
+	} else {
+		writeLog(ERROR, "searchMatchLog failed");
+		writeLog(ERROR, $query);
+		writeLog(ERROR, mysqli_error($db));
+		return false;
+	}
+}
+
+function svc_getSeasonNameByID($season_id){
+	global $db;
+	$query = "SELECT season_title FROM season_data WHERE season_id = '$season_id'";
+	return mysqli_fetch_assoc(mysqli_query($db, $query))["season_title"];
 }
 
 ?>

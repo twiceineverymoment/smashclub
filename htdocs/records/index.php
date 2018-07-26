@@ -18,9 +18,9 @@
 
 		<div class="records-display">
 		<div id="recs-left" class="rec-menu" style="border-right: 1px solid #222222">
-			<h2>Tournament Results</h2>
+			<h2>Match Results</h2>
 			<form action="/records/results/" method="get">
-			<h3>View tournament results by event:</h3>
+			<h3>View brackets from past tournaments.</h3>
 			<select name="event_id" value="0">
 			<?php
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
@@ -29,28 +29,24 @@
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
 			</form>
+			<h3>Find previous matches you played against specific people from any point in time.</h3>
+			<input type="button" class="sc-button" onclick="window.location = '/records/matchlog/'" value="View Match Log" />
 		</div>
 		<div id="recs-right" class="rec-menu">
-			<h2>Rank History</h2>
+			<h2>Rank Details</h2>
 			<form action="/records/rankings/" method="get">
-			<h3>View previous rankings by season:</h3>
+			<h3>View the ranks from previous seasons.</h3>
 			<select name="season-id" value="0" />
 			<?php
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
 				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
-				$seasons = svc_getSeasonListWithGameTitles();
-				$games=array("Mixed", "N64", "Melee", "Brawl", "Wii U");
-				while ($opt = mysqli_fetch_assoc($seasons)){
-					if ($opt['season_id']==svc_getSetting("CurrentSeasonNumber")) continue; //Added for issue #29
-					echo "<option value='".$opt['season_id']."'>";
-					echo $opt['season_title']." (".$games[$opt['season_game']].")";
-					echo "</option>";
-				}
-
+				svc_echoSeasonList(false);
 			?>
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
 			</form>
+			<h3>Check your rank history, personal bests, win/loss ratio, and more.</h3>
+			<input type="button" class="sc-button" onclick="window.location = '/profile/stats-detail/'" value="View Competitor Profile" />
 		</div>
 		</div>
 		<div class="records-display">

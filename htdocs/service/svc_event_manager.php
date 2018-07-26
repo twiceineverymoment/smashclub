@@ -165,7 +165,7 @@ Echoes a list of HTML <option> tags for events in a dropdown menu.
 If past=false, only upcoming events will be shown.
 If tourneys=true, only tournaments will be shown.
 */
-function svc_getEventListAsOptions($past, $tourneys){
+function svc_getEventListAsOptions($past, $tourneys, $selectedId = ""){
 	global $db;
 	$query = "SELECT event_id, event_title FROM event_schedule";
 	if ($tourneys){
@@ -185,7 +185,7 @@ function svc_getEventListAsOptions($past, $tourneys){
 	$rs = mysqli_query($db, $query);
 
 	while ($opt = mysqli_fetch_assoc($rs)){
-		echo "<option value='".$opt['event_id']."'>".$opt['event_title']."</option>";
+		echo "<option value='".$opt['event_id']."' ".($opt['event_id']==$selectedId ? "selected" : "").">".$opt['event_title']."</option>";
 	}
 }
 
