@@ -303,7 +303,7 @@ function getPointsLost($los, $opp){
 	writeLog(TRACE, "LOSS cons=".$cons." scale=".$scale);
 	$pow = pow(abs($opp-$los), 1/3);
 	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
-		$pow -1.0 * $pow;
+		$pow = -1.0 * $pow;
 	}
 	writeLog(TRACE, "LOSS pow=".$pow);
 	$yield = 30 + (-1.0 * $cons * $pow);
