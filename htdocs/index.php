@@ -21,6 +21,7 @@
 			<?php include($_SERVER['DOCUMENT_ROOT']."/home/port_event.php"); ?>
 			<?php include($_SERVER['DOCUMENT_ROOT']."/home/port_announcement.php"); ?>
 			<?php include($_SERVER['DOCUMENT_ROOT']."/home/port_activity.php"); ?>
+			<?php include($_SERVER['DOCUMENT_ROOT']."/home/port_social.php"); ?>
 
 		</div>
 	</body>

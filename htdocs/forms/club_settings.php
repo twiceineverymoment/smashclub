@@ -32,7 +32,11 @@
 
 	if (isset($_POST['subStreaming'])){
 		svc_putSetting("TwitchChannelID", $_POST["channelId"]);
-		showJavascriptAlert("Twitch settings saved.");
+		svc_putSetting("Facebook.PageName", $_POST["fbname"]);
+		svc_putSetting("Facebook.Handle", $_POST["fblink"]);
+		svc_putSetting("Twitter.Handle", $_POST["twlink"]);
+		svc_putSetting("YouTube.Handle", $_POST["ytlink"]);
+		showJavascriptAlert("Social Media settings saved.");
 	}
 
 	if (isset($_POST['subRanks'])){
@@ -91,10 +95,20 @@
 			</div>
 			<br />
 			<div class="formpage-block">
-				<h2>Twitch Streaming</h2>
+				<h2>Social Media</h2>
+				<h3>Leave any row blank to hide it from the site</h3>
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
-					<span style="width: 73%">Enter your club's Twitch channel ID here:</span>
+					<span style="width: 73%">Twitch Channel ID: <i>(Will also be used for embedded streaming)</i></span>
 					<input type="text" name="channelId" value="<?php echo svc_getSetting('TwitchChannelID'); ?>" style="width: 23%" />
+					<p>&nbsp;</p>
+					<span style="width: 73%">Facebook Page Name:</span>
+					<input type="text" name="fbname" value="<?php echo svc_getSetting('Facebook.PageName'); ?>" style="width: 23%" />
+					<span style="width: 73%">Facebook Page URL: </span>
+					<input type="text" name="fblink" value="<?php echo svc_getSetting('Facebook.Handle'); ?>" style="width: 23%" label="@" />
+					<span style="width: 73%">Twitter Handle: </span>
+					<input type="text" name="twlink" value="<?php echo svc_getSetting('Twitter.Handle'); ?>" style="width: 23%" label="@" />
+					<span style="width: 73%">YouTube Channel: </span>
+					<input type="text" name="ytlink" value="<?php echo svc_getSetting('YouTube.Handle'); ?>" style="width: 23%" />
 					<p>&nbsp;</p>
 					<input type="submit" name="subStreaming" value="Save Settings" class="sc-button" />
 				</form>
