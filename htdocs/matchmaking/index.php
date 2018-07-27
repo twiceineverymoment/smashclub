@@ -58,6 +58,7 @@
 
 		<h1>Matchmaking</h1>
 
+		<div class="records-display">
 		<div id="recs-left" class="rec-menu" style="border-right: 1px solid #222222">
 			<h2>Find An Opponent</h2>
 			<?php $mm_order = svc_getQueueOrder($_SESSION['uuid'], 0); ?>
@@ -119,6 +120,7 @@
 			<?php else : ?>
 				<h3>You are number <b><?php echo $pf_order; ?></b> in the queue against <b><?php echo svc_getQueuedOpponent($_SESSION['uuid'], 1); ?></b></h3>
 			<?php endif; ?>
+		</div>
 		</div>
 		</div>
 	</body>

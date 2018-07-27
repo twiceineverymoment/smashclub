@@ -75,15 +75,18 @@ function svc_getRankHistoryBySeason($seasonid, $order){
 	}
 }
 
-//Echoes a set of dropdown menu options for each account that is active. Excludes type 5 (invisible admin)
-function svc_getEligiblePlayersHTML(){
+/*
+Prints a list of all user accounts eligible to compete in games (accounts that are activated, not disabled or banned, and not root accounts.)
+$selectedId: The UUID of the user to be initially selected.
+*/
+function svc_getEligiblePlayersHTML($selectedId = ""){
 	global $db;
-	$query = "SELECT uuid, user_username FROM user_authentication WHERE user_locked < 2 AND user_type < 5 ORDER BY user_username ASC";
+	$query = "SELECT uuid, user_username FROM user_authentication WHERE user_locked < 2 AND (user_type BETWEEN 1 AND 4) ORDER BY user_username ASC";
 
 	$rs = mysqli_query($db, $query);
 
 	while ($ent = mysqli_fetch_assoc($rs)){
-		echo "<option value='".$ent['uuid']."'>".$ent['user_username']."</option>";
+		echo "<option value='".$ent['uuid']."' ".($ent['uuid']==$selectedId ? "selected" : "").">".$ent['user_username']."</option>";
 	}
 }
 

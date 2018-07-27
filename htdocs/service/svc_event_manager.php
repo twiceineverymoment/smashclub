@@ -1,6 +1,7 @@
 <?php
 
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_authentication.php");
 
 /*
 Converts a SQL date object into a detailed date for displaying on the Events page.
@@ -61,13 +62,15 @@ Returns a MySQL result set of all past events from the event_schedule table.
 */
 function svc_getAllPastEvents($showprivate){
 	if (is_null($showprivate)) $showprivate = false;
+	$int = svc_getSetting("PastEventAgeLimit");
 	global $db;
-	$query = "SELECT * FROM event_schedule WHERE event_time < NOW()";
+	$query = "SELECT * FROM event_schedule WHERE (event_time BETWEEN DATE_SUB(NOW(), INTERVAL $int day) AND NOW())";
 	if (!$showprivate) $query .= " AND event_signup_access = 0";
 	$query .= " ORDER BY event_time DESC";
 	$result = mysqli_query($db, $query);
 	if (!$result){
 		writeLog(SEVERE, "getAllPastEvents failed");
+		writeLog(SEVERE, $query);
 		writeLog(SEVERE, mysqli_error($db));
 		return false;
 	} else {
@@ -162,7 +165,7 @@ Echoes a list of HTML <option> tags for events in a dropdown menu.
 If past=false, only upcoming events will be shown.
 If tourneys=true, only tournaments will be shown.
 */
-function svc_getEventListAsOptions($past, $tourneys){
+function svc_getEventListAsOptions($past, $tourneys, $selectedId = ""){
 	global $db;
 	$query = "SELECT event_id, event_title FROM event_schedule";
 	if ($tourneys){
@@ -182,7 +185,7 @@ function svc_getEventListAsOptions($past, $tourneys){
 	$rs = mysqli_query($db, $query);
 
 	while ($opt = mysqli_fetch_assoc($rs)){
-		echo "<option value='".$opt['event_id']."'>".$opt['event_title']."</option>";
+		echo "<option value='".$opt['event_id']."' ".($opt['event_id']==$selectedId ? "selected" : "").">".$opt['event_title']."</option>";
 	}
 }
 
@@ -234,7 +237,7 @@ function svc_getEventDataById($event_id){
 		writeLog(SEVERE, "MySQL Error: ".mysqli_error($db));
 		return false;
 	}
-	if (mysqli_num_rows($rs)==0){
+	if (mysqli_num_rows($rs)==0 && $event_id != 0){ //Added the event_id check because the match log page will call this method with event_id=0
 		writeLog(ERROR, "getEventDataById called for unknown event ID = ".$event_id.", no rows returned");
 		return false;
 	}
@@ -400,6 +403,34 @@ function svc_isAttendanceTaken($event_id){
 		return true;
 	}
 	return false;
+}
+
+function svc_createGuestAndSignUp($event_id, $username, $firstname, $lastname, $email, $phone){
+	writeLog(DEBUG, "Entering createGuestAndSignUp");
+	global $db;
+	if (svc_createNewUser($username, null, 0, $email, $phone, $firstname, $lastname)){
+		$uuid = mysqli_insert_id($db);
+		if (svc_addSignup($uuid, $event_id)){
+			writeLog(INFO, "Created a guest account: ".$username." with UUID ".$uuid);
+			return true;
+		} else {
+			writeLog(ERROR, "Failed to signup guest account for event, see previous log entries");
+			return false;
+		}
+	} else {
+		writeLog(ERROR, "Failed to create guest account, see previous log entries");
+		return false;
+	}
+}
+
+function svc_getEventNameByGuestID($uuid){
+	global $db;
+	$query = "SELECT e.event_title FROM event_schedule e  
+	INNER JOIN event_user_signup s ON s.event_id = e.event_id 
+	WHERE s.uuid = '$uuid' 
+	LIMIT 1";
+
+	return mysqli_fetch_assoc(mysqli_query($db, $query))["event_title"];
 }
 
 ?>

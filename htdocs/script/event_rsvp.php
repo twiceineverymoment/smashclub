@@ -25,7 +25,10 @@ elseif (isset($_POST['cancel'])){
 	}
 }
 elseif (isset($_POST['guest-rsvp'])){
-	echo "<meta http-equiv='REFRESH' content='0 url=/events/guestrsvp/?eid=".$eventid."' />";
+	echo "<meta http-equiv='REFRESH' content='0 url=/events/guestrsvp/confirm.php?eid=".$eventid."' />";
+}
+elseif (isset($_POST['register-guest'])){
+	echo "<meta http-equiv='REFRESH' content='0 url=/events/createguest/?eid=".$eventid."' />";
 }
 elseif (isset($_POST['guest-confirm'])){
 	if (svc_addGuestSignup($eventid, $_POST['rsvp-name'], $_POST['rsvp-contact'])){

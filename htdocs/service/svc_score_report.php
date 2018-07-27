@@ -84,8 +84,18 @@ function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 		writeLog(INFO, "Player[2]: ".$p2data['user_username'].", Score: ".$score2.", Old rank: ".$curr2.", New rank: ".$new2.", PM Counter: ".$pl2);
 		writeLog(INFO, "--------");
 
+		//Check the UUIDs to see if one or both are guests
+		$guests = false;
+		if (svc_getUserType($id1) == 0){
+			$guests = true;
+		}
+		if (svc_getUserType($id2) == 0){
+			$guests = true;
+		}
+		writeLog(TRACE, "Guests = ".$guests." for this match");
+
 		//Perform database update, unless the match was a scoreless tie (forfeit) - Prevents placement counter from decrementing on forfeit
-		if ($score1 > 0 or $score2 > 0){
+		if (($score1 > 0 or $score2 > 0) and !$guests){
 			if (!svc_updateRank($id1, $new1)){
 				return false;
 			}
@@ -293,7 +303,7 @@ function getPointsLost($los, $opp){
 	writeLog(TRACE, "LOSS cons=".$cons." scale=".$scale);
 	$pow = pow(abs($opp-$los), 1/3);
 	if ($los > $opp){ //Because pow() doesn't like negative roots for some reason
-		$pow -1.0 * $pow;
+		$pow = -1.0 * $pow;
 	}
 	writeLog(TRACE, "LOSS pow=".$pow);
 	$yield = 30 + (-1.0 * $cons * $pow);
@@ -328,6 +338,20 @@ function svc_doStreakAnnouncement($uuid, $streak){
 	} else if ($streak == $interval * 4){
 		$username = svc_getMemberNameByID($uuid);
 		svc_addActivityItem(5, null, $username." is <b>God-like</b> (".$streak." wins in a row)", null);
+	}
+}
+
+function svc_logMatchResults($event_id, $id1, $id2, $score1, $score2, $doubles, $ranked){
+	global $db;
+	$reportedBy = $_SESSION["uuid"];
+	$season = svc_getSetting("CurrentSeasonNumber");
+	$query = "INSERT INTO match_score_log (event_id, season_id, match_p1_uuid, match_p2_uuid, match_p1_score, match_p2_score, match_is_doubles, match_is_ranked, match_reported_by_uuid) 
+	VALUES ('$event_id', '$season', '$id1', '$id2', '$score1', '$score2', '$doubles', '$ranked', '$reportedBy')";
+
+	if (!mysqli_query($db, $query)){
+		writeLog(ERROR, "Failed to insert a match into the logs");
+		writeLog(ERROR, $query);
+		writeLog(ERROR, mysqli_error($db));
 	}
 }
 
