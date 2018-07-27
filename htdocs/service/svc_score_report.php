@@ -4,6 +4,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_player_ranks.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_activity_feed.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_site_settings.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_authentication.php");
+
 
 function svc_reportSinglesScore($id1, $score1, $id2, $score2){
 
