@@ -24,7 +24,7 @@
 			<input type="submit" class="sc-button" value="Search" />
 		</form>
 		<?php if($_SESSION['type']==0) : ?>
-		<h3>For privacy purposes, some results may be hidden. <b>Log In</b> to see all members.</h3>
+		<h3>Note: Some members' information may not be displayed due to privacy reasons.</h3>
 		<?php endif; ?>
 		<hr />
 		

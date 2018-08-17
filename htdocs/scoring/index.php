@@ -30,8 +30,8 @@
 		<div id="main" class="page-content">
 		<h2>Score Entry</h2>
 		<hr />
-		<h2 style="margin: 0 auto !important; text-align: center">Available Matches</h2>
 		<?php if ($status==3 or $status==4) : ?> <!--Freeplay event-->
+			<h2 style="margin: 0 auto !important; text-align: center">Matchmaking Queue</h2>
 			<table class="rank-list">
 				<?php if (mysqli_num_rows($fpqueue)==0) : ?>
 					<tr id="rank-list-head">
@@ -75,9 +75,11 @@
 				<?php endwhile; ?>
 			</table>
 		<?php elseif ($status==2) : ?>
+			<h2 style="margin: 0 auto !important; text-align: center">Tournament Matches</h2>
 			<h3>A tourney is preparing to start! When it begins, scores will appear here.</h3>
 		<?php endif; ?>
 		<?php if ($status==1 or $status==4) : ?>
+			<h2 style="margin: 0 auto !important; text-align: center">Tournament Matches</h2>
 			<h4 style="text-align: center">Use the radio buttons to select the winner before marking a match complete.</h4>
 
 			<?php
@@ -186,7 +188,8 @@
 			</table>
 
 		<?php else : ?>
-			<h3>There is no tourney or event active.</h3>
+			<h2 style="margin: 0 auto !important; text-align: center">Event &amp; Tournament Scoring</h2>
+			<h3>There is no event active. When you start an event or tournament, the match queue will appear here.</h3>
 		<?php endif; ?>
 		<hr />
 			<h2 style="margin: 0 auto !important; text-align: center">Manual Score Entry</h2>
