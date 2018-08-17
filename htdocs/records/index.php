@@ -10,7 +10,11 @@
 			<img src="/customization/banner.png" class="banner-img" /> 
 		</div>
 
-	<?php require_once($_SERVER['DOCUMENT_ROOT']."/alertmessage.php"); ?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT']."/alertmessage.php"); 
+	require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
+	require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
+
+	?>
 
 		<div id="main" class="page-content">
 
@@ -23,8 +27,7 @@
 			<h3>View brackets from past tournaments.</h3>
 			<select name="event_id" value="0">
 			<?php
-				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
-				svc_getEventListAsOptions(2, true);
+				svc_echoTournamentRecordsList();
 			?>
 			</select>
 			<input type="submit" class="sc-button" value="Go!" />
@@ -38,8 +41,6 @@
 			<h3>View the ranks from previous seasons.</h3>
 			<select name="season-id" value="0" />
 			<?php
-				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
-				require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
 				svc_echoSeasonList(false);
 			?>
 			</select>
