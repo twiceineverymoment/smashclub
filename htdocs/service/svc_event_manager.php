@@ -379,7 +379,7 @@ function svc_saveAttendance($event_id, $attendees){
 		writeLog(SEVERE, mysqli_error($db));
 		return false;
 	}
-	writeLog(INFO, Rating decay query applied.);
+	writeLog(INFO, "Rating decay query applied.");
 	$query4 = "UPDATE event_schedule SET event_attendance_taken = 1 WHERE event_id = '$event_id'";
 	mysqli_query($db, $query4);
 	return true;
