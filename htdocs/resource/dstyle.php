@@ -110,6 +110,18 @@ body {
 	color: #FFFFFF;
 }
 
+#noscript-banner {
+	width: calc(100% - 250px);
+	margin-left: 250px;
+	margin-bottom: 0px;
+	padding: 0px;
+	background-color: #FFFF00;
+	text-align: center;
+	font-family: MavenPro;
+	font-size: 16px;
+	color: #000000;
+}
+
 #eventalert {
 	width: calc(100% - 250px);
 	margin-left: 250px;
@@ -194,6 +206,38 @@ body {
 	width: 400px;
 	height: 225px;
 	margin: 0 auto;
+}
+
+.competitor-block {
+	display: block;
+	background-color: <?php echo $theme['BlockBackgroundColor']; ?> ;
+	font-family: MavenPro;
+	color: <?php echo $theme['BlockTextColor']; ?> ;
+	box-shadow: 0px 0px 10px #222222;
+	padding: 3px 3px 3px 3px;
+	border-radius: 5px;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.competitor-block hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1.0), rgba(0, 0, 0, 0));
+}
+
+.competitor-block h2, h3 {
+	text-align: center;
+}
+
+.competitor-block table {
+	width: 75%;
+	color: <?php echo $theme['BlockTextColor']; ?> ;
+	margin: 0 auto;
+}
+
+.competitor-table-spacer {
+	font-size: 6px;
 }
 
 .character-image {

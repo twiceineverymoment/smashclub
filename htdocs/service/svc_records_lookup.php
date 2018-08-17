@@ -3,6 +3,9 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_site_settings.php");
 
+$games_short = array("Mixed", "Smash64", "Melee", "Brawl", "Wii U");
+$games_long = array("", "Super Smash Bros. (N64)", "Super Smash Bros. Melee (GC)", "Super Smash Bros. Brawl (Wii)", "Super Smash Bros. for Wii U / 3DS");
+
 /*
 Returns a MySQL result set containing the list of seasons, including the current season.
 */
@@ -26,14 +29,55 @@ $current: If true, include the current season in the dropdown.
 $selectedId: The option to be initially selected.
 */
 function svc_echoSeasonList($current, $selectedId = ""){
+	global $games_short;
 	$seasons = svc_getSeasonListWithGameTitles();
-	$games=array("Mixed", "N64", "Melee", "Brawl", "Wii U");
 				while ($opt = mysqli_fetch_assoc($seasons)){
 					if ($opt['season_id']==svc_getSetting("CurrentSeasonNumber") && !$current) continue; //Added for issue #29
-					echo "<option value='".$opt['season_id']."'".($opt['season_id']==$selectedId ? "selected" : "").">";
-					echo $opt['season_title']." (".$games[$opt['season_game']].")";
+					echo "<option value='".$opt['season_id']."' ".($opt['season_id']==$selectedId ? "selected" : "").">";
+					echo $opt['season_title']." (".$games_short[$opt['season_game']].")";
 					echo "</option>";
 				}
+}
+
+/*
+Prints the list of games to lookup records by game.
+$selectedId: The option to be initially selected.
+*/
+function svc_echoGamesList($selectedId = ""){
+	global $games_long;
+	for($i=1; $i<count($games_long); $i++){
+		echo "<option value='".$i."' ".($i==$selectedId ? "selected" : "").">";
+		echo $games_long[$i];
+		echo "</option>";
+	}
+}
+
+function svc_getCurrentSeasonGameNo(){
+	global $db;
+	$season = svc_getSetting("CurrentSeasonNumber");
+	if ($season==0){
+		$query = "SELECT season_game FROM season_data ORDER BY season_id DESC LIMIT 1";
+	} else {
+		$query = "SELECT season_game FROM season_data WHERE season_id = '$season'";
+	}
+	$rs = mysqli_query($db, $query);
+	if ($rs){
+		return mysqli_fetch_assoc($rs)['season_game'];
+	} else {
+		writeLog(ERROR, $query);
+		writeLog(ERROR, mysqli_error($db));
+		return false;
+	}
+}
+
+function svc_getPlayerRankInfoBySeason($uuid, $season_id){
+	global $db;
+	$query = "SELECT * FROM records_user_ranking WHERE uuid = '$uuid' AND season_number = '$season_id' LIMIT 1";
+	if ($rs = mysqli_query($db, $query)){
+		return mysqli_fetch_assoc($rs);
+	} else {
+		return false;
+	}
 }
 
 /*
@@ -242,6 +286,22 @@ function svc_getSeasonNameByID($season_id){
 	global $db;
 	$query = "SELECT season_title FROM season_data WHERE season_id = '$season_id'";
 	return mysqli_fetch_assoc(mysqli_query($db, $query))["season_title"];
+}
+
+function svc_getAllTimeCompProfileStats($uuid){
+	global $db;
+	
+}
+
+function svc_echoTournamentRecordsList($selectedId = ""){
+	global $db;
+	$query = "SELECT r.event_id, e.event_title FROM records_tourney_schedule r INNER JOIN event_schedule e ON e.event_id = r.event_id ORDER BY e.event_time DESC";
+
+	$rs = mysqli_query($db, $query);
+
+	while ($opt = mysqli_fetch_assoc($rs)){
+		echo "<option value='".$opt['event_id']."' ".($opt['event_id']==$selectedId ? "selected" : "").">".$opt['event_title']."</option>";
+	}
 }
 
 ?>
