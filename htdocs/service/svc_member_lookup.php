@@ -16,9 +16,9 @@ function svc_getProfilesByUsername($search, $staffonly){
 	WHERE a.user_locked in (0, 1, 4) ";
 
 	if ($staffonly){
-		$query .= " AND 1 < a.user_type < 5";
+		$query .= " AND (a.user_type BETWEEN 2 AND 4)";
 	} else {
-		$query .= " AND a.user_type < 5";
+		$query .= " AND (a.user_type BETWEEN 1 AND 4)";
 	}
 
 	if ($search != null){
@@ -28,6 +28,7 @@ function svc_getProfilesByUsername($search, $staffonly){
 	$query .= " ORDER BY a.user_username ASC";
 
 	$result = mysqli_query($db, $query);
+	writeLog(TRACE, "Directory query = ".$query);
 
 	if (!$result){
 		writeLog(SEVERE, "getProfilesByUsername FAILED with search=".$search.", staffonly=".$staffonly);

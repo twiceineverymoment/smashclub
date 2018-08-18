@@ -2,7 +2,8 @@
 
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_authentication.php");
-
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_activity_feed.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
 
 //Returns match data for a bracketed tourney.
 //0=winners bracket or single elim, 1=losers bracket
@@ -304,6 +305,87 @@ function svc_makeEliminationBracket($event_id, $doubleElim, $seedOrder){
 
 	return svc_buildBracketByArray($roundSet, $bracketSeedSet);
 
+}
+
+/*
+Called when the final match is closed.
+Announce the winner in the activity feed, update their tourney win count, and save the bracket to the hall of records.
+*/
+function svc_endTournament($winner){
+	global $db;
+	$eventName = svc_getEventDataById(svc_getSetting("MatchMakingEvent"))['event_title'];
+	$congrats = "Congratulations to <b>".svc_getUsernameByID($winner)."</b>, winner of <b>".$eventName."</b>!";
+	svc_addActivityItem(5, null, $congrats, 0);
+
+	$query = "UPDATE user_ranking SET rank_tourney_wins = rank_tourney_wins + 1 WHERE uuid = '$winner'"; //TODO Update for doubles tourmanents
+	if (!mysqli_query($db, $query)){
+		writeLog(ERROR, "Failed to update tourney win count");
+		writeLog(ERROR, mysqli_error($db));
+	}
+	if (!svc_saveTournamentToRecords($winner)){
+		return false;
+	}
+	return true;
+}
+
+//Winner is either a UUID for singles tournaments or a group ID for doubles tournaments
+function svc_saveTournamentToRecords($winner){
+	global $db;
+	$rules = svc_getSetting("CompMatchRules");
+	$mode = svc_getSetting("TourneyBracketStyle");
+	$event_id = svc_getSetting("MatchMakingEvent");
+	$doubles = svc_getSetting("TourneyDoubles");
+
+	$query1 = "INSERT INTO records_tourney_schedule (event_id, tourney_bracket_style, tourney_is_doubles, tourney_rules, tourney_winner_id) 
+	VALUES ('$event_id', '$mode', '$doubles', '$rules', '$winner')";
+
+	$query2 = "INSERT INTO records_tourney_round (round_bracket_level, round_no, round_name) 
+	SELECT round_bracket_level, round_no, round_name FROM tourney_round_list";
+
+	$query3 = "UPDATE records_tourney_round SET event_id = '$event_id' WHERE event_id = 0";
+
+	$query4 = "INSERT INTO records_tourney_match (match_order, match_bracket_level, match_round_no, match_p1_uuid, match_p1_ref, match_p2_uuid, match_p2_ref, match_status, match_p1_score, match_p2_score, match_winner_uuid, match_is_final) 
+	SELECT match_order, match_bracket_level, match_round_no, match_p1_uuid, match_p1_ref, match_p2_uuid, match_p2_ref, match_status, match_p1_score, match_p2_score, match_winner_uuid, match_is_final FROM tourney_match_order";
+
+	$query5 = "UPDATE records_tourney_match SET event_id = '$event_id' WHERE event_id = 0";
+
+	if (mysqli_query($db, $query1)){
+		if (mysqli_query($db, $query2)){
+			if (mysqli_query($db, $query3)){
+				if (mysqli_query($db, $query4)){
+					if (mysqli_query($db, $query5)){
+						writeLog(INFO, "saveTournamentToRecords finished successfully.");
+						return true;
+					} else {
+						writeLog(SEVERE, "saveTournamentToRecords failed on query 5");
+						writeLog(SEVERE, $query5);
+						writeLog(SEVERE, mysqli_error($db));
+						return false;
+					}
+				} else {
+					writeLog(SEVERE, "saveTournamentToRecords failed on query 4");
+					writeLog(SEVERE, $query4);
+					writeLog(SEVERE, mysqli_error($db));
+					return false;
+				}
+			} else {
+				writeLog(SEVERE, "saveTournamentToRecords failed on query 3");
+				writeLog(SEVERE, $query3);
+				writeLog(SEVERE, mysqli_error($db));
+				return false;
+			}
+		} else {
+			writeLog(SEVERE, "saveTournamentToRecords failed on query 2");
+			writeLog(SEVERE, $query2);
+			writeLog(SEVERE, mysqli_error($db));
+			return false;
+		}
+	} else {
+		writeLog(SEVERE, "saveTournamentToRecords failed on query 1");
+		writeLog(SEVERE, $query1);
+		writeLog(SEVERE, mysqli_error($db));
+		return false;
+	}
 }
 
 ?>

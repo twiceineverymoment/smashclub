@@ -205,7 +205,7 @@
 					<select name="player2b" id="dbl2" style="display:none"><?php svc_getEligiblePlayersHTML(); ?></select>
 				</div>
 				<br/>
-				<input name="doubles" id="doubles" name="doubles" type="checkbox" value="false" onChange="enableDisableDoubles()" />Doubles Match<br/>
+				<!--<input name="doubles" id="doubles" name="doubles" type="checkbox" value="false" onChange="enableDisableDoubles()" />Doubles Match<br/> Temporarily removed due to upcoming v2.6 doubles update-->
 				<input type="submit" class="sc-button" value="Submit Score" name="confirm" />
 				</form>
 			</div>

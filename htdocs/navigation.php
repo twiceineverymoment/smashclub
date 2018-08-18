@@ -45,10 +45,10 @@
 		<img src="/resource/tab_members.png" width="30" />
 		<a href="/directory/">Members</a>
 	</div>
-	<div class="sidebarlink">
+	<!--<div class="sidebarlink">
 		<img src="/resource/tab_activity.png" width="30" />
 		<a href="/activity/">Activity</a>
-	</div>
+	</div>-->
 	<div class="sidebarlink">
 		<img src="/resource/tab_events.png" width="30" />
 		<a href="/events/">Events</a>

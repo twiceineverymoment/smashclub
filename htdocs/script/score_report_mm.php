@@ -17,8 +17,11 @@ if (!isset($_POST['submit'])){
 }
 
 if (svc_closeMatch($_POST['match_id'])){
-	if (svc_getSetting("EventIsRanked")==1){
+	$ranked = svc_getSetting("EventIsRanked");
+	svc_logMatchResults($event, $_POST['uuid1'], $_POST['uuid2'], $_POST['score1'], $_POST['score2'], 0, $ranked);
+	if ($ranked==1){
 		if (svc_reportSinglesScore($_POST['uuid1'], $_POST['score1'], $_POST['uuid2'], $_POST['score2'])){
+			$event = svc_getSetting("MatchMakingEvent");
 			sendRedirect("/scoring");
 		} else {
 			showErrorPage(500);

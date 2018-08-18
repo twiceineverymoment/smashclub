@@ -15,27 +15,30 @@
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_authentication.php"); ?>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php"); ?>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php"); ?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php"); ?>
 
 	<?php
 	if ($_SESSION['type']==0) {
-		writeLog(ALERT, "Page:TOURNEY requested by unauthorized user, IP: ".$_SERVER['REMOTE_ADDR']);
+		writeLog(ALERT, "Page:RECORDS_TOURNEY_RESULTS requested by unauthorized user, IP: ".$_SERVER['REMOTE_ADDR']);
 		showErrorPage(401);
 		die();
 	}
-	$status = svc_getSetting("TourneyStatus");
-	if ($status==0 or $status==3){
-		writeLog(INFO, "User attempted to access the Tourney bracket but there is no tournament open. Redirecting to homepage.");
-		sendRedirect("/");
+
+	if (!is_numeric($_GET['event_id'])){
+		writeLog(ALERT, "Page:RECORDS_TOURNEY_RESULTS loaded with invalid event_id: ".$_GET['event_id']." - possible injection attack. IP: ".$_SERVER['REMOTE_ADDR']);
+		showErrorPage(400);
 		die();
 	}
+
+	$data = svc_getTournamentRecordsData($_GET['event_id']);
+	$mode = $data["tourney_bracket_style"];
 
 	?>
 
 		<div id="main" class="page-content">
 
-		<h2><?php echo svc_getEventDataByID(svc_getSetting("MatchMakingEvent"))['event_title']; ?>
+		<h2><?php echo svc_getEventDataByID($_GET['event_id'])['event_title']; ?>
 			[<?php
-			$mode = svc_getSetting("TourneyBracketStyle");
 			switch($mode){
 				case 0: echo "Single Elimination"; break;
 				case 1: echo "Double Elimination"; break;
@@ -44,19 +47,14 @@
 			}
 			?>]
 		</h2>
-		<h2 style="font-size: 16px"><?php echo svc_getSetting("CompMatchRules"); ?></h2>
+		<h2 style="font-size: 16px"><?php echo $data["tourney_rules"]; ?></h2>
 		<hr/>
 			<?php
-			$mode = svc_getSetting("TourneyBracketStyle");
 
 			function drawPlayerName($uuid){
 				$info = svc_getMemberInfoByID($uuid);
 				$emblem = svc_getEmblemByRank($info['rank_current'], $info['rank_season_high']);
-				if ($info['user_type']==0){
-					return "<img class='rank-img-tiny' src='/resource/emblem/guest.png' /> <i><a class='bracket-username' href='/profile/?u=".$info['user_username']."'>".$info['user_username']."</a></i>";
-				} else {
-					return "<img class='rank-img-tiny' src=".$emblem." /> <a class='bracket-username' href='/profile/?u=".$info['user_username']."'>".$info['user_username']."</a>";
-				}
+				return "<img class='rank-img-tiny' src=".$emblem." /> ".$info['user_username'];
 			}
 
 			function drawMatchBlock($assoc){
@@ -174,18 +172,11 @@
 			}
 
 			?>
-			<!--Pregame message-->
-			<?php if($status==2) : ?>
-				<div align="center">
-					<h2>Get Ready!</h2>
-					<h3>The tournament hasn't started yet! When it starts, the bracket will appear here.</h3>
-				</div>
-			<?php die(); endif; ?>
 
 			<!--BEGIN WINNERS BRACKET-->
 			<?php if($mode==0 or $mode==1) : ?>
 				<?php
-					$Wrounds = svc_getBracketRounds(0); //Winners bracket
+					$Wrounds = svc_getPastTournamentRounds($_GET['event_id'], 0); //Winners bracket
 					if ($mode==1){
 						echo "<h2>Winners' Bracket</h2>";
 					} else {
@@ -198,7 +189,7 @@
 					<?php while($Wcol = mysqli_fetch_assoc($Wrounds)) : ?>
 						<td class="tourney-match-cell">
 						<h3><?php echo $Wcol['round_name']; ?></h3>
-						<?php $Wmatches = svc_getBracketMatches(0, $Wcol['round_no']); ?>
+						<?php $Wmatches = svc_getPastTournamentMatches($_GET['event_id'], 0, $Wcol['round_no']); ?>
 						<?php
 							while($Wmatch = mysqli_fetch_assoc($Wmatches)){
 								drawMatchBlock($Wmatch);
@@ -215,7 +206,7 @@
 			<!--BEGIN LOSERS BRACKET-->
 			<?php if($mode==1) : ?>
 				<?php
-					$Lrounds = svc_getBracketRounds(1); //Losers bracket
+					$Lrounds = svc_getPastTournamentRounds($_GET['event_id'], 1); //Losers bracket
 					echo "<h2>Losers' Bracket</h2>";
 				?>
 
@@ -224,7 +215,7 @@
 					<?php while($Lcol = mysqli_fetch_assoc($Lrounds)) : ?>
 						<td class="tourney-match-cell">
 						<h3><?php echo $Lcol['round_name']; ?></h3>
-						<?php $Lmatches = svc_getBracketMatches(1, $Lcol['round_no']); ?>
+						<?php $Lmatches = svc_getPastTournamentMatches($_GET['event_id'], 1, $Lcol['round_no']); ?>
 						<?php
 							while($Lmatch = mysqli_fetch_assoc($Lmatches)){
 								drawMatchBlock($Lmatch);
