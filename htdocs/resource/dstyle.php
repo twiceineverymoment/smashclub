@@ -89,6 +89,15 @@ body {
 	margin-right: 10px;
 }
 
+.event-link {
+	color: white;
+	text-decoration: none;
+}
+
+.event-link:hover {
+	text-decoration: underline;
+}
+
 #banner {
 	width: calc(100% - 250px);
 	margin-left: 250px;

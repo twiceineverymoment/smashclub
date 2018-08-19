@@ -46,12 +46,40 @@
 			$gametext = $games_long[$gameIndex];
 		}
 
+		//Data by game
+		if (isset($_POST["game_id"])){
+			$gameRecords = svc_getRecordsByGame($uuid, $_POST["game_id"]);
+		} else {
+			$gameRecords = svc_getRecordsByGame($uuid, $gameIndex);
+		}
+
 		//Calculated values
 		$careerwinrate = round(($profile['rank_career_wins'] / $profile['rank_career_games']) * 100.0, 2);
+		$gamewinrate = round(($gameRecords["wins"] / ($gameRecords["losses"]+$gameRecords["wins"])) * 100.0, 2);
+		if (isset($_POST["season_id"])){
+			$seasonwinrate = round(($seasonRecords['rec_season_wins'] / ($seasonRecords['rec_season_losses']+$seasonRecords['rec_season_wins']) * 100.0), 2);
+		} else {
+			$seasonwinrate = round(($profile['rank_season_wins'] / ($profile['rank_season_losses']+$profile['rank_season_wins']) * 100.0), 2);
+		}
 
 		//Emblems
 		$careerHighEmblem = svc_getEmblemByRank($profile['rank_career_high'], $profile['rank_career_high']);
 
+		if (is_nan($seasonwinrate)){
+			$seasonwinrate = "N/A";
+		} else {
+			$seasonwinrate .= "%";
+		}
+		if (is_nan($careerwinrate)){
+			$careerwinrate = "N/A";
+		} else {
+			$careerwinrate .= "%";
+		}
+		if (is_nan($gamewinrate)){
+			$gamewinrate = "N/A";
+		} else {
+			$gamewinrate .= "%";
+		}
 
 		function drawRankDelta($a, $b){
 			if ($a == $b){
@@ -86,6 +114,10 @@
 					<td>Total Tournaments Attended</td>
 					<td><?=$profile['rank_tourney_count']?></td>
 				</tr>
+				<tr>
+					<td>Rating Decay Status</td>
+					<td><?=svc_getRatingDecayStatus($uuid);?></td>
+				</tr>
 				<tr><td colspan="2" class="competitor-table-spacer">&nbsp;</td></tr>
 				<tr>
 					<td>Wins</td>
@@ -97,7 +129,7 @@
 				</tr>
 				<tr>
 					<td>Win Percentage</td>
-					<td><?=$careerwinrate?>%</td>
+					<td><?=$careerwinrate?></td>
 				</tr>
 				<tr>
 					<td>Longest Winning Streak</td>
@@ -107,14 +139,6 @@
 				<tr>
 					<td>Tournament Wins</td>
 					<td><?=$profile['rank_tourney_wins']?></td>
-				</tr>
-				<tr>
-					<td>Average Rank at End of Season</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td>Average Rank after Placement</td>
-					<td>-</td>
 				</tr>
 			</table>
 			<hr />
@@ -187,7 +211,7 @@
 				</tr>
 				<tr>
 					<td>Win Percentage</td>
-					<td>%</td>
+					<td><?=$seasonwinrate?></td>
 				</tr>
 				</table>
 			<?php endif; ?>
@@ -204,32 +228,32 @@
 			</form>
 			<table>
 				<tr>
+					<td>Seasons Played</td>
+					<td><?=$gameRecords["seasons"];?></td>
+				</tr>
+				<tr>
 					<td>Highest Rating</td>
-					<td>-</td>
+					<td><?=$gameRecords["highest"];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($gameRecords['highest'], $gameRecords['highest']);?> /></td>
 				</tr>
 				<tr>
 					<td>Average Final Rating</td>
-					<td>-</td>
+					<td><?=$gameRecords["average-final"];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($gameRecords['average-final'], $gameRecords['average-final']);?> /></td>
 				</tr>
 				<tr>
 					<td>Average Initial Rating</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td>Total Games Played</td>
-					<td>-</td>
+					<td><?=$gameRecords["average-init"];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($gameRecords['average-init'], $gameRecords['average-init']);?> /></td>
 				</tr>
 				<tr>
 					<td>Wins</td>
-					<td>-</td>
+					<td><?=$gameRecords["wins"];?></td>
 				</tr>
 				<tr>
 					<td>Losses</td>
-					<td>-</td>
+					<td><?=$gameRecords["losses"];?></td>
 				</tr>
 				<tr>
 					<td>Win Percentage</td>
-					<td>-</td>
+					<td><?=$gamewinrate;?></td>
 				</tr>
 			</table>
 		</div>
