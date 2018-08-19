@@ -23,12 +23,13 @@
 	}
 
 	if (isset($_POST['sortbutton'])){
-		$ranks = svc_getAllCurrentRankData($_POST['order']);
+		$sortOrder = $_POST['order'];
 	}
 	else {
-		$ranks = svc_getAllCurrentRankData(svc_getSetting("DefaultRankSortOrder"));
+		$sortOrder = svc_getSetting("DefaultRankSortOrder");
 	}
 
+	$ranks = svc_getAllCurrentRankData($sortOrder);
 	$count=1;
 
 	?>
@@ -53,16 +54,16 @@
 				</a>
 			</div>
 			<hr />
-			<form action="/leaderboard/" method="post">
+			<form action="/leaderboard/" id="sort" method="post">
 				Sort By:
-				<select name="order" value="0">
-					<option value="0">Current Rank (High to Low)</option>
-					<option value="1">Current Rank (Low to High)</option>
-					<option value="2">Season High (High to Low)</option>
-					<option value="3">All-Time High (High to Low)</option>
-					<option value="4">Username (A to Z)</option>
+				<select name="order" value="0" onchange="document.getElementById('sort').submit()">
+					<option value="0" <?=($sortOrder==0)?"selected":"";?>>Current Rank (High to Low)</option>
+					<option value="1" <?=($sortOrder==1)?"selected":"";?>>Current Rank (Low to High)</option>
+					<option value="2" <?=($sortOrder==2)?"selected":"";?>>Season High (High to Low)</option>
+					<option value="3" <?=($sortOrder==3)?"selected":"";?>>All-Time High (High to Low)</option>
+					<option value="4" <?=($sortOrder==4)?"selected":"";?>>Username (A to Z)</option>
 				</select>
-				<input type="submit" class="sc-button" value="Sort" name="sortbutton" />
+				<input type="hidden" value="Sort" name="sortbutton" />
 			</form>
 
 			<table class="rank-list">
