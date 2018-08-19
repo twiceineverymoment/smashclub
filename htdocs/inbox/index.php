@@ -22,12 +22,16 @@
 		}
 
 		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_messaging.php");
+		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
+
 
 		$results = svc_getInboxByUser($_SESSION['uuid']);
 
 		function drawInboxRow($assoc){
 			if ($assoc['from_uuid']==0){ //Notification
-
+				echo "<tr><td><input type='checkbox' name='selectedMessages[]' value='".$assoc["message_id"]."' /></td>";
+				echo "<td colspan='2'>".$assoc["message_body"]."</td>";
+				echo "<td>".svc_formatTimestamp($assoc["message_sent"])."</td></tr>";
 			} else { //Private Message
 
 			}
@@ -50,9 +54,9 @@
 				<th>Subject</th>
 				<th>Received</th>
 			</tr>
-			<?php if(count($results)==0) : ?>
+			<?php if(mysqli_num_rows($results)==0) : ?>
 				<tr>
-				<td colspan="7">No messages found</td>
+				<td colspan="4">No messages found</td>
 				</tr>
 			<?php else : while ($result = mysqli_fetch_assoc($results)) : ?>
 			<?php drawInboxRow($result); ?>
