@@ -5,6 +5,14 @@
 		<title>Polls - SmashClub</title>
 	</head>
 	<body>
+
+	<script type="text/javascript">
+	function closePoll(){
+		if (confirm("Closing the poll will clear all responses. Are you sure?")){
+			window.location = "/script/poll_update.php?close";
+		}
+	}
+	</script>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/navigation.php"); ?>
 		<div id="banner">
 			<img src="/customization/banner.png" class="banner-img" /> 
@@ -12,12 +20,7 @@
 
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/alertmessage.php"); ?>
 
-		<div id="main" class="page-content">
-
-		<h1>Polls</h1>
-		<hr />
-
-		<?php
+	<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_polling.php");
 
 		if ($_SESSION['type']==0){
@@ -33,6 +36,22 @@
 
 		writeLog(DEBUG, "PollChoices size=".$max.", value=".implode(",", $choices));
 		?>
+
+		<div id="main" class="page-content">
+
+		<div style="float: right">
+			<?php if($_SESSION["type"] >= 3) : ?>
+			<?php if($mode=="0") : ?>
+				<input type="button" class="sc-button" value="Create Poll" onClick="window.location='/forms/poll_create.php'" />
+			<?php else : ?>
+				<input type="button" class="sc-button" value="Poll Results" onClick="window.location='/forms/poll_results.php'" />
+				<input type="button" class="sc-button" value="Close Poll" style="background-color: firebrick" onClick="closePoll()" />
+			<?php endif; ?>
+			<?php endif; ?>
+		</div>
+
+		<h1>Polls</h1>
+		<hr />
 
 		<?php if($mode=="0") : ?>
 			<h2>There is no open poll to display.</h2>
