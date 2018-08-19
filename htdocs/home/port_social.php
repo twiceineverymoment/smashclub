@@ -23,8 +23,8 @@
 	margin-bottom: 5px;
 }
 .social-row img {
-	width: 32px;
-	height: 32px;
+	width: 10%;
+	max-width: 32px;
 	vertical-align: middle;
 }
 .social-row a:link, .social-row a:visited {
