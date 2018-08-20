@@ -76,7 +76,7 @@
 			} else {
 				echo "<td>".$eventName["event_title"]."</td>";
 			}
-			echo "<td>".$arr["match_time"];
+			echo "<td>".svc_formatTimestamp($arr["match_time"]);
 			echo "<td>".svc_getUsernameByID($arr["match_reported_by_uuid"])."</td>";
 			echo "</tr>";
 		}

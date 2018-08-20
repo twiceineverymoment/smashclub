@@ -24,6 +24,73 @@
 
 		<div id="main" class="page-content">
 
+		<?php if(isset($_GET["id"])) : ?>
+			<?php $es = svc_getEventDataById($_GET["id"]); ?>
+
+			<div class="event-block">
+			<h1><?php echo $es['event_title']; ?></h1>
+			<h2><img src="/resource/icons/ico_event_date.png" /> <?php echo svc_longFormatDate(new DateTime($es['event_time'])); ?></h2>
+			<h2 class="event-label"><?php echo $es['event_location']; ?> <img src="/resource/icons/ico_event_location.png" /></h2>
+			<p><?php echo $es['event_description']; ?></p>
+
+			<table style="width: 100%; border-collapse: collapse;">
+			<tr>
+				<td width="50%">
+					<h2 class="event-type">
+					<?php
+					if ($es['event_type']==0){
+						echo "<span style='color: orangered'>Tournament</span>";
+					}
+					elseif ($es['event_type']==1){
+						echo "<span style='color: orange'>Competitive Play</span>";
+					}
+					elseif ($es['event_type']==2){
+						echo "<span style='color: mediumseagreen'>Casual Play</span>";
+					}
+					elseif ($es['event_type']==3){
+						echo "<span style='color: skyblue'>Training Session</span>";
+					}
+					elseif ($es['event_type']==4){
+						echo "<span style='color: #888'>Meeting</span>";
+					} else {
+						echo "<span>&nbsp;</span>";
+					}
+					?>
+				</h2>
+				</td>
+				<td width="50%" style="text-align: right !important">
+					<form action="/script/event_rsvp.php" method="post">
+					<input type="hidden" name="event-id" value=<?php echo "'".$es['event_id']."'"; ?> />
+					<?php if($es['event_signup_open']==0) : ?>
+						<span style="color: white; display: inline-block">Sign-up is locked for this event.</span>
+					<?php elseif($_SESSION['type']==0) : ?>
+						<?php if (svc_isEventFull($es['event_id'])) : ?>
+							<span style="color: white; display: inline-block">This event is full. Please contact the organizer.</span>
+						<?php elseif($es['event_type']==0 and svc_getSetting("EnableGuestAccounts")==1) : ?>
+							<input type="submit" class="sc-button" name="register-guest" style="display: inline-block; width: 150px; background-color: purple" value="&#10004; Guest Sign Up" />
+						<?php else : ?>
+							<input type="submit" class="sc-button" name="guest-rsvp" style="display: inline-block; width: 150px" value="&#10004; Sign Up" />
+						<?php endif; ?>
+					<?php elseif(in_array($es['event_id'], $signedUpIds)) : ?>
+						<span style="color: white; display: inline-block">You are signed up for this event!</span>
+						<input type="submit" class="sc-button" name="cancel" style="background-color: firebrick; display: inline-block; width: 150px" value="&#128473; Cancel" />
+					<?php elseif(svc_isEventFull($es['event_id'])) : ?>
+						<span style="color: white; display: inline-block">This event is full. Please contact the organizer.</span>
+					<?php else : ?>
+						<input type="submit" class="sc-button" name="member-rsvp" style="background-color: limegreen; display: inline-block; width: 150px" value="&#10004; Sign Up Now" />
+					<?php endif; ?>
+
+					<input type="button" class="sc-button" value="&#9993; Contact Host" style="display: inline-block; width: 150px" onclick=<?php echo "\"contactHost(".$es['event_owner_uuid'].")\""; ?> />
+					</form>
+
+				</td>
+			</tr>
+			</table>
+			
+			</div>
+
+		<?php else : ?> <!--End selected event detail-->
+
 		<?php if(svc_getSetting("TourneyStatus")>0) : ?>
 
 			<?php if (svc_getSetting("TourneyStatus")==2) : ?>
@@ -96,6 +163,12 @@
 			<hr />
 		<?php endif; ?>
 
+		<div style="float: right">
+			<?php if($_SESSION["type"] >= 3) : ?>
+				<input type="button" class="sc-button" value="Create Event" onClick="window.location='/forms/event_create.php'" />
+			<?php endif; ?>
+		`</div>
+
 		<h1>Upcoming Events</h1>
 		<?php if($_SESSION['type']>0) : ?>
 		<h3>Click "Sign Up" to put your name on the list in one click!</h3>
@@ -116,7 +189,7 @@
 		<?php while($e = mysqli_fetch_assoc($results1)) : ?>
 
 			<div class="event-block">
-			<h1><?php echo $e['event_title']; ?></h1>
+			<h1><a class='event-link' href=<?='/events?id='.$e['event_id'];?> ><?php echo $e['event_title']; ?></a></h1>
 			<h2><img src="/resource/icons/ico_event_date.png" /> <?php echo svc_longFormatDate(new DateTime($e['event_time'])); ?></h2>
 			<h2 class="event-label"><?php echo $e['event_location']; ?> <img src="/resource/icons/ico_event_location.png" /></h2>
 			<p><?php echo $e['event_description']; ?></p>
@@ -237,5 +310,7 @@
 		<?php endwhile; ?>
 
 		</div>
+
+	<?php endif; ?> <!--Endif for selected vs. list view-->
 	</body>
 </html>
