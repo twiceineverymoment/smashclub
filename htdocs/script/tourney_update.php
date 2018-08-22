@@ -3,6 +3,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_site_settings.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_tourney_manager.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php");
 
 if ($_SESSION['type']<3){
 	writeLog(ALERT, "Script:TOURNEY_UPDATE requested by unauthorized user, IP: ".$_SERVER['REMOTE_ADDR']);
@@ -18,6 +19,7 @@ if ($_GET['action']=="start"){
 	svc_putSetting("EventIsRanked", $_POST['ranked']);
 	svc_putSetting("TourneyBracketStyle", $_POST['bracket']);
 	svc_putSetting("MatchMakingEvent", $_POST['event']);
+	svc_removeDuplicateTournamentData($_POST['event']);
 	sendRedirect("/adminpanel/");
 }
 

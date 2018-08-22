@@ -331,7 +331,7 @@ function svc_endTournament($winner){
 //Winner is either a UUID for singles tournaments or a group ID for doubles tournaments
 function svc_saveTournamentToRecords($winner){
 	global $db;
-	$rules = svc_getSetting("CompMatchRules");
+	$rules = mysqli_real_escape_string(svc_getSetting("CompMatchRules"));
 	$mode = svc_getSetting("TourneyBracketStyle");
 	$event_id = svc_getSetting("MatchMakingEvent");
 	$doubles = svc_getSetting("TourneyDoubles");
