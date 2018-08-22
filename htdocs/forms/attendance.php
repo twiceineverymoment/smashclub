@@ -17,12 +17,17 @@
 
 	if (isset($_POST['view'])){
 		$list = svc_getGuestListByEvent($_POST['event_id']);
+		if (svc_isAttendanceTaken($_POST['event_id'])){
+			showJavascriptAlert("Attendance for this event has already been recorded. Please select a different event.");
+			sendRedirect("/forms/attendance.php");
+			die();
+		}
 	}
 
 	if (isset($_POST['save'])){
 		$ids = $_POST['entries'];
 		if (svc_saveAttendance($_POST['event_id'], $ids)) {
-			showJavascriptAlert('Save successful');
+			showJavascriptAlert('Attendance was saved successfully. Skill rating decay has been applied.');
 			sendRedirect('/adminpanel');
 			die();
 		}
@@ -48,6 +53,7 @@
 			<?php if (isset($_POST['view'])) : ?>
 				<hr />
 				<h3>Guest List For <?php echo svc_getEventDataById($_POST['event_id'])['event_title']; ?></h3>
+				<p style="color: yellow">NOTE: Attendance can only be recorded once per event. Once it is finalized, you will not be able to change it. Please wait until the end of your event to record attendance in case of any late arrivals.</p>
 				<form action="/forms/attendance.php" method="post">
 					<table class="rank-list">
 						<tr>
