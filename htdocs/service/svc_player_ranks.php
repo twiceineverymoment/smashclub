@@ -294,7 +294,7 @@ function svc_startSeason($title, $game, $method, $placements){
 function svc_populateInitRanks($method, $placements, $game){
 	global $db;
 	if ($method==INIT_FRESH_START){ //Set all rows to 1200 and reset placement matches
-		$query = "UPDATE user_ranking SET rank_current = 1200, rank_initial = 1200, rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements'";
+		$query = "UPDATE user_ranking SET rank_current = 1200, rank_initial = 1200, rank_season_high = 0, rank_consec_games = 0, rank_missed_events = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements'";
 		if (mysqli_query($db, $query)){
 			writeLog(DEBUG, "Initial season ratings have been populated using the fresh-start method,.");
 			return true;
@@ -330,7 +330,7 @@ function svc_populateInitRanks($method, $placements, $game){
 			}
 		}
 		foreach($init_ranks as $rkey => $rval){ //Perform database updates.
-			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
+			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_missed_events = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
 			if (mysqli_query($db, $query2)){
 				writeLog(TRACE, "init_ranks query: ".$query2);
 			} else {
@@ -372,7 +372,7 @@ function svc_populateInitRanks($method, $placements, $game){
 			$init_ranks[$user] = $average;
 		}
 		foreach($init_ranks as $rkey => $rval){ //Perform database updates.
-			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
+			$query2 = "UPDATE user_ranking SET rank_current = '$rval', rank_initial = '$rval', rank_season_high = 0, rank_consec_games = 0, rank_missed_events = 0, rank_season_wins = 0, rank_season_losses = 0, rank_placements = '$placements' WHERE uuid = '$rkey'";
 			if (mysqli_query($db, $query2)){
 				writeLog(TRACE, "init_ranks query: ".$query2);
 			} else {

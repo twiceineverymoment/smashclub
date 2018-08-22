@@ -27,6 +27,11 @@
 		<?php if(isset($_GET["id"])) : ?>
 			<?php $es = svc_getEventDataById($_GET["id"]); ?>
 
+			<?php if(strlen($es['event_title']) == 0){
+				showErrorPage(404);
+				die();
+			} ?>
+
 			<div class="event-block">
 			<h1><?php echo $es['event_title']; ?></h1>
 			<h2><img src="/resource/icons/ico_event_date.png" /> <?php echo svc_longFormatDate(new DateTime($es['event_time'])); ?></h2>
