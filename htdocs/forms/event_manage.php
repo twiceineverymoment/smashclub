@@ -15,7 +15,6 @@
 	}
 
 	if (isset($_POST['event-select'])){
-		$selectedEvent = $_POST['event-id'];
 		$eventdata = svc_getEventDataById($_POST['event-id']);
 		$datetime = new DateTime($eventdata['event_time']);
 	}
@@ -37,7 +36,7 @@
 				<form action="event_manage.php" method="post" id="topForm">
 					<span>Select Event:</span>
 					<select name="event-id" id="event-id">
-						<?php svc_getEventListAsOptions(true, false, $selectedEvent); ?>
+						<?php svc_getEventListAsOptions(true, false); ?>
 					</select>
 					<span>What would you like to do?</span><br/>
 					<input type="submit" class="sc-button" name="event-select" value="Edit Event" />

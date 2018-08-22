@@ -32,11 +32,7 @@
 
 	if (isset($_POST['subStreaming'])){
 		svc_putSetting("TwitchChannelID", $_POST["channelId"]);
-		svc_putSetting("Facebook.PageName", $_POST["fbname"]);
-		svc_putSetting("Facebook.Handle", $_POST["fblink"]);
-		svc_putSetting("Twitter.Handle", $_POST["twlink"]);
-		svc_putSetting("YouTube.Handle", $_POST["ytlink"]);
-		showJavascriptAlert("Social Media settings saved.");
+		showJavascriptAlert("Twitch settings saved.");
 	}
 
 	if (isset($_POST['subRanks'])){
@@ -79,7 +75,7 @@
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 					<span style="width: 73%"><b>Open Registration: </b>Allow anyone browsing the site to register for an account. If this is turned off, only scorekeepers and officials can create accounts for new members.</span>
 					<input type="checkbox" name="openReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableSelfRegister')==1) ? 'checked' : '';?> />
-					<span style="width: 73%"><b>Guest Accounts for Tournaments: </b>Guests signing up for tournaments will have a guest account created for them, which can participate in the bracket without receiving a rank, and be converted into a full account later.</span>
+					<span style="width: 73%"><b>Enable Guest Registration: </b>Guests signing up for certain events will have a guest account created for them, which can participate in the event and be converted into a full account later.</span>
 					<input type="checkbox" name="guestReg" value="on" style="width: 23%" <?php echo (svc_getSetting('EnableGuestAccounts')==1) ? 'checked' : '';?> />
 					<p>&nbsp;</p>
 					<input type="submit" name="subRegistration" value="Save Settings" class="sc-button" />
@@ -95,20 +91,10 @@
 			</div>
 			<br />
 			<div class="formpage-block">
-				<h2>Social Media</h2>
-				<h3>Leave any row blank to hide it from the site</h3>
+				<h2>Twitch Streaming</h2>
 				<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
-					<span style="width: 73%">Twitch Channel ID: <i>(Will also be used for embedded streaming)</i></span>
+					<span style="width: 73%">Enter your club's Twitch channel ID here:</span>
 					<input type="text" name="channelId" value="<?php echo svc_getSetting('TwitchChannelID'); ?>" style="width: 23%" />
-					<p>&nbsp;</p>
-					<span style="width: 73%">Facebook Page Name:</span>
-					<input type="text" name="fbname" value="<?php echo svc_getSetting('Facebook.PageName'); ?>" style="width: 23%" />
-					<span style="width: 73%">Facebook Page URL: </span>
-					<input type="text" name="fblink" value="<?php echo svc_getSetting('Facebook.Handle'); ?>" style="width: 23%" label="@" />
-					<span style="width: 73%">Twitter Handle: </span>
-					<input type="text" name="twlink" value="<?php echo svc_getSetting('Twitter.Handle'); ?>" style="width: 23%" label="@" />
-					<span style="width: 73%">YouTube Channel: </span>
-					<input type="text" name="ytlink" value="<?php echo svc_getSetting('YouTube.Handle'); ?>" style="width: 23%" />
 					<p>&nbsp;</p>
 					<input type="submit" name="subStreaming" value="Save Settings" class="sc-button" />
 				</form>

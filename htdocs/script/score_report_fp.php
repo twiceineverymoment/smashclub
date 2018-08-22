@@ -22,7 +22,6 @@ if (isset($_POST['confirm'])){
 	} else {
 
 		if (svc_reportSinglesScore($_POST['player1a'], $_POST['score1'], $_POST['player2a'], $_POST['score2'])){
-			svc_logMatchResults(0, $_POST['player1a'], $_POST['player2a'], $_POST['score1'], $_POST['score2'], 0, 1);
 			showJavascriptAlert("This match was logged successfully. Ranks have been adjusted.");
 			sendRedirect("/scoring/");
 			die();

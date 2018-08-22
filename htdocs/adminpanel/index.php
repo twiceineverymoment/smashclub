@@ -19,18 +19,9 @@
 			var option = dropdown.options[dropdown.selectedIndex].value;
 
 			if (option==8){
-				return confirm('WARNING! This will remove all traces of this member from the system. This is not recommended, as all data will be lost and past records may be invalidated. You cannot undo this action. Please disable the account instead if you want records to be retained. Do you wish to continue?');
+				return confirm('WARNING! This will remove all traces of this account from the system. All social and current ranking data will be lost. References to it in records may be invalidated. You cannot undo this action. Please disable the account instead if you want data to be retained. Do you wish to continue?');
 			} else if (option==6){
-				return confirm('Disabling this account will remove it from the directory, but previous records and data will be retained. You can re-enable the account later. Do you wish to continue?');
-			} else if (option==9) {
-				var name = document.getElementById('account');
-				var selectedAccount = name.options[name.selectedIndex].innerHTML;
-				if (selectedAccount.includes('(Guest)')){
-					return confirm("This guest account will be activated as a full member. You will be shown a temporary password to give to the member. If your club is set to open, it is easier for the member to do this themselves. Are you sure?");
-				} else {
-					alert("This account is already activated!");
-					return false;
-				}
+				return confirm('Disabling this account will cause it to disappear from rankings and directories, but data will be retained. You can re-enable the account later. Do you wish to continue?');
 			} else {
 				return confirm('Are you sure? Please confirm this account change.');
 			}
@@ -59,14 +50,13 @@
 				</div>
 				<form class="acp-icon" action="/script/user_management.php" method="post" onsubmit="return confirmAccountChange();" >
 					<h3>Manage Accounts</h3>
-					Account: <select name="account" id="account">
+					Account: <select name="account">
 						<?php echo svc_getAllAccountsHTML(); ?>
 					</select><br />
 					Action: <select name="action" value="bees" id="action">
 						<option value="bees">Select...</option>
 						<option value="0">Enable</option>
 						<option value="1">Reset Password</option>
-						<option value="9">Activate Guest Account</option>
 						<option value="2">Make Referee</option>
 						<?php if($_SESSION['type']>=4) : ?>
 						<option value="3">Make Officer</option>
@@ -200,7 +190,7 @@
 				<h2>Scheduling</h2>
 				
 				<div class="acp-icon">
-					<a href="/forms/event_create.php" target="_blank">
+					<a href="/forms/event_create.php">
 					<img src="/resource/admincp/create_event.png" />
 					Create Event
 					</a>
@@ -214,19 +204,19 @@
 				</div>
 				-->
 				<div class="acp-icon">
-					<a href="/forms/event_manage.php" target="_blank">
+					<a href="/forms/event_manage.php">
 					<img src="/resource/admincp/edit_events.png" />
 					Manage Events
 					</a>
 				</div>
 				<div class="acp-icon">
-					<a href="/forms/event_review.php" target="_blank">
+					<a href="/forms/event_review.php">
 					<img src="/resource/admincp/attendance.png" />
 					View Signups
 					</a>
 				</div>
 				<div class="acp-icon">
-					<a href="/forms/attendance.php" target="_blank">
+					<a href="/forms/attendance.php">
 					<img src="/resource/admincp/event_attendance.png" />
 					Take Attendance
 					</a>
@@ -299,13 +289,13 @@
 				</div>
 				<?php endif; ?>
 				<div class="acp-icon">
-					<a href="/forms/home_edit.php" target="_blank">
+					<a href="/forms/home_edit.php">
 					<img src="/resource/admincp/site_settings.png" />
 					Customize Homepage
 					</a>
 				</div>
 				<div class="acp-icon">
-					<a href="/forms/club_settings.php" target="_blank">
+					<a href="/forms/club_settings.php">
 					<img src="/resource/admincp/access_settings.png" />
 					Club Settings
 					</a>

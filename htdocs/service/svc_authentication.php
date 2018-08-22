@@ -9,7 +9,7 @@ function svc_authenticateUser($username, $password){
 	global $db, $debug;
 	$query = "SELECT a.*, p.prof_email_address FROM user_authentication a 
 	INNER JOIN user_profile p ON p.uuid = a.uuid 
-	WHERE a.user_type > 0 AND p.prof_email_address = '".$username."';"; //Changed to use e-mail login
+	WHERE p.prof_email_address = '".$username."';"; //Changed to use e-mail login
 	$rs = mysqli_query($db, $query);
 	if (mysqli_num_rows($rs)!=1){
 		if ($debug){ echo "Username not found / "; echo mysqli_num_rows($rs)." / "; echo $query; }
@@ -55,7 +55,6 @@ function svc_createNewUser($username, $password, $type, $email, $phone, $firstna
 
 	global $db, $debug;
 	$hash = password_hash($password, PASSWORD_DEFAULT);
-	$initplacement = svc_getSetting("InitialPlacementMatches");
 
 	$auth_query = "INSERT INTO user_authentication (`user_username`, `user_password_hash`, `user_type`, `user_locked`) VALUES ('$username', '$hash', '$type', 0);";
 	if (!mysqli_query($db, $auth_query)){
@@ -73,7 +72,7 @@ function svc_createNewUser($username, $password, $type, $email, $phone, $firstna
 		return false;
 	}
 
-	$rank_query = "INSERT INTO user_ranking (`rank_current`, `rank_season_high`, `rank_career_high`, `rank_placements`) VALUES (1200, 0, 0, '$initplacement');";
+	$rank_query = "INSERT INTO user_ranking (`rank_current`, `rank_season_high`, `rank_career_high`, `rank_placements`) VALUES (1200, 0, 0, 4);";
 	if (!mysqli_query($db, $rank_query)){
 		writeLog(SEVERE, "Registration (admin) failed on 3rd query, inserting default rows to prevent database corruption.");
 		writeLog(SEVERE, mysqli_error($db));
@@ -245,15 +244,12 @@ function svc_setAccountStatus($uuid, $status){
 
 function svc_getAllAccountsHTML(){
 	global $db;
-	$query = "SELECT uuid, user_type, user_username, user_locked FROM user_authentication WHERE user_type < 5 ORDER BY user_username ASC";
+	$query = "SELECT uuid, user_username, user_locked FROM user_authentication WHERE user_type < 5 ORDER BY user_username ASC";
 
 	$rs = mysqli_query($db, $query);
 
 	while ($ent = mysqli_fetch_assoc($rs)){
 		$tag="";
-		if ($ent['user_type']==0){
-			$tag="(Guest)";
-		}
 		switch($ent['user_locked']){
 			case 2:
 			$tag="(Disabled)";
@@ -311,12 +307,6 @@ function svc_getUsernameByID($uuid){
 	global $db;
 	$query = "SELECT user_username FROM user_authentication WHERE uuid = '$uuid'";
 	return mysqli_fetch_assoc(mysqli_query($db, $query))['user_username'];
-}
-
-function svc_getUserType($uuid){
-	global $db;
-	$query = "SELECT user_type FROM user_authentication WHERE uuid = '$uuid'";
-	return mysqli_fetch_assoc(mysqli_query($db, $query))['user_type'];
 }
 
 function svc_getIDByUsername($username){
@@ -392,37 +382,8 @@ function svc_selfResetPassword($username, $email){
 	}
 }
 
-function svc_convertGuestToMember($uuid, $username, $password){
-	global $db;
-	$pwhash = password_hash($password, PASSWORD_DEFAULT);
-	$query = "UPDATE user_authentication SET user_type = 1, user_username = '$username', user_password_hash = '$pwhash' WHERE user_type = 0 AND UUID = '$uuid'";
-	$query2 = "UPDATE user_ranking SET date_member_join = getdate() WHERE uuid = '$uuid'";
-
-	if (mysqli_query($db, $query)){
-		mysqli_query($db, $query2); //Updates join date for issue #130
-		writeLog(INFO, "Account UUID ".$uuid." was converted to a full account.");
-		return true;
-	} else {
-		writeLog(SEVERE, "Failed to convert to full account");
-		writeLog(SEVERE, $query);
-		writeLog(SEVERE, mysqli_error($db));
-		return false;
-	}
-}
-
-function svc_findGuestAccount($email, $phone){
-	global $db;
-	$query = "SELECT a.uuid FROM user_authentication a 
-	INNER JOIN user_profile p ON p.uuid = a.uuid 
-	WHERE p.prof_email_address = '$email' AND p.prof_phone_number = '$phone'";
-
-	$rs = mysqli_query($db, $query);
-	if ($row = mysqli_fetch_assoc($rs)){
-		$uuid = $row['uuid'];
-		return $uuid;
-	} else {
-		return false;
-	}
+function svc_createGuestDummyID($gamertag, $email, $phone){
+	
 }
 
 ?>

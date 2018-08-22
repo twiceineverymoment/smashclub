@@ -52,11 +52,7 @@
 			function drawPlayerName($uuid){
 				$info = svc_getMemberInfoByID($uuid);
 				$emblem = svc_getEmblemByRank($info['rank_current'], $info['rank_season_high']);
-				if ($info['user_type']==0){
-					return "<img class='rank-img-tiny' src='/resource/emblem/guest.png' /> <i><a class='bracket-username' href='/profile/?u=".$info['user_username']."'>".$info['user_username']."</a></i>";
-				} else {
-					return "<img class='rank-img-tiny' src=".$emblem." /> <a class='bracket-username' href='/profile/?u=".$info['user_username']."'>".$info['user_username']."</a>";
-				}
+				return "<img class='rank-img-tiny' src=".$emblem." /> ".$info['user_username'];
 			}
 
 			function drawMatchBlock($assoc){

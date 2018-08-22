@@ -55,7 +55,6 @@
 				<input type="submit" class="sc-button" value="Sort" name="sortbutton" />
 			</form>
 
-			<h3><b>Note: </b>Members who did not complete placement during this season are not shown.</h3>
 			<table class="rank-list">
 
 				<tr id="rank-list-head" />
@@ -69,19 +68,21 @@
 				<?php while($row = mysqli_fetch_assoc($ranks)) : ?>
 					<tr>
 						<td><?php echo $count; ?></td>
-						<td><img src=<?php echo svc_getEmblemByRank($row['rec_rank_final'], $row['rec_rank_season_high']); ?> /></td>
+						<td><img src=<?php echo svc_getEmblemByRank($row['rank_final'], $row['rank_high']); ?> /></td>
 						<td><a href=<?php echo "'/profile/?u=".$row['user_username']."'" ?>><?php 
 							if ($row['user_type']==2) { echo "<b style='color: forestgreen'>&#9873; </b>"; }
 							elseif ($row['user_type']==3) { echo "<b style='color: gold'>&#10030; </b>"; }
 							elseif ($row['user_type']==4) { echo "<b style='color: dodgerblue'>&#10026; </b>"; }
 							echo $row['user_username'];
 							?></a></td>
-						<td><?php echo $row['rec_rank_final']; ?></td>
-						<td><?php echo $row['rec_rank_season_high']; ?></td>
+						<td><?php echo $row['rank_final']; ?></td>
+						<td><?php echo $row['rank_high']; ?></td>
 					</tr>
 				<?php $count++; endwhile; ?>
 
 			</table>
+
+			<h3>Players who did not complete placement are not shown.</h3>
 		</div>
 	</body>
 </html>
