@@ -396,8 +396,10 @@ function svc_convertGuestToMember($uuid, $username, $password){
 	global $db;
 	$pwhash = password_hash($password, PASSWORD_DEFAULT);
 	$query = "UPDATE user_authentication SET user_type = 1, user_username = '$username', user_password_hash = '$pwhash' WHERE user_type = 0 AND UUID = '$uuid'";
+	$query2 = "UPDATE user_ranking SET date_member_join = getdate() WHERE uuid = '$uuid'";
 
 	if (mysqli_query($db, $query)){
+		mysqli_query($db, $query2); //Updates join date for issue #130
 		writeLog(INFO, "Account UUID ".$uuid." was converted to a full account.");
 		return true;
 	} else {
