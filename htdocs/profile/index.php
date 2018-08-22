@@ -13,20 +13,13 @@
 		<div id="main" class="page-content">
 		<?php
 		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_member_lookup.php");
-		require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php");
-
 		$profile = svc_getFullMemberProfile($_GET['u']);
-		if ($profile['user_type']==0){
-			$guest = true;
-			$eventname = svc_getEventNameByGuestID($profile['UUID']);
-		} else {
-			$joindate = date_format(new DateTime($profile['date_member_join']), "F Y");
-			$pmleft = $profile['rank_placements'];
-			$pminit = svc_getSetting("InitialPlacementMatches");
-			$imagesrc = "/resource/character/ultimate/".$profile['prof_main_character'].".png";
-			if ($profile['rank_consec_games'] <= (-2 * svc_getSetting("WinningStreakInterval"))){
-				$imagesrc = "/resource/waaah.png";
-			}
+		$joindate = date_format(new DateTime($profile['date_member_join']), "F Y");
+		$pmleft = $profile['rank_placements'];
+		$pminit = svc_getSetting("InitialPlacementMatches");
+		$imagesrc = "/resource/character/ultimate/".$profile['prof_main_character'].".png";
+		if ($profile['rank_consec_games'] <= (-1 * svc_getSetting("WinningStreakInterval"))){
+			$imagesrc = "/resource/waaah.png";
 		}
 		?>
 
@@ -36,36 +29,11 @@
 		<?php elseif($profile=="404") : ?>
 			<h1>Ummm...</h1>
 			<h3>That profile was not found. The account may have been renamed, banned, or deleted.</h3>
-		<?php elseif(isset($guest)) : ?>
-			<!--Profile view for guest accounts-->
-			<div class="pview-block" />
-				<div id="pview-title">
-					<h2><?php echo $profile['user_username']; ?></h2>
-					<h3>Guest at <?php echo $eventname; ?></h3>
-				</div>
-				<div id="pview-ranks">
-					<p><img style="display: block; margin: 0 auto; width: 35%" src="/resource/emblem/guest.png" /></p>
-					<h3>Rank Not Available</h3>
-					<p>Guest accounts do not receive a rank, and matches against them will not affect members' ranks.</p>
-				</div>
-				<div id="pview-connects">
-				<?php
-				if ($profile['prof_show_email']==1 or $_SESSION['type']>1){
-					echo "<div class='pview-connect-box'><img src='/resource/connect/email.png' /> ".$profile['prof_email_address']."</div> ";
-				}
-
-				if ($profile['prof_show_phone']==1 or $_SESSION['type']>1){
-					$num = (string) $profile['prof_phone_number'];
-					echo "<div class='pview-connect-box'><img src='/resource/connect/phone.png' /> (".substr($num, 0, 3).") ".substr($num, 3, 3)."-".substr($num, 6)."</div> ";
-				}
-				?>
-				</div>
-			</div>
 		<?php else : ?>
 
 			<?php if ($_SESSION['name']==$_GET['u']) : ?>
 				<div style="width: 50%; margin: 0 auto;">
-					<input class="sc-button" onclick="window.location='edit'" type="button" value="Edit Profile" style="float: right"/>
+					<input class="sc-button" onclick="window.location='edit'" type="button" value="Edit Details" style="float: right"/>
 					<h1>Your Public Profile</h1>
 				</div>
 			<?php endif; ?>
@@ -170,11 +138,6 @@
 
 				?>
 				</div>
-				<?php if($_SESSION["name"] == $_GET["u"]) : ?>
-					<div id="pview-more-details">
-						<a href="/profile/stats-detail/">More Details &#9658;</a>
-					</div>
-				<?php endif; ?>
 			</div>
 
 		<?php endif; ?>

@@ -24,7 +24,7 @@
 			<input type="submit" class="sc-button" value="Search" />
 		</form>
 		<?php if($_SESSION['type']==0) : ?>
-		<h3>Note: Some members' information may not be displayed due to privacy reasons.</h3>
+		<h3>For privacy purposes, some results may be hidden. <b>Log In</b> to see all members.</h3>
 		<?php endif; ?>
 		<hr />
 		
@@ -35,7 +35,7 @@
 
 		function printProfileBlock($username, $main, $firstname, $lastname, $catchphrase, $type, $streak){
 			echo "<table class='profile-block'><tr>";
-			if ($streak <= (-2 * svc_getSetting("WinningStreakInterval"))){
+			if ($streak <= (-1 * svc_getSetting("WinningStreakInterval"))){
 				echo "<td width='30%' rowspan='2'><img src='/resource/waaah.png' class='character-image' /></td>";
 			} else {
 				echo "<td width='30%' rowspan='2'><img src='/resource/character/ultimate/".$main.".png' class='character-image' /></td>";
