@@ -399,6 +399,11 @@ function svc_isAttendanceTaken($event_id){
 	global $db;
 	$query = "SELECT event_attendance_taken FROM event_schedule WHERE event_id = '$event_id'";
 	$rs = mysqli_query($db, $query);
+	if (!$rs){
+		writeLog(ERROR, "svc_isAttendanceTaken Error");
+		writeLog(ERROR, mysqli_error($db));
+		return false;
+	}
 	if (mysqli_fetch_assoc($rs)['event_attendance_taken'] == 1){
 		return true;
 	}
