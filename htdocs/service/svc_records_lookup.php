@@ -110,7 +110,7 @@ function svc_getRecordsByGame($uuid, $game_id){
 	$query = "SELECT r.rec_rank_final, r.rec_rank_season_high, r.rec_rank_initial, r.rec_season_wins, r.rec_season_losses 
 	FROM records_user_ranking r 
 	INNER JOIN season_data s ON r.season_number = s.season_id 
-	WHERE r.uuid = '$uuid' AND s.season_game = '$game_id'";
+	WHERE r.uuid = '$uuid' AND s.season_game IN ('$game_id', '0')";
 	if ($rs=mysqli_query($db, $query)){
 		writeLog(TRACE, mysqli_num_rows($rs)." rows - ".$query);
 		while($rec = mysqli_fetch_assoc($rs)){
@@ -405,6 +405,39 @@ function svc_getRatingDecayStatus($uuid){
 	} else {
 		return "Error";
 	}
+}
+
+function svc_isTournamentAlreadyRun($event_id){
+	global $db;
+	$query = "SELECT count(*) AS rows FROM records_tourney_schedule WHERE event_id = '$event_id'";
+
+	$rs = mysqli_query($db, $query);
+
+	if (mysqli_fetch_assoc($rs)["rows"] > 0){
+		writeLog(TRACE, "Tournament ID ".$event_id." already run - TRUE");
+		return true;
+	}
+	writeLog(TRACE, "Tournament ID ".$event_id." already run - FALSE");
+	return false;
+}
+
+function svc_removeDuplicateTournamentData($event_id){
+	global $db;
+	writeLog(DEBUG, "svc_removeDuplicateTournamentData was called for event ID ".$event_id);
+	$query1 = "DELETE FROM records_tourney_schedule WHERE event_id = '$event_id'";
+	$query2 = "DELETE FROM records_tourney_match WHERE event_id = '$event_id'";
+	$query3 = "DELETE FROM records_tourney_round WHERE event_id = '$event_id'";
+
+	if (mysqli_query($db, $query1)){
+		if (mysqli_query($db, $query2)){
+			if (mysqli_query($db, $query3)){
+				return true;
+			}
+		}
+	}
+
+	writeLog(ERROR, mysqli_error($db));
+	return false;
 }
 
 ?>
