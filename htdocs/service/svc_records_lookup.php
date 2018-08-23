@@ -134,16 +134,19 @@ function svc_getRecordsByGame($uuid, $game_id){
 		$rs3 = mysqli_query($db, $query3);
 		$curr = mysqli_fetch_assoc($rs3);
 		if (!$curr){
-
+			writeLog(ERROR, "Failed to get current season data in svc_getRecordsByGame");
+			writeLog(ERROR, mysqli_error($db));
 		}
 
-		$assoc["seasons"]++;
-		$total_final += $curr["rank_current"];
-		$total_init += $curr["rank_initial"];
-		$assoc["wins"] += $curr["rank_season_wins"];
-		$assoc["losses"] += $curr["rank_season_losses"];
-		if ($curr["rank_season_high"] > $assoc["highest"]){
-			$assoc["highest"] = $curr["rank_season_high"];
+		if ($curr["rank_placements"] == 0){ //Do not factor in the current season if the member has not completed placement yet
+			$assoc["seasons"]++;
+			$total_final += $curr["rank_current"];
+			$total_init += $curr["rank_initial"];
+			$assoc["wins"] += $curr["rank_season_wins"];
+			$assoc["losses"] += $curr["rank_season_losses"];
+			if ($curr["rank_season_high"] > $assoc["highest"]){
+				$assoc["highest"] = $curr["rank_season_high"];
+			}
 		}
 	}
 
