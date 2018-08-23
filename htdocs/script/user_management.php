@@ -117,6 +117,24 @@ if (isset($_POST['acctmgmt'])){
 			sendRedirect("/adminpanel/");
 		}
 	}
+	elseif ($action==9){
+		$username = svc_getUsernameByID($uuid);
+		if (svc_convertGuestToMember($uuid, $username, "")){
+			if ($pw = svc_resetUserPassword($uuid)){
+				showJavascriptAlert("This account has been activated. TEMPORARY PASSWORD: ".$pw." . Write this down and give it to the account owner. User will be required to change their password on next login.");
+				sendRedirect("/adminpanel/");
+			} else {
+				showErrorPage(500);
+				die();
+			}
+		} else {
+			showErrorPage(500);
+			die();
+		}
+	} else {
+		showErrorPage(400);
+		die();
+	}
 }
 else {
 	writeLog(WARNING, "Script:USER_MANAGEMENT loaded without proper context, IP: ".$_SERVER['REMOTE_ADDR']);

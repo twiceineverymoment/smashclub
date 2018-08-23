@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" href="/resource/dstyle.php" />
 		<link rel="shortcut icon" href="/resource/favicon.ico" />
-		<title>Start Season - SmashClub</title>
+		<title>Sign Up - SmashClub</title>
 	</head>
 	<body>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/alertmessage_wide.php"); ?>

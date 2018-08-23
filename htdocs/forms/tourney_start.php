@@ -7,6 +7,7 @@
 	<body>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/alertmessage_wide.php"); ?>
 	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_event_manager.php"); ?>
+	<?php require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_records_lookup.php"); ?>
 	<?php
 	if ($_SESSION['type']<3){
 		writeLog(ALERT, "Form:TOURNEY_START requested by unauthorized user, IP: ".$_SERVER['REMOTE_ADDR']);
@@ -15,6 +16,11 @@
 	}
 
 	if (isset($_POST['event-select'])){
+
+		if (svc_isTournamentAlreadyRun($_POST['event-id'])){
+			showJavascriptAlert("WARNING: There is already data in the Hall of Records for this tournament. If you replay it, the old results & records will be erased. To avoid this, choose a different event unless you are really doing a re-run.");
+		}
+
 		$eventdata = svc_getEventDataById($_POST['event-id']);
 		$datetime = new DateTime($eventdata['event_time']);
 	}

@@ -31,6 +31,11 @@
 			$uuid = $_SESSION['uuid'];
 		}
 		if (isset($_POST["season_id"])){
+			if ($_POST["season_id"] == "CURRENT"){
+				unset($_POST["season_id"]); //Unset this post argument when selecting the 'back to current season' option
+			}
+		}
+		if (isset($_POST["season_id"])){
 			$season_id = $_POST["season_id"];
 			$seasonRecords = svc_getPlayerRankInfoBySeason($uuid, $season_id);
 		} else {
@@ -146,10 +151,11 @@
 			<form id="seasonSelect" action=<?=$_SERVER['PHP_SELF'];?> method="post">
 				<select name="season_id" onchange="document.getElementById('seasonSelect').submit()" style="display: block; margin: 0 auto">
 					<?php if (isset($_POST["season_id"])) : ?>
-						<?php svc_echoSeasonList(true, $season_id); ?>
+						<option value="CURRENT">Back to Current Season</option>
+						<?php svc_echoSeasonList(false, $season_id); ?>
 					<?php else : ?>
 						<option value="" selected>View Other Seasons...</option>
-						<?php svc_echoSeasonList(true); ?>
+						<?php svc_echoSeasonList(false); ?>
 					<?php endif; ?>
 				</select>
 			</form>
@@ -165,7 +171,11 @@
 				<?php else : ?>
 				<tr>
 					<td>Current Rating</td>
+					<?php if($profile['rank_placements']==0) : ?>
 					<td><?=$profile['rank_current'];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($profile['rank_current'], $profile['rank_season_high']);?> /></td>
+					<?php else : ?>
+					<td>Not Placed</td>
+					<?php endif; ?>
 				</tr>
 				<?php endif; ?>
 				<tr>
@@ -181,7 +191,11 @@
 					<?php if(isset($_POST["season_id"])) : ?>
 					<td><?=$seasonRecords['rec_rank_initial'];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($seasonRecords['rec_rank_initial'], $seasonRecords['rec_rank_initial']);?> /></td>
 					<?php else : ?>
-					<td><?=$profile['rank_initial'];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($profile['rank_initial'], $profile['rank_initial']);?> /></td>
+						<?php if($profile['rank_placements']==0) : ?>
+							<td><?=$profile['rank_initial'];?> <img style="width: 24px; height: 24px; vertical-align: middle" src=<?=svc_getEmblemByRank($profile['rank_initial'], $profile['rank_initial']);?> /></td>
+						<?php else : ?>
+							<td>Not Placed</td>
+						<?php endif; ?>
 					<?php endif; ?>
 				</tr>
 				<tr>
@@ -189,7 +203,11 @@
 					<?php if(isset($_POST["season_id"])) : ?>
 					<?php drawRankDelta($seasonRecords['rec_rank_initial'], $seasonRecords['rec_rank_final']); ?>
 					<?php else : ?>
-					<?php drawRankDelta($profile['rank_initial'], $profile['rank_current']); ?>
+						<?php if($profile['rank_placements']==0) {
+							drawRankDelta($profile['rank_initial'], $profile['rank_current']);
+						} else {
+							echo "<td>N/A</td>";
+						} ?>
 					<?php endif; ?>
 				</tr>
 				<tr><td colspan="2" class="competitor-table-spacer">&nbsp;</td></tr>

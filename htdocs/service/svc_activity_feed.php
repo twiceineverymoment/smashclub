@@ -2,9 +2,9 @@
 
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
 
-function svc_getActivityItems(){
+function svc_getActivityItems($count){
 	global $db;
-	$query = "SELECT * FROM activity_feed ORDER BY activity_time DESC LIMIT 20";
+	$query = "SELECT * FROM activity_feed ORDER BY activity_time DESC LIMIT $count";
 	return mysqli_query($db, $query);
 }
 

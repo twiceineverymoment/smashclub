@@ -89,6 +89,15 @@ body {
 	margin-right: 10px;
 }
 
+.event-link {
+	color: white;
+	text-decoration: none;
+}
+
+.event-link:hover {
+	text-decoration: underline;
+}
+
 #banner {
 	width: calc(100% - 250px);
 	margin-left: 250px;
@@ -108,6 +117,18 @@ body {
 	font-family: MavenPro;
 	font-size: 16px;
 	color: #FFFFFF;
+}
+
+#noscript-banner {
+	width: calc(100% - 250px);
+	margin-left: 250px;
+	margin-bottom: 0px;
+	padding: 0px;
+	background-color: #FFFF00;
+	text-align: center;
+	font-family: MavenPro;
+	font-size: 16px;
+	color: #000000;
 }
 
 #eventalert {
@@ -194,6 +215,38 @@ body {
 	width: 400px;
 	height: 225px;
 	margin: 0 auto;
+}
+
+.competitor-block {
+	display: block;
+	background-color: <?php echo $theme['BlockBackgroundColor']; ?> ;
+	font-family: MavenPro;
+	color: <?php echo $theme['BlockTextColor']; ?> ;
+	box-shadow: 0px 0px 10px #222222;
+	padding: 3px 3px 3px 3px;
+	border-radius: 5px;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.competitor-block hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1.0), rgba(0, 0, 0, 0));
+}
+
+.competitor-block h2, h3 {
+	text-align: center;
+}
+
+.competitor-block table {
+	width: 75%;
+	color: <?php echo $theme['BlockTextColor']; ?> ;
+	margin: 0 auto;
+}
+
+.competitor-table-spacer {
+	font-size: 6px;
 }
 
 .character-image {
@@ -654,6 +707,92 @@ body {
 }
 
 .sidebar .sidebartitle a:hover {
+	text-decoration: underline;
+}
+
+#pview-more-details {
+	display: block;
+	width: 80%;
+	margin: 6px auto;
+}
+
+#pview-more-details a {
+	font-family: BigNoodleTitling;
+	font-style: italic;
+	color: <?php echo $theme['BlockTextColor']; ?>;
+	font-size: 36px;
+	text-decoration: none;
+}
+
+#pview-more-details a:hover {
+	text-decoration: underline;
+}
+
+.records-display {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.hall-of-records {
+	display: table;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hall-of-records tbody {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.hall-of-records td {
+	width: 33%;
+	background-color: <?php echo $theme['RankBlockColor']; ?>;
+	border-radius: 2px;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 0;
+	vertical-align: top;
+	height: 100%;
+}
+
+.hall-of-records .records-header {
+	width: 100%;
+	background-color: <?php echo $theme['BlockBackgroundColor']; ?>;
+	margin-top: 0;
+	padding-top: 0;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	color: white;
+}
+
+.records-text {
+	margin: auto 0;
+	vertical-align: middle;
+	align-items: stretch;
+}
+
+.records-text h1, .records-text h2, .records-text h3 {
+	font-family: BigNoodleTitling;
+	font-style: italic;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+.records-emblem {
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.bracket-username {
+	color: <?php echo $theme['BlockTextColor']; ?>;
+	text-decoration: none;
+}
+
+.bracket-username:hover {
 	text-decoration: underline;
 }
 

@@ -53,7 +53,7 @@
 				<h3>Review Event: <?php echo svc_getEventDataById($event_id)['event_title']; ?></h3>
 				<p>Please review the event guest list before starting gameplay. <br/>
 				<b>NOTE: Signups will be locked once you click Start Tournament. Members cannot join a tournament once it has already started. Make sure everyone is signed up before starting!</b><br/>
-				<b style="color: yellow">An account is required to participate in gameplay. Guest signups will NOT be included! Please have these guests register accounts and sign up before starting!</b><br/></p>
+				</p>
 				<form action="/forms/start_game_event.php" method="post" onsubmit="return confirm('Are you sure you want to delete the selected signups? This cannot be undone.')">
 					<table class="rank-list">
 						<tr>

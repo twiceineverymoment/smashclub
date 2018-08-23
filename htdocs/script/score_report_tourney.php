@@ -59,7 +59,10 @@ elseif (isset($_POST['endmatch'])){
 		die();
 	}
 	//Op 3: Update rankings
-	if (svc_getSetting("EventIsRanked")==1){
+	$ranked = svc_getSetting("EventIsRanked");
+	$event = svc_getSetting("MatchMakingEvent");
+	svc_logMatchResults($event, $_POST['uuid1'], $_POST['uuid2'], $_POST['score1'], $_POST['score2'], 0, $ranked);
+	if ($ranked==1){
 		svc_reportSinglesScore($_POST['uuid1'], $_POST['score1'], $_POST['uuid2'], $_POST['score2']);
 	} else {
 		//Post to activity feed without updating rank
@@ -69,6 +72,15 @@ elseif (isset($_POST['endmatch'])){
 	if ($_POST['isfinal']==1 AND $_POST['winner']==1){ //The top slot (winners bracket) won the finals, so the second final is not needed
 		writeLog(TRACE, "Calling setSkipFinalMatch...");
 		if (!svc_setSkipFinalMatch($winner_id)){
+			showErrorPage(500);
+			die();
+		}
+	}
+	//Op 5: Check if the tournament is over
+	if (svc_isTourneyFinished()){
+		showJavascriptAlert("The tournament is now over! Results have been saved to the Hall of Records. You may now end the event.");
+		if (!svc_endTournament($winner_id)){
+			showJavascriptAlert("There was an error finalizing the tournament. Please contact the site administrator as soon as possible.");
 			showErrorPage(500);
 			die();
 		}

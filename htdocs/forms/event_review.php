@@ -20,6 +20,8 @@
 		if (!svc_purgeSignups($_POST['entries'])){
 			showErrorPage(500);
 			die();
+		} else {
+			$selectedEvent = $_POST['event_id'];
 		}
 	}
 
@@ -29,6 +31,7 @@
 	}
 
 	if (isset($_POST['view'])){
+		$selectedEvent = $_POST['event_id'];
 		$list = svc_getGuestListByEvent($_POST['event_id']);
 	}
 	
@@ -41,7 +44,7 @@
 
 			<form action="/forms/event_review.php" method="post">
 			<span>Select event:</span>
-			<select name="event_id"><option>Select...</option><?php echo svc_getEventListAsOptions(true, false); ?></select>
+			<select name="event_id"><option>Select...</option><?php echo svc_getEventListAsOptions(true, false, $selectedEvent); ?></select>
 			<input type="submit" name="view" value="View Signups" class="sc-button"/>
 			</form>
 
