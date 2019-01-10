@@ -26,16 +26,18 @@
 					<span>Who's Your Main?</span>
 					<select name="main">
 						<option value=<?php echo "\"".$profile['prof_main_character']."\""; ?> selected>Change...</option>
-						<option value="unknown">(Unknown)</option>
+						<option value="unknown" selected>(unknown)</option>
 						<option value="63">Bayonetta</option>
 						<option value="14">Bowser</option>
 						<option value="58">Bowser Jr.</option>
 						<option value="11">Capt. Falcon</option>
 						<option value="35">Charizard</option>
+						<option value="25a">Chrom</option>
 						<option value="61">Cloud</option>
 						<option value="62">Corrin</option>
-						<!--<option value="13a">Daisy</option>-->
+						<option value="13a">Daisy</option>
 						<option value="28a">Dark Pit</option>
+						<option value="04a">Dark Samus</option>
 						<option value="36">Diddy Kong</option>
 						<option value="02">Donkey Kong</option>
 						<option value="18">Dr. Mario</option>
@@ -46,10 +48,14 @@
 						<option value="50">Greninja</option>
 						<option value="15">Ice Climbers</option>
 						<option value="32">Ike</option>
-						<!--<option value="64">Inkling</option>-->
+						<option value="69">Incineroar</option>
+						<option value="64">Inkling</option>
+						<option value="68">Isabelle</option>
 						<option value="34">Ivysaur</option>
 						<option value="12">Jigglypuff</option>
+						<option value="60a">Ken</option>
 						<option value="39">King Dedede</option>
+						<option value="67">King K. Rool</option>
 						<option value="06">Kirby</option>
 						<option value="03">Link</option>
 						<option value="49">Little Mac</option>
@@ -74,7 +80,9 @@
 						<option value="19">Pichu</option>
 						<option value="08">Pikachu</option>
 						<option value="28">Pit</option>
-						<!--<option value="65">Ridley</option>-->
+						<option value="70">Piranha Plant</option>
+						<option value="66a">Richter</option>
+						<option value="65">Ridley</option>
 						<option value="42">R. O. B.</option>
 						<option value="56">Robin</option>
 						<option value="48">Rosalina &amp; Luma</option>
@@ -83,6 +91,7 @@
 						<option value="04">Samus</option>
 						<option value="16">Sheik</option>
 						<option value="57">Shulk</option>
+						<option value="66">Simon</option><!--Beefcake-->
 						<option value="31">Snake</option>
 						<option value="38">Sonic</option>
 						<option value="33">Squirtle</option>

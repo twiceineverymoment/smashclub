@@ -19,7 +19,7 @@
 			var option = dropdown.options[dropdown.selectedIndex].value;
 
 			if (option==8){
-				return confirm('WARNING! This will remove all traces of this member from the system. This is not recommended, as all data will be lost and past records may be invalidated. You cannot undo this action. Please disable the account instead if you want records to be retained. Do you wish to continue?');
+				return confirm('WARNING! This will remove all traces of this member from the system. This will cause past records to be invalidated and may even corrupt previous tournament results. If you want to preserve this member\'s legacy, disable th account instead. Are you sure you want to completely delete this profile?');
 			} else if (option==6){
 				return confirm('Disabling this account will remove it from the directory, but previous records and data will be retained. You can re-enable the account later. Do you wish to continue?');
 			} else if (option==9) {
@@ -200,7 +200,7 @@
 				<h2>Scheduling</h2>
 				
 				<div class="acp-icon">
-					<a href="/forms/event_create.php" target="_blank">
+					<a href="/forms/event_create.php">
 					<img src="/resource/admincp/create_event.png" />
 					Create Event
 					</a>
@@ -214,7 +214,7 @@
 				</div>
 				-->
 				<div class="acp-icon">
-					<a href="/forms/event_manage.php" target="_blank">
+					<a href="/forms/event_manage.php">
 					<img src="/resource/admincp/edit_events.png" />
 					Manage Events
 					</a>
@@ -226,7 +226,7 @@
 					</a>
 				</div>
 				<div class="acp-icon">
-					<a href="/forms/attendance.php" target="_blank">
+					<a href="/forms/attendance.php">
 					<img src="/resource/admincp/event_attendance.png" />
 					Take Attendance
 					</a>
