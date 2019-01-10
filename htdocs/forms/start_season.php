@@ -28,6 +28,7 @@
 						<option value="2">Super Smash Bros. Melee</option>
 						<option value="3">Super Smash Bros. Brawl</option>
 						<option value="4">Super Smash Bros. Wii U / 3DS</option>
+						<option value="5">Super Smash Bros. Ultimate</option>
 					</select>
 					<span>Initialize Rankings To:</span>
 					<select name="seed-method">
@@ -37,7 +38,7 @@
 					</select>
 					<span>Number of Placement Matches (1 to 10):</span>
 					<input type="number" name="placements" value="4" min="1" max="10" />
-					<input type="submit" class="sc-button" name="create" value="Create Event" />
+					<input type="submit" class="sc-button" name="create" value="Initialize Season" />
 				</form>
 			</div>
 		</div>

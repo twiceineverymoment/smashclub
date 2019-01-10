@@ -58,6 +58,10 @@
 			echo "/resource/game/wiiu.png";
 			$game = "SMASH 4";
 			break;
+			case 5:
+			echo "/resource/game/switch.png";
+			$game = "ULTIMATE";
+			break;
 		}
 	?>
 	/>

@@ -3,8 +3,8 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/service/app_properties.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/service/svc_site_settings.php");
 
-$games_short = array("Mixed", "Smash64", "Melee", "Brawl", "Wii U");
-$games_long = array("", "Super Smash Bros. (N64)", "Super Smash Bros. Melee (GC)", "Super Smash Bros. Brawl (Wii)", "Super Smash Bros. for Wii U / 3DS");
+$games_short = array("Mixed", "Smash 64", "Melee", "Brawl", "Smash 4", "Ultimate");
+$games_long = array("", "Super Smash Bros (N64)", "Super Smash Bros Melee", "Super Smash Bros Brawl", "Super Smash Bros (WiiU/3DS)", "Super Smash Bros Ultimate");
 
 function svc_formatTimestamp($time){
 	$timestamp = strtotime($time);
